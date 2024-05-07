@@ -1,0 +1,98 @@
+.table_box{
+    width: 100%;
+    overflow-y: auto;
+
+    .table{
+        background-color: white;
+        width: 100%;
+        border: none;
+        border-radius: .8rem;
+        border-collapse: collapse;
+        overflow: hidden;
+
+        thead tr{
+            border-radius: .8rem;
+        }
+
+        thead th{
+            padding: 1rem;
+            border: 1px solid #eee;
+        }
+
+        tbody td{
+            padding: 1.8rem 2rem;
+
+        }
+
+        tbody td.type{
+            text-align: center;
+        }
+
+        tbody td.ico{
+            display: flex;
+            justify-content: center;
+
+            .icon{
+                border-radius: .8rem;
+                padding: .2rem;
+                display: grid;
+                place-items: center;
+
+                i{
+                    font-size: 3.5rem;
+                }
+            }
+        }
+
+
+
+        tbody td.view{
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+
+            a{
+                border: 1px solid #eee;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: .7rem;
+                border-radius: .6rem;
+                cursor: pointer;
+                transition: all .1s linear;
+                position: relative;
+
+                span{
+                    position: absolute;
+                    background-color: #828282;
+                    color: white;
+                    font-size: 1rem;
+                    display: inline-block;
+                    border-radius: .5rem;
+                    padding: .2rem .8rem;
+                    top: -2.4rem;
+                    right: -1.5rem;
+                    display: none;
+                }
+
+                &:hover{
+                    background-color: #7380EC;
+                    color: white;
+
+                    span{
+                        display: inline-block;
+                    }
+                }
+
+                color: darkblue;
+                i{
+                    font-size: 2.4rem;
+                }
+            }
+        }
+  
+
+    }
+
+}
+

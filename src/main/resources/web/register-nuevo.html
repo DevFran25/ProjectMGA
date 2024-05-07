@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="auth">
+    <nav class="nav">
+        <a href="" class="nav_logo">
+            <img src="img/logo2.png" alt="" class="logo">
+        </a>
+        <div class="nav_links">
+            <a href="login.html">
+                Iniciar Sesión
+            </a>
+            <a href="register.html" class="">
+                Crear una cuenta nueva
+            </a>
+        </div>
+    </nav>
+
+    <div class="login">
+        <div class="box" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+            <div class="login_container">
+                <h2 class="text-3xl font-medium">Registro</h2>
+            </div>
+            <form action="/register_usuarios" class="form" method="post">
+                <div class="form_group">
+                    <label for="comboDni" class="">Dni Colaborador</label>
+                        <select name="comboDni" id="comboDni">
+                            <option value="71484606">71484606</option>
+                            <option value="70707070">70707070</option>
+                            <option value="12345678">12345678</option>
+                    </select>
+                </div>
+                <div class="form_group">
+                    <label for="comboRol" class="">Rol</label>
+                    <select name="comboRol" id="comboRol">
+                            <option value="Admin">Admin</option>
+                            <option value="Jefe">Jefe</option>
+                            <option value="Colaborador">Colaborador</option>
+                    </select>
+                </div>
+                <div class="form_group">
+                    <label for="txtpassword" class="">Password</label>
+                    <input name="txtpassword" id="txtpassword" type="password" placeholder="Ingresar Contraseña">
+                </div>
+                <input type="submit" value="Registrar" class="form_submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+.right{
+    padding: 2rem;
+    padding-right: 0;
+    height: 85vh;
+    overflow-y: auto;
+    padding-top: 0;
+    
+
+    &::-webkit-scrollbar {
+        width: 10px; 
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Color de fondo de la pista */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #e6e6e6; /* Color del pulgar */
+        border-radius: 5px; /* Radio de borde del pulgar */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #d8d8d8; /* Cambio de color al pasar el ratón sobre el pulgar */
+    }
+    
+    .calendar{
+        width: 100%;
+        margin-bottom: 2rem;
+
+        .vanilla-calendar-month, 
+        .vanilla-calendar-year{
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .vanilla-calendar-day__btn {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .vanilla-calendar-week__day{
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .date{
+        color: #778CA2;
+        font-weight: 500;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .tasks{
+        margin-top: 2rem;
+    }
+
+    .task{
+        background-color: white;
+        border-radius: .8rem;
+        margin-bottom: 1rem;
+        border: 1px solid #778ca22f;
+        padding: 1.5rem;
+        position: relative;
+        padding-left: 5rem;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 2.8rem;
+            transform: translateY(-50%);
+            width: 0.25rem;
+            height: 50%;
+            background-color: #778CA2;
+            border-radius: .2rem;
+        }
+
+        .time{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.4rem;
+            color: #778CA2;
+            i{
+                font-size: 1.5rem;
+            }
+        }
+
+        > p{
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+    }
+}

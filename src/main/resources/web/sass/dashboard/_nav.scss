@@ -1,0 +1,50 @@
+.navbar{
+    min-height: 7rem;
+    border-bottom: 1px solid #eee;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar_left{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        i{
+            margin-top: .7rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    .navbar_right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        .perfil_user{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        i{
+            margin-top: .5rem;
+        }
+
+        .perfil_icon{
+            width: 3.5rem;
+            height: 3.5rem;
+            background-color: #E5ECFF;
+            display: grid;
+            place-content: center;
+            border-radius: 50%;
+            border: 1px solid rgb(196, 205, 230);
+        }
+
+    }
+
+}
+

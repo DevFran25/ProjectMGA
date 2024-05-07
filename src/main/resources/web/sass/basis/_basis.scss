@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    background-color: #F8FAFB;
+
+    @media screen and (min-width: 1280px) {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+
+.container{
+    /*
+    display: grid;
+    grid-template-columns: 1fr;
+    */
+    width: 100%;
+
+    @media screen and (min-width: 1280px) {
+        overflow: hidden;
+        padding-left: 26rem;
+    }
+
+
+}
+
+.complete{
+    background-color: rgba(133, 238, 58, 0.070);
+    color: #87c958;
+} 
+
+.text.complete{
+    background-color: unset;
+}
+
+
+.pending{
+    background-color: #fff3df62;
+    color: #FFA700;
+}
+
+.text.pending{
+    background-color: unset;
+}
+
+.doc{
+    background-color: #DDE6F5;
+    color: #2B579A;
+}
+
+.pdf{
+    background-color: #F7E6E2;
+    color: #BD3719;
+}
+
+.file{
+    background-color: #DCEDE4;
+    color: #0F783E;
+}
+
+.image{
+    background-color: rgba(121, 176, 186, 0.216);
+    color: rgba(7, 123, 143, 1.603922);
+}
+
+
+
+

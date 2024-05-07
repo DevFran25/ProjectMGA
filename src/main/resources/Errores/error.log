@@ -1,0 +1,23 @@
+2024-05-06 09:44:21 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-06 09:50:37 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-06 09:50:38 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-06 11:54:13 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-06 11:54:17 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-06 11:54:17 - ERROR - No se pudo crear cuenta de user por que ya esta registrado
+2024-05-06 11:54:34 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 12:26:54 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 11:57:49 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 11:57:53 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 11:59:33 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 11:59:37 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 11:59:37 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 11:59:37 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 11:59:37 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 11:59:37 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 12:00:33 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 12:01:21 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 12:01:21 - ERROR - PROCEDURE projectsdb.RegistrarUsuario does not exist
+2024-05-07 12:01:48 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 12:01:48 - ERROR - PROCEDURE projectsdb.RegistrarUsuario does not exist
+2024-05-07 12:02:06 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-07 12:02:06 - ERROR - PROCEDURE projectsdb.RegistrarUsuario does not exist

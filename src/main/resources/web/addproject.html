@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <aside class="aside">
+            <div class="top">
+                <a href="" class="top_logo">
+                    <img src="img/logo2.png" alt="">
+                </a>
+            </div>
+            <div class="sidebar">
+                <a href="index.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <p>Panel</p>
+                </a>
+                <a href="projects.html"  class="active">
+                    <i class='bx bx-cog'></i>
+                    <p>Proyectos</p>
+                </a>
+                <a href="archivos.html">
+                    <i class='bx bx-file' ></i>
+                    <p>Archivos</p>
+                </a>
+                <a href="clients.html">
+                    <i class='bx bx-user' ></i>
+                    <p>Clientes</p>
+                </a>
+                <a href="#">
+                    <i class='bx bx-calendar' ></i>
+                    <p>Calendario</p>
+                </a>
+                <a href="#">
+                    <i class='bx bx-stats' ></i>
+                    <p>Reportes</p>
+                </a>
+            </div>
+        </aside>
+        <main class="main">
+
+            <nav class="navbar">
+                
+                <div class="navbar_left">
+                    <a href="">
+                        <i class='bx bx-menu' ></i>
+                    </a>
+                    <h3>Agregar Proyecto</h3>
+                </div>
+                <div class="navbar_right">
+                    <a href="#">
+                        <i class='bx bx-bell' ></i>
+                    </a>
+                    <a href="#" class="perfil_user">
+                        <div class="perfil_icon">
+                            <p>U</p>
+                        </div>
+                        <p>Usuario</p>
+                    </a>
+                </div>
+
+            </nav>
+
+            <div class="page_project">
+                
+                <div class="project">
+
+
+                    <div class="top">
+                        
+                        <div class="head">
+                            <a href="projects.html">
+                                <i class='bx bxs-chevron-left' ></i>
+                            </a>
+                            <h3>Crear nuevo proyecto</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="form">
+
+                        <form action="" class="form_box" method="POST">
+
+                            <div class="form_group file_input">
+                                <label for="">Subir foto</label>
+                                <input type="file" >
+                            </div>
+
+                            <div class="form_group">
+                                <label for="">Descripción</label>
+                                <textarea name="" id="" cols="3" rows="3"></textarea>
+                            </div>
+
+                            <div class="form_group">
+                                <label for="">Cliente</label>
+                                <select name="" id="">
+                                    <option value="">Selecciona un cliente</option>
+                                    <option value="">Pedro Gomez</option>
+                                    <option value="">Ana Perez</option>
+                                    <option value="">Miguel Castro</option>
+                                </select>
+                            </div>
+
+                            <div class="form_group">
+                                <label for="">Ubicación</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form_group">
+                                <label for="">Presupuesto</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="dates">
+                                <div class="form_group">
+                                    <label for="">Fecha Inicio</label>
+                                    <input type="date">
+                                </div>
+    
+                                <div class="form_group">
+                                    <label for="">Fecha Fin</label>
+                                    <input type="date">
+                                </div>
+                            </div>
+
+                            <input type="submit" value="Crear Proyecto">
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </main>
+    </div>
+
+    
+</body>
+</html>
