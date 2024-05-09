@@ -84,47 +84,67 @@
 
                     <div class="form">
 
-                        <form action="" class="form_box" method="POST">
+                        <form action="register_proyectos" class="form_box" enctype="multipart/form-data" method="POST">
+
+                            <div class="form_group">
+                                <label for="txtid_proyecto">Codigo Proyecto</label>
+                                <input name="txtid_proyecto" id="txtid_proyecto" type="text">
+                            </div>
 
                             <div class="form_group file_input">
-                                <label for="">Subir foto</label>
-                                <input type="file" >
+                                <label for="txtFoto">Subir foto</label>
+                                <input type="file" id="txtFoto" name="txtFoto" >
                             </div>
 
                             <div class="form_group">
-                                <label for="">Descripción</label>
-                                <textarea name="" id="" cols="3" rows="3"></textarea>
+                                <label for="txtnombre">Descripción</label>
+                                <textarea name="txtnombre" id="txtnombre" cols="3" rows="3"></textarea>
                             </div>
 
                             <div class="form_group">
-                                <label for="">Cliente</label>
-                                <select name="" id="">
-                                    <option value="">Selecciona un cliente</option>
-                                    <option value="">Pedro Gomez</option>
-                                    <option value="">Ana Perez</option>
-                                    <option value="">Miguel Castro</option>
+                                <label for="txtdni_colaborador">Encargado del Proyecto</label>
+                                <select name="txtdni_colaborador" id="txtdni_colaborador">
+                                    <option value="0">Selecciona un colaborador</option>
+                                    <option value="71484606">Pedro Gomez</option>
+                                    <option value="2">Ana Perez</option>
+                                    <option value="3">Miguel Castro</option>
+                                </select>
+                            </div>
+
+
+
+                            <div class="form_group">
+                                <label for="txtid_cliente">Cliente</label>
+                                <select name="txtid_cliente" id="txtid_cliente">
+                                    <option value="0">Selecciona un cliente</option>
+                                    <option value="1">Pedro Gomez</option>
+                                    <option value="2">Ana Perez</option>
+                                    <option value="3">Miguel Castro</option>
                                 </select>
                             </div>
 
                             <div class="form_group">
-                                <label for="">Ubicación</label>
-                                <input type="text">
+                                <label for="txtubicacion">Ubicación</label>
+                                <input name="txtubicacion" id="txtubicacion" type="text">
                             </div>
 
                             <div class="form_group">
-                                <label for="">Presupuesto</label>
-                                <input type="text">
+                                <label for="txtcosto">Presupuesto</label>
+                                <input name="txtcosto" id="txtcosto" type="text">
                             </div>
 
                             <div class="dates">
                                 <div class="form_group">
-                                    <label for="">Fecha Inicio</label>
-                                    <input type="date">
+                                    <label for="txtestado">Estado</label>
+                                    <select name="txtestado" id="txtestado">
+                                        <option value="Completo">Completo</option>
+                                        <option value="Pendiente">Pendiente</option>
+                                    </select>
                                 </div>
-    
+
                                 <div class="form_group">
-                                    <label for="">Fecha Fin</label>
-                                    <input type="date">
+                                    <label for="txtfecha_fin">Fecha Fin</label>
+                                    <input name="txtfecha_fin" id="txtfecha_fin" type="date">
                                 </div>
                             </div>
 

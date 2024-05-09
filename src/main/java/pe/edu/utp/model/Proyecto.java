@@ -7,11 +7,11 @@ public class Proyecto {
 
     //Atributos
     private String id_proyecto;
-    private String id_cliente;
+    private int id_cliente;
     private String dni_colaborador;
     private String nombre;
     private String ubicacion;
-    private double costo;
+    private float costo;
     private String fecha_inicio;
     private String fecha_fin;
     private String estado;
@@ -21,7 +21,7 @@ public class Proyecto {
     public Proyecto() {
     }
 
-    public Proyecto(String id_proyecto, String id_cliente, String dni_colaborador, String nombre, String ubicacion, double costo, String fecha_inicio, String fecha_fin, String estado, String foto) {
+    public Proyecto(String id_proyecto, int id_cliente, String dni_colaborador, String nombre, String ubicacion, float costo, String fecha_inicio, String fecha_fin, String estado, String foto) {
         this.id_proyecto = id_proyecto;
         this.id_cliente = id_cliente;
         this.dni_colaborador = dni_colaborador;
@@ -38,7 +38,7 @@ public class Proyecto {
         return id_proyecto;
     }
 
-    public String getId_cliente() {
+    public int getId_cliente() {
         return id_cliente;
     }
 
@@ -54,7 +54,7 @@ public class Proyecto {
         return ubicacion;
     }
 
-    public double getCosto() {
+    public float getCosto() {
         return costo;
     }
 

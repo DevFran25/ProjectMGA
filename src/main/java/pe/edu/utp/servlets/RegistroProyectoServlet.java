@@ -15,7 +15,7 @@ import pe.edu.utp.utils.UTPBinary;
 import java.io.IOException;
 import java.time.LocalDate;
 
-@WebServlet("/register_usuarios")
+@WebServlet("/register_proyectos")
 @MultipartConfig(
         fileSizeThreshold = 1024 * 1024,
         maxFileSize = 1024 * 1024 * 2,  // Ajusta este valor a 2 MB, por ejemplo
@@ -24,24 +24,31 @@ import java.time.LocalDate;
 
 public class RegistroProyectoServlet extends HttpServlet {
 
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        this.doPost(req,resp);
+    }
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        //Captura de datos
         String id_proyecto = req.getParameter("txtid_proyecto");
-        String id_cliente = req.getParameter("txtid_cliente");
         String dni_colaborador = req.getParameter("txtdni_colaborador");
         String nombre = req.getParameter("txtnombre");
         String ubicacion = req.getParameter("txtubicacion");
-        double costo = Double.parseDouble(req.getParameter("txtcosto"));
+        float costo = Float.parseFloat(req.getParameter("txtcosto"));
+        int id_cliente = Integer.parseInt(req.getParameter("txtid_cliente"));
         String fecha_inicio = LocalDate.now().toString();
         String fecha_fin = req.getParameter("txtfecha_fin");
         String estado = req.getParameter("txtestado");
         //String foto = req.getParameter("txtfoto");
-
-
         // AppConfig + Metodo
-        String destino = AppConfig.getImgDir();
+        String destino = "src\\main\\resources\\web\\upload\\";
+
+
+        //System.out.println(id_proyecto + dni_colaborador + id_cliente + nombre + ubicacion + costo + fecha_inicio + fecha_fin + estado);
+
 
         try {
             //Obtener la imagen y guardarla en la carpeta upload
@@ -53,9 +60,11 @@ public class RegistroProyectoServlet extends HttpServlet {
 
             Proyecto proyecto = new Proyecto(id_proyecto, id_cliente, dni_colaborador, nombre, ubicacion, costo, fecha_inicio, fecha_fin,estado, foto);
 
+
             App.RegProyects.registrarProyectos(proyecto);
 
-            String filename = "src\\main\\resources\\web\\proyecto.html";
+            //String filename = "src\\main\\resources\\web\\addproject.html";
+            String filename = AppConfig.getRegistroProyecto();
             String html = TextUTP.read(filename);
             resp.getWriter().println(html);
 
