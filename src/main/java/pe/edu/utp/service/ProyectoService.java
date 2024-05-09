@@ -21,15 +21,22 @@ public class ProyectoService {
 
     // Método para Registrar Proyectos
     public void newProyectos(Proyecto proy) throws SQLException, IOException {
-        String strSQL = String.format("CALL RegistrarProyecto(?, ?, ?)");
+        String strSQL = String.format("CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         ErrorLog.log(strSQL, ErrorLog.Level.INFO);
         String idProyecto = proy.getId_proyecto();
 
         try {
             PreparedStatement pstmt = cnn.prepareStatement(strSQL);
             pstmt.setString(1, proy.getId_proyecto());
-            pstmt.setString(2, proy.getDni_colaborador());
-            pstmt.setString(3, proy.getId_cliente());
+            pstmt.setInt(2, proy.getId_cliente());
+            pstmt.setString(3, proy.getDni_colaborador());
+            pstmt.setString(4, proy.getNombre());
+            pstmt.setString(5, proy.getUbicacion());
+            pstmt.setDouble(6, proy.getCosto());
+            pstmt.setString(7, proy.getFecha_inicio());
+            pstmt.setString(8, proy.getFecha_fin());
+            pstmt.setString(9, proy.getEstado());
+            pstmt.setString(10, proy.getFoto());
 
 
             int num = pstmt.executeUpdate();
