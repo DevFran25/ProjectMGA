@@ -20,7 +20,7 @@ public class ClientesService {
     }
 
     public void newClientes(Cliente cli) throws SQLException, IOException {
-        String strSQL = String.format("CALL RegistrarClientes(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        String strSQL = String.format("CALL RegistrarCliente(?, ?, ?, ?, ?, ?)");
         ErrorLog.log(strSQL, ErrorLog.Level.INFO);
         String identificacion = cli.getIdentificacion();
 

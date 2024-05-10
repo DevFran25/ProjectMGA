@@ -22,3 +22,8 @@
 2024-05-07 12:02:06 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-07 12:02:06 - ERROR - PROCEDURE projectsdb.RegistrarUsuario does not exist
 2024-05-09 09:14:57 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-09 11:54:16 - INFO - CALL RegistrarClientes(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-09 11:54:16 - ERROR - No value specified for parameter 7
+2024-05-10 12:21:18 - INFO - CALL RegistrarClientes(?, ?, ?, ?, ?, ?)
+2024-05-10 12:21:18 - ERROR - PROCEDURE projectsdb.RegistrarClientes does not exist
+2024-05-10 12:27:04 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)

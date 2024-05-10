@@ -43,8 +43,7 @@ public class App
 
         //Usuario
         webserver.addServlet(RegistroUsuarioServlet.class, "/register_usuarios");
-
-
+        
         //Cliente
         webserver.addServlet(RegistroClienteServlet.class, "/register_cliente");
 
