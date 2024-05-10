@@ -1,9 +1,7 @@
 package pe.edu.utp.model;
 
 
-
 public class Proyecto {
-
 
     //Atributos
     private String id_proyecto;

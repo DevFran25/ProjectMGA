@@ -21,3 +21,4 @@
 2024-05-07 12:01:48 - ERROR - PROCEDURE projectsdb.RegistrarUsuario does not exist
 2024-05-07 12:02:06 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-07 12:02:06 - ERROR - PROCEDURE projectsdb.RegistrarUsuario does not exist
+2024-05-09 09:14:57 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
