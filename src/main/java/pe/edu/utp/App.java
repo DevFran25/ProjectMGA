@@ -1,4 +1,5 @@
 package pe.edu.utp;
+import jakarta.servlet.MultipartConfigElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.edu.utp.model.*;
@@ -20,7 +21,6 @@ public class App
     public static final Logger logger = LoggerFactory.getLogger(App.class);
     public static UsuariosService busquedaUsuarioService = null;
     public static RegistroUsuarios RegUsers = new RegistroUsuarios();
-
     public static RegistroProyectos RegProyects = new RegistroProyectos();
 
 
@@ -40,7 +40,7 @@ public class App
         //Registrando Servlets
 
         //Proyecto
-        webserver.addServlet(RegistroProyectoServlet.class, "/register_proyectos");
+        webserver.addServlet(RegistroProyectoServlet.class, "/register_proyectos").getRegistration().setMultipartConfig(new MultipartConfigElement("src\\main\\resources\\web\\upload"));
 
         //Usuario
         webserver.addServlet(RegistroUsuarioServlet.class, "/register_usuarios");
