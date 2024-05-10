@@ -23,6 +23,7 @@ public class App
     public static RegistroUsuarios RegUsers = new RegistroUsuarios();
     public static RegistroProyectos RegProyects = new RegistroProyectos();
     public static RegistroClientes RegClients = new RegistroClientes();
+    public static RegistroColaborador RegColabs = new RegistroColaborador();
 
 
     public static void main( String[] args ) throws Exception {
@@ -46,6 +47,9 @@ public class App
         
         //Cliente
         webserver.addServlet(RegistroClienteServlet.class, "/register_cliente");
+
+        //Colaborador
+        webserver.addServlet(RegistroColaboradorServlet.class, "/register_colaborador");
 
 
         webserver.addServlet(ch.qos.logback.classic.ViewStatusMessagesServlet.class, "/status");
