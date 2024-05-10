@@ -1,41 +1,44 @@
 package pe.edu.utp.servlets;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import pe.edu.utp.App;
-import pe.edu.utp.model.*;
+import pe.edu.utp.model.Cliente;
 import pe.edu.utp.utils.TextUTP;
+
 import java.io.IOException;
 
-@WebServlet("/register_usuarios")
+@WebServlet("/register_cliente")
 
-public class RegistroUsuarioServlet extends HttpServlet {
+public class RegistroClienteServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.doPost(req,resp);
+        super.doGet(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //Capturar los datos del Usuario
-        String dni_colaborador  = req.getParameter("comboDni");
-        String username = req.getParameter("comboRol");
-        String password = req.getParameter("txtpassword");
+        //Capturar los datos del Cliente
+        String identificacion  = req.getParameter("txtidentificacion");
+        String nombre = req.getParameter("txtnombre");
+        String apellidos = req.getParameter("txtapellidos");
+        String correo = req.getParameter("txtcorreo");
+        String celular = req.getParameter("txtcelular");
+        String tipo_cliente = req.getParameter("txt_tipopersona");
 
 
         // Crear objeto usuario
         try {
-            Usuario usuario = new Usuario(dni_colaborador, username, password);
+            Cliente cliente = new Cliente(identificacion, tipo_cliente, nombre, apellidos, correo, celular);
 
-            //Registro Usuario a la bd
-            App.RegUsers.registrarUsuarios(usuario);
+            //Registro Cliente a la bd
+            App.RegClients.registrarCliente(cliente);
 
-            String filename = "src\\main\\resources\\web\\register-nuevo.html";
+            String filename = "src\\main\\resources\\web\\clients.html";
             String html = TextUTP.read(filename);
             resp.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html");

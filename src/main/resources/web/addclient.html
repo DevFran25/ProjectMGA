@@ -86,31 +86,41 @@
 
                         <form action="" class="form_box" method="POST">
 
+                            <div class="form_group">
+                                <label for="txt_tipopersona">Tipo Persona</label>
+                                <select name="txt_tipopersona" id="txt_tipopersona">
+                                    <option value="0">Seleccionar</option>
+                                    <option value="Natural">Natural</option>
+                                    <option value="Juridica">Juridica</option>
+                                </select>
+                            </div>
 
                             <div class="form_group">
-                                <label for="">Nombre</label>
-                                <input type="text" name="nombre">
+                                <label for="">Identificacion</label>
+                                <input type="text" name="txtidentificacion" id="txtidentifiacion">
+                            </div>
+
+                            <div class="form_group">
+                                <label for="txtnombre">Nombre</label>
+                                <input type="text" name="txtnombre" id="txtnombre">
                             </div>
 
                             <div class="form_group">
                                 <label for="">Apellidos</label>
-                                <input type="text" name="apellidos">
+                                <input type="text" name="txtapellidos" id="txtapellidos">
                             </div>
 
                             <div class="form_group">
                                 <label for="">Correo</label>
-                                <input type="text" name="correo">
+                                <input type="text" name="txtcorreo" id="txtcorreo">
                             </div>
 
                             <div class="form_group">
-                                <label for="">Dirección</label>
-                                <input type="text">
+                                <label for="">Celular</label>
+                                <input type="text" name="txtcelular" id="txtcelular">
                             </div>
 
-                            <div class="form_group">
-                                <label for="">Teléfono</label>
-                                <input type="text">
-                            </div>
+
 
                             <input type="submit" value="Crear Cliente">
 

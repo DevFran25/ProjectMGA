@@ -22,8 +22,7 @@ public class App
     public static UsuariosService busquedaUsuarioService = null;
     public static RegistroUsuarios RegUsers = new RegistroUsuarios();
     public static RegistroProyectos RegProyects = new RegistroProyectos();
-
-
+    public static RegistroClientes RegClients = new RegistroClientes();
 
 
     public static void main( String[] args ) throws Exception {
@@ -44,6 +43,10 @@ public class App
 
         //Usuario
         webserver.addServlet(RegistroUsuarioServlet.class, "/register_usuarios");
+
+
+        //Cliente
+        webserver.addServlet(RegistroClienteServlet.class, "/register_cliente");
 
 
         webserver.addServlet(ch.qos.logback.classic.ViewStatusMessagesServlet.class, "/status");
