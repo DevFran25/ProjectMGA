@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="container">
+    <aside class="aside">
+        <div class="top">
+            <a href="" class="top_logo">
+                <img src="img/logo2.png" alt="">
+            </a>
+        </div>
+        <div class="sidebar">
+            <a href="index.html">
+                <i class='bx bxs-dashboard'></i>
+                <p>Panel</p>
+            </a>
+            <a href="projects.html"  class="">
+                <i class='bx bx-cog'></i>
+                <p>Proyectos</p>
+            </a>
+            <a href="archivos.html" >
+                <i class='bx bx-file' ></i>
+                <p>Archivos</p>
+            </a>
+            <a href="clients.html">
+                <i class='bx bx-user' ></i>
+                <p>Clientes</p>
+            </a>
+            <a href="collaborators.html" class="active">
+                <i class='bx bx-user' ></i>
+                <p>Colaboradores</p>
+            </a>
+            <!--<a href="#">
+                <i class='bx bx-calendar' ></i>
+                <p>Calendario</p>
+            </a>-->
+            <!--<a href="#">
+                <i class='bx bx-stats' ></i>
+                <p>Reportes</p>
+            </a>-->
+        </div>
+    </aside>
+    <main class="main">
+
+        <nav class="navbar">
+
+            <div class="navbar_left">
+                <a href="">
+                    <i class='bx bx-menu' ></i>
+                </a>
+                <h3>Colaborador</h3>
+            </div>
+            <div class="navbar_right">
+                <a href="#">
+                    <i class='bx bx-bell' ></i>
+                </a>
+                <a href="#" class="perfil_user">
+                    <div class="perfil_icon">
+                        <p>U</p>
+                    </div>
+                    <p>Usuario</p>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="page_project">
+
+            <div class="project">
+
+
+                <div class="top">
+
+                    <div class="head">
+                        <a href="collaborators.html">
+                            <i class='bx bxs-chevron-left' ></i>
+                        </a>
+                        <h3>Agregar un nuevo colaborador</h3>
+                    </div>
+
+                </div>
+
+                <div class="form">
+
+                    <form action="/register_colaborador" class="form_box" method="POST">
+
+                        <div class="form_group">
+                            <label for="txtdni">Dni</label>
+                            <input type="text" name="txtdni" id="txtdni">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="txtnombre">Nombre</label>
+                            <input type="text" name="txtnombre" id="txtnombre">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="txtapellidos">Apellidos</label>
+                            <input type="text" name="txtapellidos" id="txtapellidos">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="">Correo</label>
+                            <input type="text" name="txtcorreo" id="txtcorreo">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="txtcelular">Celular</label>
+                            <input type="text" name="txtcelular" id="txtcelular">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="txtcargo">Cargo</label>
+                            <input type="text" name="txt_cargo" id="txt_cargo">
+                        </div>
+
+
+
+                        <input type="submit" value="Crear Colaborador">
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+</div>
+
+
+</body>
+</html>

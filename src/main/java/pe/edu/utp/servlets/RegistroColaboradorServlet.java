@@ -24,12 +24,12 @@ public class RegistroColaboradorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         //Capturar los datos del Colaborador
-        String dni_colaborador = req.getParameter("txtidentificacion");
+        String dni_colaborador = req.getParameter("txtdni");
         String nombre = req.getParameter("txtnombre");
         String apellidos = req.getParameter("txtapellidos");
-        String telefono = req.getParameter("txtcorreo");
-        String email = req.getParameter("txtcelular");
-        String cargo = req.getParameter("txt_tipopersona");
+        String telefono = req.getParameter("txtcelular");
+        String email = req.getParameter("txtcorreo");
+        String cargo = req.getParameter("txt_cargo");
 
         // Crear objeto colaborador
         try {
@@ -38,7 +38,7 @@ public class RegistroColaboradorServlet extends HttpServlet {
             //Registro Cliente a la bd
             App.RegColabs.registrarColaborador(colaborador);
 
-            String filename = "src\\main\\resources\\web\\colabs.html";
+            String filename = "src\\main\\resources\\web\\collaborators.html";
             String html = TextUTP.read(filename);
             resp.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html");

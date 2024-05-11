@@ -40,7 +40,7 @@ public class ColaboradorService {
                 throw new RuntimeException(msg);
             }
         } catch (SQLIntegrityConstraintViolationException e) {
-            String msg = String.format("No se pudo crear proyecto por que ya esta registrado", dni_colaborador);
+            String msg = String.format("No se pudo crear colaborador por que ya esta registrado", dni_colaborador);
             ErrorLog.log(msg, ErrorLog.Level.ERROR);
             throw new AlreadyExistsException(msg);
         } catch (SQLException e) {
