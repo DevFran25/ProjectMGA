@@ -7,7 +7,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import pe.edu.utp.App;
 import pe.edu.utp.model.Cliente;
 import pe.edu.utp.utils.TextUTP;
-
 import java.io.IOException;
 
 @WebServlet("/register_cliente")

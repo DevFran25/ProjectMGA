@@ -46,6 +46,7 @@ public class App
         webserver.addServlet(RegistroUsuarioServlet.class, "/register_usuarios");
         
         //Cliente
+        webserver.addServlet(ListarClienteServlet.class,"/listar_clientes");
         webserver.addServlet(RegistroClienteServlet.class, "/register_cliente");
 
         //Colaborador

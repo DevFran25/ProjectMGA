@@ -46,3 +46,5 @@
 2024-05-11 01:03:05 - INFO - CALL RegistrarColaborador(?, ?, ?, ?, ?, ?)
 2024-05-11 01:03:05 - ERROR - No se pudo crear colaborador por que ya esta registrado
 2024-05-11 01:04:41 - INFO - CALL RegistrarColaborador(?, ?, ?, ?, ?, ?)
+2024-05-12 11:32:10 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
+2024-05-12 11:32:16 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
