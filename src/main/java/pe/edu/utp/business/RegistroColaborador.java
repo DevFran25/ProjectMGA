@@ -6,9 +6,11 @@ import pe.edu.utp.service.ColaboradorService;
 import pe.edu.utp.util.AppConfig;
 import pe.edu.utp.util.DataAccessMariaDB;
 import pe.edu.utp.util.ErrorLog;
+import pe.edu.utp.utils.TextUTP;
 import javax.naming.NamingException;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 public class RegistroColaborador {
 
@@ -46,5 +48,38 @@ public class RegistroColaborador {
             ErrorLog.log(errorMsg, ErrorLog.Level.ERROR);
             throw new RuntimeException(e);
         }
+    }
+    //Listar Colaborador
+    public String getHtmlListarColaborador() throws IOException, SQLException {
+        // Cargar plantilla principal
+        String filename = "src\\main\\resources\\web\\collaborators.html";
+        String html = TextUTP.read(filename);
+
+        // Cargar plantilla para los item
+        String filenameItems = "src\\main\\resources\\templates\\colaboradores_listado.html";
+        String htmlItem = TextUTP.read(filenameItems);
+
+
+        // Recorrer la lista de Colaboradores
+        StringBuilder itemsHtml = new StringBuilder();
+
+        // Listar
+        List<Colaborador> listaColaborador = busquedaServiceColaborador.getAllColaboradores();
+
+        for (Colaborador colaborador : listaColaborador) {
+
+            //Tabla Colaboradores
+            String item = htmlItem.replace("${dni_colaborador}", colaborador.getDni_colaborador())
+                    .replace("${nombres}", colaborador.getNombre())
+                    .replace("${apellidos}", colaborador.getApellidos())
+                    .replace("${telefono}", colaborador.getTelefono())
+                    .replace("${email}", colaborador.getEmail())
+                    .replace("${cargo}", colaborador.getCargo());
+            itemsHtml.append(item);
+        }
+        // Reemplazar en la plantilla principal
+        String reporteHtml = html.replace("${itemsColaboradores}", itemsHtml.toString());
+
+        return reporteHtml;
     }
 }
