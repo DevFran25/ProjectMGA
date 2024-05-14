@@ -1,15 +1,16 @@
 package pe.edu.utp.service;
 
 import pe.edu.utp.exceptions.AlreadyExistsException;
+import pe.edu.utp.exceptions.NotFoundException;
+import pe.edu.utp.model.Colaborador;
 import pe.edu.utp.model.Proyecto;
 import pe.edu.utp.util.DataAccess;
 import pe.edu.utp.util.ErrorLog;
 import javax.naming.NamingException;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ProyectoService {
 
@@ -53,5 +54,40 @@ public class ProyectoService {
             ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
             throw new SQLException(e);
         }
+    }
+
+    //Metodo para listar Proyectos
+    public List<Proyecto> getAllProyectos() throws SQLException, NotFoundException {
+        List<Proyecto> lista = new LinkedList<>();
+
+        String strSQL = String.format("CALL listarProyectos()");
+        try {
+            ResultSet rst = cnn.createStatement().executeQuery(strSQL);
+            int count = 0;
+
+            while (rst.next()) {
+                String id_proyecto = rst.getString("id_proyecto");
+                int id_cliente = rst.getInt("id_cliente");
+                String dni_colaborador = rst.getString("dni_colaborador");
+                String nombre = rst.getString("nombre");
+                String ubicacion = rst.getString("ubicacion");
+                Float costo = rst.getFloat("costo");
+                String fecha_inicio = rst.getString("fecha_inicio");
+                String fecha_fin= rst.getString("fecha_fin");
+                String estado = rst.getString("estado");
+                String foto = rst.getString("foto");
+
+                Proyecto proyecto = new Proyecto(id_proyecto,id_cliente,dni_colaborador,nombre,ubicacion,costo,fecha_inicio,fecha_fin, estado,foto);
+                lista.add(proyecto);
+                count++;
+            }
+            if (count == 0) {
+                throw new NotFoundException("No se encontró ninguna cuenta en la bd");
+            }
+        } catch (SQLException e) {
+            String msg = String.format("Ocurrió una excepción SQL: %s", e.getMessage());
+            throw new SQLException(msg);
+        }
+        return lista;
     }
 }

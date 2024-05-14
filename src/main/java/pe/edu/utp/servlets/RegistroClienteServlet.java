@@ -37,7 +37,7 @@ public class RegistroClienteServlet extends HttpServlet {
             //Registro Cliente a la bd
             App.RegClients.registrarCliente(cliente);
 
-            String filename = "src\\main\\resources\\web\\clients.html";
+            String filename = "src\\main\\resources\\web\\listar_clientes";
             String html = TextUTP.read(filename);
             resp.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html");
