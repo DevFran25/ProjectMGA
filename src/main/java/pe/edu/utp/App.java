@@ -54,6 +54,7 @@ public class App
         webserver.addServlet(ListarColaboradorServlet.class,"/listar_colaborador");
         webserver.addServlet(RegistroColaboradorServlet.class, "/register_colaborador");
 
+        webserver.addServlet(LoginServlet.class, "/login");
 
         webserver.addServlet(ch.qos.logback.classic.ViewStatusMessagesServlet.class, "/status");
 
