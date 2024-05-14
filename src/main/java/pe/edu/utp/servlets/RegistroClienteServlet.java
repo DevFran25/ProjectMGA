@@ -7,7 +7,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import pe.edu.utp.App;
 import pe.edu.utp.model.Cliente;
 import pe.edu.utp.utils.TextUTP;
-
 import java.io.IOException;
 
 @WebServlet("/register_cliente")
@@ -38,7 +37,7 @@ public class RegistroClienteServlet extends HttpServlet {
             //Registro Cliente a la bd
             App.RegClients.registrarCliente(cliente);
 
-            String filename = "src\\main\\resources\\web\\clients.html";
+            String filename = "src\\main\\resources\\web\\listar_clientes";
             String html = TextUTP.read(filename);
             resp.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html");

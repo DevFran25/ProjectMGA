@@ -1,15 +1,15 @@
 package pe.edu.utp.service;
 
 import pe.edu.utp.exceptions.AlreadyExistsException;
+import pe.edu.utp.exceptions.NotFoundException;
 import pe.edu.utp.model.Cliente;
 import pe.edu.utp.util.DataAccess;
 import pe.edu.utp.util.ErrorLog;
 import javax.naming.NamingException;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ClientesService {
 
@@ -47,5 +47,36 @@ public class ClientesService {
             ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
             throw new SQLException(e);
         }
+    }
+
+    //Metodo para listar Clientes
+    public List<Cliente> getAllClientes() throws SQLException, NotFoundException {
+        List<Cliente> lista = new LinkedList<>();
+
+        String strSQL = String.format("CALL listarClientes()");
+        try {
+            ResultSet rst = cnn.createStatement().executeQuery(strSQL);
+            int count = 0;
+
+            while (rst.next()) {
+                String identificacion = rst.getString("identificacion");
+                String tipo_cliente = rst.getString("tipo_cliente");
+                String nombre = rst.getString("nombre");
+                String apellidos = rst.getString("apellidos");
+                String email = rst.getString("email");
+                String celular = rst.getString("celular");
+
+                Cliente cliente = new Cliente(identificacion,tipo_cliente,nombre,apellidos,email,celular);
+                lista.add(cliente);
+                count++;
+            }
+            if (count == 0) {
+                throw new NotFoundException("No se encontró ninguna cuenta en la bd");
+            }
+        } catch (SQLException e) {
+            String msg = String.format("Ocurrió una excepción SQL: %s", e.getMessage());
+            throw new SQLException(msg);
+        }
+        return lista;
     }
 }
