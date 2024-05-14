@@ -72,6 +72,7 @@ public class Proyecto {
         return foto;
     }
 
+
     @Override
     public String toString() {
         return "Proyecto{" +

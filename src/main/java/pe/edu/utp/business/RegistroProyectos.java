@@ -62,7 +62,6 @@ public class RegistroProyectos {
         String filenameItems = "src\\main\\resources\\templates\\proyecto_listado.html";
         String htmlItem = TextUTP.read(filenameItems);
 
-
         // Recorrer la lista de Proyectos
         StringBuilder itemsHtml = new StringBuilder();
 
@@ -80,11 +79,13 @@ public class RegistroProyectos {
                     .replace("${costo}",  Float.toString(proyecto.getCosto()))
                     .replace("${fecha_inicio}", proyecto.getFecha_inicio())
                     .replace("${fecha_fin}", proyecto.getFecha_fin())
-                    .replace("${estado}", proyecto.getEstado()));
+                    .replace("${estado}", proyecto.getEstado())
+                            .replace("${Foto}", proyecto.getFoto()));
             itemsHtml.append(item);
+
         }
         // Reemplazar en la plantilla principal
-        String reporteHtml = html.replace("${itemsProyectos}", itemsHtml.toString());
+        String reporteHtml = html.replace("${itemsProyecto}", itemsHtml.toString());
 
         return reporteHtml;
     }
