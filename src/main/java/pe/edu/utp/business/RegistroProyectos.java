@@ -68,21 +68,21 @@ public class RegistroProyectos {
         // Listar
         List<Proyecto> listaProyectos = busquedaServiceProyecto.getAllProyectos();
 
+
         for (Proyecto proyecto : listaProyectos) {
 
             //Tabla Proyectos
             String item = htmlItem.replace("${id_proyecto}", proyecto.getId_proyecto())
-                    .replace("${idcliente}", Integer.toString(proyecto.getId_cliente())
                     .replace("${dni_colaborador}", proyecto.getDni_colaborador())
-                    .replace("${nombre}",proyecto.getNombre())
+                    .replace("${id_cliente}", Integer.toString(proyecto.getId_cliente()))
+                    .replace("${nombre}", proyecto.getNombre())
                     .replace("${ubicacion}", proyecto.getUbicacion())
-                    .replace("${costo}",  Float.toString(proyecto.getCosto()))
+                    .replace("${costo}", Float.toString(proyecto.getCosto()))
                     .replace("${fecha_inicio}", proyecto.getFecha_inicio())
                     .replace("${fecha_fin}", proyecto.getFecha_fin())
                     .replace("${estado}", proyecto.getEstado())
-                            .replace("${Foto}", proyecto.getFoto()));
+                    .replace("${Foto}", proyecto.getFoto());
             itemsHtml.append(item);
-
         }
         // Reemplazar en la plantilla principal
         String reporteHtml = html.replace("${itemsProyecto}", itemsHtml.toString());
