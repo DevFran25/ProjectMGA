@@ -38,6 +38,5 @@ build/
 .DS_Store
 
 #files
-/src/main/resources/Errores/error.log
-/src/main/resources/bd_gestor.log
-
+src/main/resources/Errores/error.log
+src/main/resources/bd_gestor.log
