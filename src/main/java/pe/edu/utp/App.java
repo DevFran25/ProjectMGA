@@ -5,6 +5,7 @@ import org.eclipse.jetty.servlet.FilterHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.edu.utp.filters.AdminFilter;
+import pe.edu.utp.filters.AuthFilter;
 import pe.edu.utp.filters.ColaboradorFilter;
 import pe.edu.utp.filters.LoginFilter;
 import pe.edu.utp.model.*;
@@ -73,6 +74,7 @@ public class App
 
         webserver.addServlet(ch.qos.logback.classic.ViewStatusMessagesServlet.class, "/status");
 
+        webserver.addFilter(AuthFilter.class, "*.html", EnumSet.of(DispatcherType.REQUEST));
         webserver.addFilter(LoginFilter.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
         webserver.addFilter(ColaboradorFilter.class, "/colaborador/*", EnumSet.of(DispatcherType.REQUEST));
         webserver.addFilter(AdminFilter.class, "", EnumSet.of(DispatcherType.REQUEST));

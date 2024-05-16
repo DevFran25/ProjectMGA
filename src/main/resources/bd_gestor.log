@@ -54,3 +54,73 @@
 2024-05-16 07:51:31,708 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@710c2b53{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
 2024-05-16 07:51:31,739 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@6f53b8a{HTTP/1.1, (http/1.1)}{0.0.0.0:54550}
 2024-05-16 07:51:31,740 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@13e344d{STARTING}[11.0.15,sto=0] @1582ms
+2024-05-16 12:33:26,458 INFO [main] pe.edu.utp.App [App.java : 38] -- Init app...
+2024-05-16 12:33:26,981 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.8.1+8-LTS
+2024-05-16 12:33:27,068 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-16 12:33:27,153 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@55dfcc6{/,file:///C:/Users/USUARIO/AppData/Local/Temp/,AVAILABLE}
+2024-05-16 12:33:27,235 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@177bea38{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-16 12:33:27,275 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@3568f9d2{HTTP/1.1, (http/1.1)}{0.0.0.0:51007}
+2024-05-16 12:33:27,276 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@7b420819{STARTING}[11.0.15,sto=0] @3983ms
+2024-05-16 12:49:01,108 INFO [main] pe.edu.utp.App [App.java : 38] -- Init app...
+2024-05-16 12:49:01,537 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.8.1+8-LTS
+2024-05-16 12:49:01,641 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-16 12:49:01,689 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@71454b9d{/,file:///C:/Users/USUARIO/AppData/Local/Temp/,AVAILABLE}
+2024-05-16 12:49:01,724 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@bcef303{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-16 12:49:01,744 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@6fb365ed{HTTP/1.1, (http/1.1)}{0.0.0.0:51286}
+2024-05-16 12:49:01,744 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@5ba88be8{STARTING}[11.0.15,sto=0] @2424ms
+2024-05-16 12:56:32,379 INFO [main] pe.edu.utp.App [App.java : 39] -- Init app...
+2024-05-16 12:56:32,541 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.8.1+8-LTS
+2024-05-16 12:56:32,611 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-16 12:56:32,676 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@71454b9d{/,file:///C:/Users/USUARIO/AppData/Local/Temp/,AVAILABLE}
+2024-05-16 12:56:32,716 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@bcef303{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-16 12:56:32,731 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@6fb365ed{HTTP/1.1, (http/1.1)}{0.0.0.0:51512}
+2024-05-16 12:56:32,731 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@5ba88be8{STARTING}[11.0.15,sto=0] @1807ms
+2024-05-16 12:59:50,745 INFO [main] pe.edu.utp.App [App.java : 39] -- Init app...
+2024-05-16 12:59:50,903 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.8.1+8-LTS
+2024-05-16 12:59:50,973 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-16 12:59:51,038 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@71454b9d{/,file:///C:/Users/USUARIO/AppData/Local/Temp/,AVAILABLE}
+2024-05-16 12:59:51,080 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@bcef303{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-16 12:59:51,096 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@6fb365ed{HTTP/1.1, (http/1.1)}{0.0.0.0:51613}
+2024-05-16 12:59:51,097 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@5ba88be8{STARTING}[11.0.15,sto=0] @1587ms
+2024-05-16 13:04:40,853 INFO [main] pe.edu.utp.App [App.java : 39] -- Init app...
+2024-05-16 13:04:41,016 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.8.1+8-LTS
+2024-05-16 13:04:41,094 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-16 13:04:41,152 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@71454b9d{/,file:///C:/Users/USUARIO/AppData/Local/Temp/,AVAILABLE}
+2024-05-16 13:04:41,200 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@bcef303{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-16 13:04:41,216 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@6fb365ed{HTTP/1.1, (http/1.1)}{0.0.0.0:51736}
+2024-05-16 13:04:41,216 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@5ba88be8{STARTING}[11.0.15,sto=0] @1577ms
+2024-05-16 13:25:39,694 INFO [main] pe.edu.utp.App [App.java : 39] -- Init app...
+2024-05-16 13:25:40,026 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.8.1+8-LTS
+2024-05-16 13:25:40,151 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-16 13:25:40,244 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@71454b9d{/,file:///C:/Users/USUARIO/AppData/Local/Temp/,AVAILABLE}
+2024-05-16 13:25:40,299 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@bcef303{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-16 13:25:40,335 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@6fb365ed{HTTP/1.1, (http/1.1)}{0.0.0.0:52410}
+2024-05-16 13:25:40,336 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@5ba88be8{STARTING}[11.0.15,sto=0] @2843ms
+2024-05-16 13:26:52,342 INFO [main] pe.edu.utp.App [App.java : 39] -- Init app...
+2024-05-16 13:26:52,597 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.8.1+8-LTS
+2024-05-16 13:26:52,701 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-16 13:26:52,761 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@71454b9d{/,file:///C:/Users/USUARIO/AppData/Local/Temp/,AVAILABLE}
+2024-05-16 13:26:52,836 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@bcef303{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-16 13:26:52,863 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@6fb365ed{HTTP/1.1, (http/1.1)}{0.0.0.0:52467}
+2024-05-16 13:26:52,864 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@5ba88be8{STARTING}[11.0.15,sto=0] @2191ms
+2024-05-16 13:31:23,870 INFO [main] pe.edu.utp.App [App.java : 39] -- Init app...
+2024-05-16 13:31:24,055 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.8.1+8-LTS
+2024-05-16 13:31:24,149 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-16 13:31:24,216 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@71454b9d{/,file:///C:/Users/USUARIO/AppData/Local/Temp/,AVAILABLE}
+2024-05-16 13:31:24,258 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@bcef303{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-16 13:31:24,278 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@6fb365ed{HTTP/1.1, (http/1.1)}{0.0.0.0:52631}
+2024-05-16 13:31:24,279 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@5ba88be8{STARTING}[11.0.15,sto=0] @2303ms
+2024-05-16 13:36:09,403 INFO [main] pe.edu.utp.App [App.java : 39] -- Init app...
+2024-05-16 13:36:09,670 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.8.1+8-LTS
+2024-05-16 13:36:09,759 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-16 13:36:09,802 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@46268f08{/,file:///C:/Users/USUARIO/AppData/Local/Temp/,AVAILABLE}
+2024-05-16 13:36:09,863 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@19835e64{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-16 13:36:09,920 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@3549bca9{HTTP/1.1, (http/1.1)}{0.0.0.0:52883}
+2024-05-16 13:36:09,921 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@5d066c7d{STARTING}[11.0.15,sto=0] @2602ms
+2024-05-16 13:37:28,376 INFO [main] pe.edu.utp.App [App.java : 39] -- Init app...
+2024-05-16 13:37:28,550 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.8.1+8-LTS
+2024-05-16 13:37:28,622 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-16 13:37:28,681 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@71454b9d{/,file:///C:/Users/USUARIO/AppData/Local/Temp/,AVAILABLE}
+2024-05-16 13:37:28,723 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@bcef303{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-16 13:37:28,746 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@6fb365ed{HTTP/1.1, (http/1.1)}{0.0.0.0:52969}
+2024-05-16 13:37:28,747 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@5ba88be8{STARTING}[11.0.15,sto=0] @1995ms
