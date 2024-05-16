@@ -352,12 +352,41 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  position: relative;
+
 }
 .navbar .navbar_right .perfil_user {
   display: flex;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
+  user-select: none;
 }
+
+.navbar .navbar_right .perfil_user .user_options{
+    background-color: white;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    padding: 1rem .5rem;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.085);
+    display: none;
+}
+
+.navbar .navbar_right .perfil_user .user_options a{
+    display: inline-block;
+    background-color: white;
+    width: 100%;
+    padding: .3rem 1rem;
+    border-radius: .5rem;
+}
+
+.navbar .navbar_right .perfil_user .user_options a:hover{
+    background-color: #eee;
+}
+
 .navbar .navbar_right i {
   margin-top: 0.5rem;
 }

@@ -77,7 +77,7 @@ public class App
         webserver.addFilter(ColaboradorFilter.class, "/colaborador/*", EnumSet.of(DispatcherType.REQUEST));
         webserver.addFilter(AdminFilter.class, "", EnumSet.of(DispatcherType.REQUEST));
 
-        URL myURL = new URL("http://localhost:8085/login.html");
+        URL myURL = new URL("http://localhost:8085/login");
         System.out.println("*********************************************************");
         System.out.println("CLICK AQUI PARA ABRIR LA APLICACION:" + myURL);
         System.out.println("*********************************************************");
