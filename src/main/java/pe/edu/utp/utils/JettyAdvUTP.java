@@ -1,16 +1,20 @@
 package pe.edu.utp.utils;
 
+import jakarta.servlet.DispatcherType;
+import jakarta.servlet.Filter;
 import jakarta.servlet.Servlet;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.DefaultServlet;
+import org.eclipse.jetty.servlet.FilterHolder;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.resource.PathResource;
 import org.eclipse.jetty.util.resource.Resource;
 
 import java.nio.file.Paths;
+import java.util.EnumSet;
 
 public class JettyAdvUTP {
 
@@ -50,6 +54,11 @@ public class JettyAdvUTP {
 
     public ServletHolder addServlet(Class<? extends Servlet> servlet, String path){
         return context.addServlet(servlet, path);
+    }
+
+    // metodo que se utiliza para registrar un filtro en el contexto de la aplicacion
+    public void addFilter(Class<? extends Filter> filterClass, String pathSpec, EnumSet<DispatcherType> dispatcherTypes) {
+        context.addFilter(filterClass, pathSpec, dispatcherTypes);
     }
 
     public void start() throws Exception {

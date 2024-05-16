@@ -28,12 +28,13 @@ public class LoginBusiness {
     }
 
     public Map<String, String> existeUsuario(String dni) {
+        Map<String, String> existe = null;
         try {
-            Map<String, String> existe = loginService.usuarioExiste(dni);
-            return existe == null ? null : existe;
+            existe = loginService.usuarioExiste(dni);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return existe == null ? null : existe;
     }
 
 }
