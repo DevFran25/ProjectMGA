@@ -32,6 +32,8 @@ public class App
     public static RegistroColaborador RegColabs = new RegistroColaborador();
 
 
+
+
     public static void main( String[] args ) throws Exception {
         logger.info("Init app...");
 
@@ -59,6 +61,10 @@ public class App
         //Colaborador
         webserver.addServlet(ListarColaboradorServlet.class,"/listar_colaborador");
         webserver.addServlet(RegistroColaboradorServlet.class, "/register_colaborador");
+
+        // Avance
+        //webserver.addServlet(RegistrarAvanceServlet.class, "/registrar_avance");
+
 
         webserver.addServlet(LoginServlet.class, "/login");
         webserver.addServlet(LogoutServlet.class, "/logout");
