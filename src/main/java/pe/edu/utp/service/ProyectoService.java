@@ -77,7 +77,7 @@ public class ProyectoService {
                 String estado = rst.getString("estado");
                 String foto = rst.getString("foto");
 
-                Proyecto proyecto = new Proyecto(id_proyecto,id_cliente,dni_colaborador,nombre,ubicacion,costo,fecha_inicio,fecha_fin, estado,foto);
+                Proyecto proyecto = new Proyecto(id_proyecto,id_cliente,dni_colaborador,nombre,ubicacion,costo,fecha_inicio,fecha_fin,estado,foto);
                 lista.add(proyecto);
                 count++;
             }

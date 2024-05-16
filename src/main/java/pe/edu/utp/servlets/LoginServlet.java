@@ -8,9 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import pe.edu.utp.business.LoginBusiness;
-import pe.edu.utp.service.LoginService;
 import pe.edu.utp.util.Errors;
-import pe.edu.utp.utils.Log;
 import pe.edu.utp.utils.TextUTP;
 
 import java.io.IOException;
