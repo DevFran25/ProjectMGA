@@ -4,11 +4,9 @@
     <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
 
 
-
     <!-- CAMBIAR AQUI LA RUTA DONDE SE GUARDARAN LOS LOGS -->
     <variable name="LOG_HOME" value="src/main/resources" />
     <variable name="APP_LOG" value="bd_gestor.log" />
-
 
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">

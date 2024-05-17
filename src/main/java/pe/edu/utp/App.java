@@ -5,6 +5,7 @@ import org.eclipse.jetty.servlet.FilterHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.edu.utp.filters.AdminFilter;
+import pe.edu.utp.filters.AuthFilter;
 import pe.edu.utp.filters.ColaboradorFilter;
 import pe.edu.utp.filters.LoginFilter;
 import pe.edu.utp.model.*;
@@ -30,6 +31,8 @@ public class App
     public static RegistroProyectos RegProyects = new RegistroProyectos();
     public static RegistroClientes RegClients = new RegistroClientes();
     public static RegistroColaborador RegColabs = new RegistroColaborador();
+
+
 
 
     public static void main( String[] args ) throws Exception {
@@ -61,6 +64,10 @@ public class App
         webserver.addServlet(ListarColaboradorServlet.class,"/listar_colaborador");
         webserver.addServlet(RegistroColaboradorServlet.class, "/register_colaborador");
 
+        // Avance
+        //webserver.addServlet(RegistrarAvanceServlet.class, "/registrar_avance");
+
+
         webserver.addServlet(LoginServlet.class, "/login");
         webserver.addServlet(LogoutServlet.class, "/logout");
         webserver.addServlet(ColaboradorServlet.class, "/colaborador");
@@ -68,6 +75,7 @@ public class App
 
         webserver.addServlet(ch.qos.logback.classic.ViewStatusMessagesServlet.class, "/status");
 
+        webserver.addFilter(AuthFilter.class, "*.html", EnumSet.of(DispatcherType.REQUEST));
         webserver.addFilter(LoginFilter.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
         webserver.addFilter(ColaboradorFilter.class, "/colaborador/*", EnumSet.of(DispatcherType.REQUEST));
         webserver.addFilter(AdminFilter.class, "", EnumSet.of(DispatcherType.REQUEST));

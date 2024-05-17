@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+#files
+src/main/resources/Errores/error.log
+src/main/resources/bd_gestor.log

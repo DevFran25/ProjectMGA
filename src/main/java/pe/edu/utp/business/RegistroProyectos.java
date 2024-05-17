@@ -95,7 +95,7 @@ public class RegistroProyectos {
 
     }
 
-    public String getHtmlAddProject() throws IOException, SQLException {
+    public String gitgetHtmlAddProject() throws IOException, SQLException {
         // Cargar la plantilla de la página de agregar proyecto
         String filename = "src\\main\\resources\\web\\addproject.html";
         String html = TextUTP.read(filename);

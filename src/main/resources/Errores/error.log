@@ -58,6 +58,7 @@
 2024-05-14 08:08:59 - INFO - CALL RegistrarUsuario(?, ?, ?)
 >>>>>>> 45ff6dcae566912d43e6efa3e535ed4e8dbf6fc6
 2024-05-15 11:28:06 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+<<<<<<< HEAD
 2024-05-16 11:14:20 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 2024-05-16 11:16:28 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
 2024-05-16 11:20:47 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
@@ -65,3 +66,15 @@
 2024-05-16 11:21:24 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
 2024-05-16 11:21:36 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
 2024-05-16 11:26:00 - INFO - CALL RegistrarColaborador(?, ?, ?, ?, ?, ?)
+=======
+2024-05-15 03:45:45 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
+2024-05-15 03:46:30 - INFO - CALL RegistrarColaborador(?, ?, ?, ?, ?, ?)
+2024-05-15 03:51:17 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-15 03:51:17 - ERROR - No se pudo crear cuenta de user por que ya esta registrado
+2024-05-15 03:51:23 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-15 03:51:23 - ERROR - No se pudo crear cuenta de user por que ya esta registrado
+2024-05-15 03:54:14 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-15 03:54:14 - ERROR - No se pudo crear cuenta de user por que ya esta registrado
+2024-05-15 03:54:48 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-15 03:54:48 - ERROR - No se pudo crear cuenta de user por que ya esta registrado
+>>>>>>> 32d33239d5d87b05416b62c1881028e303f27f84
