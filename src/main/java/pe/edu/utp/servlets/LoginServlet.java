@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import pe.edu.utp.business.LoginBusiness;
+import pe.edu.utp.util.ErrorLog;
 import pe.edu.utp.util.Errors;
 import pe.edu.utp.util.Success;
 import pe.edu.utp.utils.TextUTP;
@@ -64,6 +65,8 @@ public class LoginServlet extends HttpServlet {
         Map<String, String> usuario = loginBusiness.existeUsuario(dni);
         if( usuario == null ){
             String url = "http://localhost:8085/login?error=NOT_USER_EXISTS";
+            String message = "Error: usuario no existe";
+            ErrorLog.log(message, ErrorLog.Level.ERROR);
             resp.sendRedirect(url);
             return;
         }
