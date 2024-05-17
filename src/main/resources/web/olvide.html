@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F8FAFB]">
+
+<div class="flex flex-col min-h-screen">
+    <nav class="bg-white nav flex items-center justify-between py-3 px-8 fixed w-full top-0">
+        <a href="" class="nav_logo w-[140px]">
+            <img src="img/logo2.png" alt="" class="logo block">
+        </a>
+        <div class="nav_links flex items-center gap-8">
+            <a href="login.html" class="text-lg">
+                Iniciar Sesión
+            </a>
+            <a href="register-nuevo.html" class="text-lg">
+                Crea una cuenta nueva
+            </a>
+        </div>
+    </nav>
+
+    <div class="flex items-center justify-center flex-grow">
+        <div class="max-w-[500px] w-[500px] bg-white rounded-lg p-7 px-8 border shadow-sm">
+            <h1 class="font-bold text-lg text-[#333]">Recupera tu cuenta</h1>
+            <form action="/olvide" method="POST" class="flex flex-col">
+                <input type="email" class="text-[#333] border rounded py-2 px-3 my-6" name="email" placeholder="example@gmail.com" required>
+                ${validate}
+                ${success}
+                <input type="submit" class="cursor-pointer border rounded text-white bg-[#2260FE] py-[8px]" value="Enviar Instrucciones">
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

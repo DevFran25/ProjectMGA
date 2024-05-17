@@ -66,6 +66,7 @@ public class ProyectoService {
         List<Proyecto> lista = new LinkedList<>();
 
         String strSQL = String.format("CALL listarProyectos()");
+
         try {
             ResultSet rst = cnn.createStatement().executeQuery(strSQL);
             int count = 0;

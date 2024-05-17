@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import pe.edu.utp.business.LoginBusiness;
 import pe.edu.utp.util.Errors;
+import pe.edu.utp.util.Success;
 import pe.edu.utp.utils.TextUTP;
 
 import java.io.IOException;
@@ -27,12 +28,21 @@ public class LoginServlet extends HttpServlet {
         String html = TextUTP.read(filename);
 
         String error = req.getParameter("error") != null  ? req.getParameter("error") : null;
+        String success = req.getParameter("success") != null  ? req.getParameter("success") : null;
+
 
         if( error != null){
             html = html.replace("${validate}", Errors.get(error));
         }else{
             html = html.replace("${validate}", "");
         }
+
+        if( success != null){
+            html = html.replace("${success}", Success.get(success));
+        }else{
+            html = html.replace("${success}", "");
+        }
+
         resp.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html");
         resp.getWriter().println(html);

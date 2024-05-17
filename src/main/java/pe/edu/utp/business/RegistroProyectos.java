@@ -67,7 +67,6 @@ public class RegistroProyectos {
         List<Proyecto> listaProyectos = busquedaServiceProyecto.getAllProyectos();
         //String comboClientes = busquedaServiceProyecto.getComboClientes();
 
-
         for (Proyecto proyecto : listaProyectos) {
 
             //Tabla Proyectos
