@@ -37,4 +37,32 @@ public class LoginBusiness {
         return existe == null ? null : existe;
     }
 
+    public Map<String, String> findByEmail(String email) {
+        Map<String, String> existe = null;
+        try {
+            existe = loginService.findByEmail(email);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return existe == null ? null : existe;
+    }
+
+    public Map<String, String> findByToken(String token) {
+        Map<String, String> existe = null;
+        try {
+            existe = loginService.findByToken(token);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return existe == null ? null : existe;
+    }
+
+    public boolean updateBy(String table, Map<String, String> fields, Map<String, String> where){
+        try {
+            return loginService.updateBy(table, fields, where);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

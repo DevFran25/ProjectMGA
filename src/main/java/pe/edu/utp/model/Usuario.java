@@ -7,7 +7,6 @@ public class Usuario {
     private String username;
     private String password;
 
-
     //Constructor Vacio
     public Usuario() {
     }
@@ -44,4 +43,7 @@ public class Usuario {
                 ", password='" + password + '\'' +
                 '}';
     }
+
+
+
 }

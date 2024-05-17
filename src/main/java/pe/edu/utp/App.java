@@ -73,6 +73,10 @@ public class App
         webserver.addServlet(ColaboradorServlet.class, "/colaborador");
         webserver.addServlet(AdminServlet.class, "");
 
+        webserver.addServlet(ProyectoServlet.class, "/proyectos");
+        webserver.addServlet(OlvideServlet.class, "/olvide");
+        webserver.addServlet(ReestablecerServlet.class, "/reestablecer");
+
         webserver.addServlet(ch.qos.logback.classic.ViewStatusMessagesServlet.class, "/status");
 
         webserver.addFilter(AuthFilter.class, "*.html", EnumSet.of(DispatcherType.REQUEST));
