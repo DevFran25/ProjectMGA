@@ -10,6 +10,8 @@ public class Cliente {
     private String email;
     private String celular;
 
+    private int idCliente;
+
     //Constructor Vacio
     public Cliente() {
     }
@@ -26,6 +28,11 @@ public class Cliente {
     }
 
     //Get
+
+    public int getIdCliente() {
+        return idCliente;
+    }
+
     public String getIdentificacion() {
         return identificacion;
     }
@@ -59,6 +66,7 @@ public class Cliente {
                 ", apellidos='" + apellidos + '\'' +
                 ", email='" + email + '\'' +
                 ", celular='" + celular + '\'' +
+                ", idCliente=" + idCliente +
                 '}';
     }
 }

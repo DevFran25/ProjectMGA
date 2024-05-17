@@ -1,14 +1,12 @@
 package pe.edu.utp.business;
 
 import pe.edu.utp.exceptions.AlreadyExistsException;
-import pe.edu.utp.model.Cliente;
-import pe.edu.utp.model.Proyecto;
+import pe.edu.utp.model.*;
 import pe.edu.utp.service.ProyectoService;
 import pe.edu.utp.util.AppConfig;
 import pe.edu.utp.util.DataAccessMariaDB;
 import pe.edu.utp.util.ErrorLog;
 import pe.edu.utp.utils.TextUTP;
-
 import javax.naming.NamingException;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -67,6 +65,7 @@ public class RegistroProyectos {
 
         // Listar
         List<Proyecto> listaProyectos = busquedaServiceProyecto.getAllProyectos();
+        //String comboClientes = busquedaServiceProyecto.getComboClientes();
 
 
         for (Proyecto proyecto : listaProyectos) {
@@ -85,8 +84,28 @@ public class RegistroProyectos {
             itemsHtml.append(item);
         }
         // Reemplazar en la plantilla principal
+        /*String reporteHtml = html.replace("${itemsProyecto}", itemsHtml.toString())
+                .replace("${comboClientes}", comboClientes);*/
+
+        // Reemplazar en la plantilla principal
         String reporteHtml = html.replace("${itemsProyecto}", itemsHtml.toString());
 
         return reporteHtml;
+
+
+    }
+
+    public String getHtmlAddProject() throws IOException, SQLException {
+        // Cargar la plantilla de la página de agregar proyecto
+        String filename = "src\\main\\resources\\web\\addproject.html";
+        String html = TextUTP.read(filename);
+
+        // Obtener las opciones del combo de clientes
+        String comboClientes = busquedaServiceProyecto.getComboClientes();
+
+        // Reemplazar el marcador de posición con las opciones del combo
+        String resultHtml = html.replace("${comboClientes}", comboClientes);
+
+        return resultHtml;
     }
 }

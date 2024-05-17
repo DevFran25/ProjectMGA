@@ -2,6 +2,7 @@ package pe.edu.utp.service;
 
 import pe.edu.utp.exceptions.AlreadyExistsException;
 import pe.edu.utp.exceptions.NotFoundException;
+import pe.edu.utp.model.Cliente;
 import pe.edu.utp.model.Colaborador;
 import pe.edu.utp.model.Proyecto;
 import pe.edu.utp.util.DataAccess;
@@ -16,15 +17,19 @@ public class ProyectoService {
 
     private final Connection cnn;
 
+    private final ClientesService clientesService;
     public ProyectoService(DataAccess dao) throws SQLException, NamingException {
         this.cnn = dao.getConnection();
+        this.clientesService = new ClientesService(dao); // instancia de ClientesService
     }
+
 
     // Método para Registrar Proyectos
     public void newProyectos(Proyecto proy) throws SQLException, IOException {
         String strSQL = String.format("CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         ErrorLog.log(strSQL, ErrorLog.Level.INFO);
         String idProyecto = proy.getId_proyecto();
+
 
         try {
             PreparedStatement pstmt = cnn.prepareStatement(strSQL);
@@ -89,5 +94,29 @@ public class ProyectoService {
             throw new SQLException(msg);
         }
         return lista;
+    }
+
+    //Metodo Combo Clientes
+    public String getComboClientes() throws SQLException, IOException {
+        StringBuilder sb = new StringBuilder();
+        String strSQL = "SELECT id_cliente, nombre FROM Cliente";
+
+        try {
+            Statement stmt = cnn.createStatement();
+            ResultSet rst = stmt.executeQuery(strSQL);
+
+            while (rst.next()) {
+                int idCliente = rst.getInt("id_cliente");
+                String nombreCliente = rst.getString("nombre");
+                sb.append(String.format("<option value=\"%d\">%s</option>", idCliente, nombreCliente));
+            }
+            rst.close();
+            stmt.close();
+        } catch (SQLException e) {
+            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
+            throw new SQLException("Error al obtener la lista de clientes");
+        }
+
+        return sb.toString();
     }
 }
