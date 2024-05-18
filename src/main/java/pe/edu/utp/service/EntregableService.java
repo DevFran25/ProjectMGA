@@ -31,8 +31,8 @@ public class EntregableService {
             pstmt.setInt(1, ent.getId_entregable());
             pstmt.setString(2, ent.getId_proyecto());
             pstmt.setString(3, ent.getNombre());
-            pstmt.setDate(4, ent.getFecha());
-            pstmt.setString(5, ent.getFile());
+            pstmt.setString(4, ent.getFecha());
+            pstmt.setString(5, ent.getArchivo());
 
             int num = pstmt.executeUpdate();
             pstmt.close();
@@ -64,10 +64,10 @@ public class EntregableService {
                 int id_entregable = rst.getInt("id_entregable");
                 String id_proyecto = rst.getString("id_proyecto");
                 String nombre = rst.getString("nombre");
-                Date fecha = rst.getDate("fecha");
-                String file = rst.getString("file");
+                String fecha = String.valueOf(rst.getDate("fecha"));
+                String archivo = rst.getString("archivo");
 
-                Entregable entregable = new Entregable(id_entregable, id_proyecto, nombre, fecha, file);
+                Entregable entregable = new Entregable(id_entregable, id_proyecto, nombre, fecha, archivo);
                 lista.add(entregable);
                 conteo++;
             }

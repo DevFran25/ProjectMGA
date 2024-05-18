@@ -7,18 +7,18 @@ public class Entregable {
     private int id_entregable;
     private String id_proyecto;
     private String nombre;
-    private Date fecha;
-    private String file;
+    private String fecha;
+    private String archivo;
 
-    public Entregable(int id_entregable, String id_proyecto, String nombre, long fecha, String file) {
+    public Entregable() {
     }
 
-    public Entregable(int id_entregable, String id_proyecto, String nombre, Date fecha, String file) {
+    public Entregable(int id_entregable, String id_proyecto, String nombre, String fecha, String archivo) {
         this.id_entregable = id_entregable;
         this.id_proyecto = id_proyecto;
         this.nombre = nombre;
         this.fecha = fecha;
-        this.file = file;
+        this.archivo = archivo;
     }
 
     public int getId_entregable() {
@@ -33,22 +33,22 @@ public class Entregable {
         return nombre;
     }
 
-    public java.sql.Date getFecha() {
-        return (java.sql.Date) fecha;
+    public String getFecha() {
+        return fecha;
     }
 
-    public String getFile() {
-        return file;
+    public String getArchivo() {
+        return archivo;
     }
 
     @Override
     public String toString() {
         return "Entregable{" +
                 "id_entregable=" + id_entregable +
-                ", id_proyecto=" + id_proyecto +
+                ", id_proyecto='" + id_proyecto + '\'' +
                 ", nombre='" + nombre + '\'' +
-                ", fecha=" + fecha +
-                ", file='" + file + '\'' +
+                ", fecha='" + fecha + '\'' +
+                ", archivo='" + archivo + '\'' +
                 '}';
     }
 }

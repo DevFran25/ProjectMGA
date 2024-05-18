@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import pe.edu.utp.App;
 import pe.edu.utp.model.Entregable;
 import pe.edu.utp.utils.TextUTP;
 
@@ -25,16 +26,17 @@ public class RegistrarEntregableServlet extends HttpServlet {
         int id_entregable  = Integer.parseInt(req.getParameter("txtentregable"));
         String id_proyecto = req.getParameter("txtproyecto");
         String nombre = req.getParameter("txtnombre");
-        long fecha = req.getDateHeader("txtfecha");
-        String file = req.getParameter("txtfile");
+        String fecha = req.getParameter("txtfecha");
+        String archivo = req.getParameter("txtarchivo");
 
         // Crear objeto entregable
         try {
-            Entregable entregable = new Entregable(id_entregable, id_proyecto, nombre, fecha, file);
+            Entregable entregable = new Entregable(id_entregable, id_proyecto, nombre, fecha, archivo);
 
-            //App.RegEntregable.registrarAvance(Avance);
+            //Registro Entregable a la bd
+            App.RegEntregable.registroEntregable(entregable);
 
-            String filename = "src\\main\\resources\\web\\listar_entregable";
+            String filename = "src\\main\\resources\\web\\entregable.html";
             String html = TextUTP.read(filename);
             resp.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html");

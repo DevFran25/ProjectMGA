@@ -92,3 +92,12 @@
 >>>>>>> d0b9ce1aefcca9d8622db7e044d7bc70eaada589
 2024-05-18 10:22:20 - INFO - CALL RegistrarColaborador(?, ?, ?, ?, ?, ?)
 2024-05-18 10:39:41 - INFO - CALL registrarAvance(?, ?, ?, ?)
+2024-05-18 10:53:14 - INFO - CALL registrarAvance(?, ?, ?, ?)
+2024-05-18 10:53:14 - ERROR - Data truncation: Data too long for column 'p_id_proyecto' at row 1
+2024-05-18 10:54:40 - INFO - CALL registrarAvance(?, ?, ?, ?)
+2024-05-18 10:54:40 - ERROR - Data truncation: Data too long for column 'p_id_proyecto' at row 1
+2024-05-18 10:54:44 - INFO - CALL registrarAvance(?, ?, ?, ?)
+2024-05-18 10:54:44 - ERROR - Data truncation: Data too long for column 'p_id_proyecto' at row 1
+2024-05-18 10:56:54 - INFO - CALL registrarAvance(?, ?, ?, ?)
+2024-05-18 01:18:55 - INFO - CALL registrarEntregable(?, ?, ?, ?, ?)
+2024-05-18 01:34:12 - INFO - CALL registrarEntregable(?, ?, ?, ?, ?)
