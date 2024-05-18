@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `projectsdb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `projectsdb`;
 -- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: projectsdb
@@ -89,7 +87,7 @@ CREATE TABLE `cliente` (
   `email` char(9) NOT NULL,
   `celular` varchar(20) NOT NULL,
   PRIMARY KEY (`id_cliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +96,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (1,'71484506','Natural','Francisco','Aquino','martin@gm','945784124');
+INSERT INTO `cliente` VALUES (1,'71484506','Natural','Francisco','Aquino','martin@gm','945784124'),(2,'7148458','Natural','Oscar','Vargas','oscar@gma','987455'),(3,'11111','Juridica','Municipalidad Cix','Municipalidad Cix','Muni@gmai','999999'),(4,'11111','Juridica','Municipalidad Cix','Municipalidad Cix','Muni@gmai','999999'),(5,'11111','Juridica','Municipalidad Cix','Municipalidad Cix','Muni@gmai','999999'),(6,'11111','Juridica','Municipalidad Cix','Municipalidad Cix','Muni@gmai','999999');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -126,7 +124,7 @@ CREATE TABLE `colaborador` (
 
 LOCK TABLES `colaborador` WRITE;
 /*!40000 ALTER TABLE `colaborador` DISABLE KEYS */;
-INSERT INTO `colaborador` VALUES ('78450689','Martin','Aquino','987451202','FranAquino25@gmail.com','Gerente');
+INSERT INTO `colaborador` VALUES ('11111111','Mendoza','Sanchez','999999999','Mendoza@gmail.com','jefe'),('77777777','Manuel','German','987442102','Manu@gmail.com','colaborador'),('78450689','Martin','Aquino','987451202','FranAquino25@gmail.com','admin'),('87954120','mmm','adasd','111111111','Cix@gmail.com','jefe');
 /*!40000 ALTER TABLE `colaborador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -190,7 +188,7 @@ CREATE TABLE `proyecto` (
 
 LOCK TABLES `proyecto` WRITE;
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
-INSERT INTO `proyecto` VALUES ('P01',1,'78450689','Proyecto 01','Chiclayo',40.5,'2024-05-14','2024-05-31','Pendiente','images.jpg'),('P02',1,'78450689','Proyecto 02','Lambayeque',87.5,'2024-05-14','2024-05-31','Pendiente','images.jpg'),('P03',1,'78450689','Proyecto 03','Chiclayo',5000,'2024-05-15','2024-05-29','Pendiente','Arquitectura.png');
+INSERT INTO `proyecto` VALUES ('DEMOS8',1,'78450689','Proyecto demo semana 8','Lambayeque',1000,'2024-05-17','2024-05-30','Pendiente','images.jpg'),('P01',1,'78450689','Proyecto 01','Chiclayo',40.5,'2024-05-14','2024-05-31','Pendiente','images.jpg'),('P02',1,'78450689','Proyecto 02','Lambayeque',87.5,'2024-05-14','2024-05-31','Pendiente','images.jpg'),('P023',3,'78450689','hOLA','cIX',5000,'2024-05-17','2024-05-20','Completo','images.jpg'),('P03',1,'78450689','Proyecto 03','Chiclayo',5000,'2024-05-15','2024-05-29','Pendiente','Arquitectura.png'),('P20',1,'78450689','bLA BLA','cIX',500.5,'2024-05-16','2024-05-23','Completo','Arquitectura.png');
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,10 +204,11 @@ CREATE TABLE `usuario` (
   `dni_colaborador` char(8) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(32) NOT NULL,
+  `token` varchar(80) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
   KEY `dni_colaborador` (`dni_colaborador`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`dni_colaborador`) REFERENCES `colaborador` (`dni_colaborador`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -218,7 +217,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'78450689','Francisco','0101');
+INSERT INTO `usuario` VALUES (1,'78450689','Francisco','123456',''),(4,'77777777','Martin','0101',NULL),(5,'11111111','Eberth','0101',NULL);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -229,6 +228,26 @@ UNLOCK TABLES;
 --
 -- Dumping routines for database 'projectsdb'
 --
+/*!50003 DROP PROCEDURE IF EXISTS `listarAvances` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `listarAvances`()
+BEGIN
+    SELECT id_avance, id_proyecto, dni_colaborador, progreso
+    FROM Avance;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `listarClientes` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -237,11 +256,11 @@ UNLOCK TABLES;
 /*!50003 SET character_set_results = utf8mb4 */ ;
 /*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `listarClientes`()
 BEGIN
-SELECT identificacion, tipo_cliente,nombre, apellidos,email,celular   FROM cliente;
+SELECT id_cliente, identificacion, tipo_cliente,nombre, apellidos,email,celular   FROM cliente;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -267,6 +286,25 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `listarEntregable` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `listarEntregable`()
+BEGIN
+    SELECT id_entregable, id_proyecto, nombre, fecha, archivo FROM Entregable;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `listarProyectos` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -280,6 +318,31 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `listarProyectos`()
 BEGIN
 SELECT id_proyecto,id_cliente,dni_colaborador,nombre,ubicacion,costo,fecha_inicio,fecha_fin,estado,foto FROM proyecto;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `registrarAvance` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `registrarAvance`(
+	IN p_id_avance INT,
+    IN p_id_proyecto CHAR(10),
+    IN p_dni_colaborador VARCHAR(8),
+    IN p_progreso VARCHAR(80)
+    )
+BEGIN
+INSERT INTO avance (id_avance, id_proyecto, dni_colaborador, progreso)
+    VALUES (p_id_avance, p_id_proyecto, p_dni_colaborador, p_progreso);
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -320,6 +383,32 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `RegistrarColaborador`(IN `p_dni_col
 BEGIN
     INSERT INTO colaborador (dni_colaborador, nombres, apellidos, telefono, email, cargo)
     VALUES (p_dni_colaborador, p_nombres, p_apellidos, p_telefono, p_email, p_cargo);
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `registrarEntregable` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `registrarEntregable`(
+	IN p_id_entregable INT,
+    IN p_id_proyecto CHAR(10),
+    IN p_nombre VARCHAR(30),
+    IN p_fecha DATE,
+    IN p_archivo VARCHAR(50)
+    )
+BEGIN
+    INSERT INTO Entregable (id_entregable, id_proyecto, nombre, fecha, archivo)
+    VALUES (p_id_entregable, p_id_proyecto, p_nombre, p_fecha, p_archivo);
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -378,4 +467,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-15 11:42:28
+-- Dump completed on 2024-05-18 17:34:34
