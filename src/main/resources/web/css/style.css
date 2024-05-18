@@ -1,28 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root{
-  --color-background: #181A1E;
-  --color-background-input: #333333;
-  --color-background-sidebar: #202528;
-  --color-text-input: #fff;
-  --color-text: #fff;
-  --color-background-nav: #181A1E;
-  --color-primary: #202528;
-  --color-border-input: #484848;
-  --color-perfil-icon: #acb1bc;
-  --color-border-nav: #444;
-  --color-border: #444;
-  --color-boxshadow: rgba(0, 0, 0, 0.4);
-  --color-scrollbar-track: #404040;
-  --color-scrollbar-thumb: #2c2f34;
-  --color-scrollbar-thumb-hover: #202528;
-  --color-right-date: #fff;
-  --color-background-toggler: #000;
-  --color-sidebar-hover: rgba(171, 171, 178, 0.414);
-  --color-text-project: white;
-  --color-text-secondary: white;
-  --color-action-icon: #acb1bc;
-  --color-dropdown-hover: #2C2F34;
+  /* --color-background: #181A1E; */
+    --color-background: #0D1117;
+    /* --color-background-input: #333333; */
+    --color-background-input: #0D1117;
+    /* --color-background-sidebar: #202528; */
+    --color-background-sidebar: #161B22;
+    --color-text-input: #fff;
+    --color-text: #fff;
+    /* --color-background-nav: #181A1E; */
+    --color-background-nav: #080e16;
+    /* --color-primary: #202528; */
+    --color-primary: #161B22;
+    /* --color-border-input: #484848; */
+    --color-border-input: #30363d;
+    --color-perfil-icon: #acb1bc;
+    --color-border-nav: #444;
+    --color-border: #444;
+    --color-boxshadow: rgba(0, 0, 0, 0.4);
+    --color-scrollbar-track: #404040;
+    --color-scrollbar-thumb: #2c2f34;
+    --color-scrollbar-thumb-hover: #202528;
+    --color-right-date: #fff;
+    --color-background-toggler: #000;
+    --color-sidebar-hover: rgba(171, 171, 178, 0.414);
+    --color-text-project: white;
+    --color-text-secondary: white;
+    --color-action-icon: #acb1bc;
+    --color-dropdown-hover: #0b161d;
 }
 
 .light{
@@ -259,7 +265,7 @@ ul {
 }
 
 .aside {
-  border: 1px solid var(--color-border-nav);
+  border-right: 1px solid var(--color-border-nav);
   background-color: white;
   background-color: var(--color-background-sidebar);
   position: fixed;
@@ -1442,6 +1448,13 @@ ul {
   font-size: 1.5rem;
   background-color: var(--color-background-input);
 }
+
+.page_project .project .form .form_box .form_group input:focus,
+.page_project .project .form .form_box .form_group select:focus {
+  border: 2px solid #1f6feb;
+}
+
+
 .page_project .project .form .form_box .form_group textarea {
   color: #52606e;
   border: 2px solid var(--color-border-input);
@@ -1452,6 +1465,10 @@ ul {
   padding: 1.2rem;
   font-size: 1.5rem;
   color: var(--color-text-input);
+}
+
+.page_project .project .form .form_box .form_group textarea:focus{
+  border: 2px solid #1f6feb;
 }
 
 .auth .nav {
@@ -1556,6 +1573,11 @@ ul {
   border: 2px solid var(--color-border-input);
   border-radius: 0.5rem;
 }
+
+.login .form .form_group input:focus{
+  border: 2px solid #1f6feb;
+}
+
 .login .form .form_group-pass {
   position: relative;
 }
