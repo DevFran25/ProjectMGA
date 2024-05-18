@@ -4,6 +4,7 @@ const icons = document.querySelectorAll('.theme-toggler span');
 window.addEventListener('DOMContentLoaded', () => {
   setTheme();
 })
+
 function setTheme(){
   let currentTheme = getTheme("theme");
   icons.forEach( icon => {
@@ -40,4 +41,4 @@ themeToggler.addEventListener("click", () => {
     }
   })
   document.cookie = "theme="+theme;
-});c
+});
