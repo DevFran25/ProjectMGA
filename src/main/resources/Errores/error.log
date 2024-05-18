@@ -78,3 +78,9 @@
 2024-05-15 03:54:48 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-15 03:54:48 - ERROR - No se pudo crear cuenta de user por que ya esta registrado
 >>>>>>> 32d33239d5d87b05416b62c1881028e303f27f84
+2024-05-17 12:38:13 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-17 12:38:30 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-17 12:38:30 - ERROR - No se pudo crear proyecto por que ya esta registrado
+2024-05-17 12:38:33 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-17 12:38:33 - ERROR - No se pudo crear proyecto por que ya esta registrado
+2024-05-17 12:49:49 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
