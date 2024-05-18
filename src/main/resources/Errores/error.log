@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024-05-06 09:44:21 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-06 09:50:37 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-06 09:50:38 - INFO - CALL RegistrarUsuario(?, ?, ?)
@@ -84,3 +85,8 @@
 2024-05-17 12:38:33 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 2024-05-17 12:38:33 - ERROR - No se pudo crear proyecto por que ya esta registrado
 2024-05-17 12:49:49 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+=======
+2024-05-17 06:39:47 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-17 06:42:04 - ERROR - Error: usuario no existe
+2024-05-17 06:42:27 - ERROR - Error: usuario no existe
+>>>>>>> d0b9ce1aefcca9d8622db7e044d7bc70eaada589

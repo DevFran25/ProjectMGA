@@ -62,6 +62,10 @@
                 </div>
                 
                 <div class="navbar_right">
+                    <div class="theme-toggler">
+                        <span class="light-theme"><i class='bx bxs-sun' ></i></span>
+                        <span class="dark-theme"><i class='bx bxs-moon'></i></span>
+                    </div>
                     <a href="#">
                         <i class='bx bx-bell' ></i>
                     </a>
@@ -278,13 +282,14 @@
         </main>
     </div>
 
+<script src="js/dark.js"></script>
     <script src="js/dropdown.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
           const calendar = new VanillaCalendar('#calendar', {
             settings: {
                 visibility: {
-                theme: 'light',
+                theme: 'dark',
                 },
             },
           });
