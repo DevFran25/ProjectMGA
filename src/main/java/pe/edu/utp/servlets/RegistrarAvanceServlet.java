@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import pe.edu.utp.App;
 import pe.edu.utp.model.Avance;
 import pe.edu.utp.utils.TextUTP;
 
@@ -29,9 +30,9 @@ public class RegistrarAvanceServlet extends HttpServlet {
         try {
             Avance avance = new Avance(id_avance, id_proyecto, dni_colaborador, progreso);
 
-            //App.RegAvance.registrarAvance(Avance);
+            App.RegAvance.registrarAvance(avance);
 
-            String filename = "src\\main\\resources\\web\\listar_avance";
+            String filename = "src\\main\\resources\\web\\avance.html";
             String html = TextUTP.read(filename);
             resp.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html");

@@ -28,11 +28,11 @@
                 <i class='bx bx-file' ></i>
                 <p>Archivos</p>
             </a>
-            <a href="listar_clientes">
+            <a href="listar_clientes" class="active">
                 <i class='bx bx-user' ></i>
                 <p>Clientes</p>
             </a>
-            <a href="listar_colaborador" class="active">
+            <a href="listar_colaborador" >
                 <i class='bx bx-user' ></i>
                 <p>Colaboradores</p>
             </a>
@@ -58,17 +58,17 @@
                 <a href="">
                     <i class='bx bx-menu' ></i>
                 </a>
-                <h3>Colaborador</h3>
+                <h3>Cliente</h3>
             </div>
             <div class="navbar_right">
                 <div class="theme-toggler">
                     <span class="light-theme"><i class='bx bxs-sun' ></i></span>
                     <span class="dark-theme"><i class='bx bxs-moon'></i></span>
                 </div>
-                <a href="#">
+                <!--<a href="#">
                     <i class='bx bx-bell' ></i>
-                </a>
-                <div href="#" class="perfil_user">
+                </a>-->
+                <!--<div href="#" class="perfil_user">
                     <div class="perfil_icon">
                         <p>U</p>
                     </div>
@@ -76,7 +76,7 @@
                     <div class="user_options">
                         <a href="/logout">Cerrar Sesión</a>
                     </div>
-                </div>
+                </div>-->
             </div>
 
         </nav>
@@ -89,51 +89,55 @@
                 <div class="top">
 
                     <div class="head">
-                        <a href="collaborators.html">
+                        <a href="clients.html">
                             <i class='bx bxs-chevron-left' ></i>
                         </a>
-                        <h3>Agregar un nuevo colaborador</h3>
+                        <h3>Agregar un nuevo avance</h3>
                     </div>
 
                 </div>
 
                 <div class="form">
 
-                    <form action="/register_colaborador" class="form_box" method="POST">
+                    <form action="/registrar_avance" class="form_box" method="POST">
+
+                        <!--<div class="form_group">
+                            <label for="txt_tipopersona">Tipo Persona</label>
+                            <select name="txt_tipopersona" id="txt_tipopersona">
+                                <option value="0">Seleccionar</option>
+                                <option value="Natural">Natural</option>
+                                <option value="Juridica">Juridica</option>
+                            </select>
+                        </div>-->
 
                         <div class="form_group">
-                            <label for="txtdni">Dni</label>
-                            <input type="text" name="txtdni" id="txtdni">
+                            <label for="txtavance">Id Avance</label>
+                            <input type="number" name="txtavance" id="txtavance">
                         </div>
 
                         <div class="form_group">
-                            <label for="txtnombre">Nombre</label>
-                            <input type="text" name="txtnombre" id="txtnombre">
+                            <label for="txtproyecto">Id Proyecto</label>
+                            <input type="text" name="txtproyecto" id="txtproyecto">
                         </div>
 
                         <div class="form_group">
-                            <label for="txtapellidos">Apellidos</label>
-                            <input type="text" name="txtapellidos" id="txtapellidos">
+                            <label for="txtcolaborador">Identificación (DNI - Colaborador)</label>
+                            <input type="text" name="txtcolaborador" id="txtcolaborador">
                         </div>
 
                         <div class="form_group">
-                            <label for="">Correo</label>
-                            <input type="text" name="txtcorreo" id="txtcorreo">
+                            <label for="txtprogreso">Progreso</label>
+                            <input type="text" name="txtprogreso" id="txtprogreso">
                         </div>
 
-                        <div class="form_group">
-                            <label for="txtcelular">Celular</label>
+                        <!--<div class="form_group">
+                            <label for="">Celular</label>
                             <input type="text" name="txtcelular" id="txtcelular">
                         </div>
-
-                        <div class="form_group">
-                            <label for="txtcargo">Cargo</label>
-                            <input type="text" name="txt_cargo" id="txt_cargo">
-                        </div>
+-->
 
 
-
-                        <input type="submit" value="Crear Colaborador">
+                        <input type="submit" value="Crear Avance">
 
                     </form>
 

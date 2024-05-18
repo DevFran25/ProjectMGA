@@ -90,3 +90,5 @@
 2024-05-17 06:42:04 - ERROR - Error: usuario no existe
 2024-05-17 06:42:27 - ERROR - Error: usuario no existe
 >>>>>>> d0b9ce1aefcca9d8622db7e044d7bc70eaada589
+2024-05-18 10:22:20 - INFO - CALL RegistrarColaborador(?, ?, ?, ?, ?, ?)
+2024-05-18 10:39:41 - INFO - CALL registrarAvance(?, ?, ?, ?)

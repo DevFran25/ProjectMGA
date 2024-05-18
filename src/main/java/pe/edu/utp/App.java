@@ -32,6 +32,8 @@ public class App
     public static RegistroClientes RegClients = new RegistroClientes();
     public static RegistroColaborador RegColabs = new RegistroColaborador();
 
+    public static RegistroAvance RegAvance = new RegistroAvance();
+
 
 
 
@@ -65,7 +67,8 @@ public class App
         webserver.addServlet(RegistroColaboradorServlet.class, "/register_colaborador");
 
         // Avance
-        //webserver.addServlet(RegistrarAvanceServlet.class, "/registrar_avance");
+        webserver.addServlet(ListarAvanceServlet.class, "/listar_avance");
+        webserver.addServlet(RegistrarAvanceServlet.class, "/registrar_avance");
 
 
         webserver.addServlet(LoginServlet.class, "/login");
@@ -84,7 +87,7 @@ public class App
         webserver.addFilter(ColaboradorFilter.class, "/colaborador/*", EnumSet.of(DispatcherType.REQUEST));
         webserver.addFilter(AdminFilter.class, "", EnumSet.of(DispatcherType.REQUEST));
 
-        URL myURL = new URL("http://localhost:8085/login");
+        URL myURL = new URL("http://localhost:8085/avance.html");
         System.out.println("*********************************************************");
         System.out.println("CLICK AQUI PARA ABRIR LA APLICACION:" + myURL);
         System.out.println("*********************************************************");
