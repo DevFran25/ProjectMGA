@@ -1557,6 +1557,18 @@ ul {
   margin-bottom: 3rem;
   position: relative;
 }
+
+.login .form .form_group select{
+    padding: .8rem 1.2rem;
+    border: 2px solid var(--color-border-input);
+    outline: none;
+    border-radius: 0.8rem;
+    font-family: inherit;
+    color: var(--color-text-input);
+    font-size: 1.5rem;
+    background-color: var(--color-background-input);
+}
+
 .login .form .form_group label {
   color: gray;
   font-size: 1.5rem;
@@ -1564,12 +1576,11 @@ ul {
 .login .form .form_group input {
   border: none;
   outline: none;
-  height: 3.5rem;
   font-family: inherit;
   font-size: 1.5rem;
   color: var(--color-text-input);
   background-color: var(--color-background-input);
-  padding: 0 1rem;
+  padding: .65rem 1.2rem;
   border: 2px solid var(--color-border-input);
   border-radius: 0.5rem;
 }
@@ -1589,10 +1600,11 @@ ul {
   top: 50%;
   right: 1rem;
   cursor: pointer;
+  color: var(--color-text);
 }
 @media screen and (min-width: 576px) {
   .login .form .form_group-pass span {
-    top: 15%;
+    top: 22%;
   }
 }
 .login .forget {
