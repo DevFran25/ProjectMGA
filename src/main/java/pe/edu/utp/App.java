@@ -51,6 +51,9 @@ public class App
 
         //Registrando Servlets
 
+        //Index
+        webserver.addServlet(ReportesServlet.class, "/inicio");
+
         //Proyecto
         webserver.addServlet(RegistroProyectoServlet.class, "/register_proyectos").getRegistration().setMultipartConfig(new MultipartConfigElement("src\\main\\resources\\web\\upload"));
         webserver.addServlet(ListarProyectosServlet.class, "/listar_proyecto");

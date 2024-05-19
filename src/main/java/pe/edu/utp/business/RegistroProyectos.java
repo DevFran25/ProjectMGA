@@ -172,7 +172,7 @@ public class RegistroProyectos {
     }
 
     public String getHtmlUsuarios() throws IOException, SQLException {
-        // Cargar la plantilla de la página de agregar proyecto
+        // Cargar la pagina del user
         String filename = "src\\main\\resources\\web\\register-nuevo.html";
         String html = TextUTP.read(filename);
 
@@ -181,6 +181,24 @@ public class RegistroProyectos {
 
         // Reemplazar
         String resultHtml = html.replace("${comboColaboradores}",comboColaboradores);
+
+        return resultHtml;
+    }
+
+    //Reportes
+    public String getTotal() throws SQLException, IOException {
+        // Cargar la página donde se mostrarán los reportes
+        String filename = "src\\main\\resources\\web\\index.html";
+        String html = TextUTP.read(filename);
+
+        // Obtener los reportes
+        int totalClientes = busquedaServiceProyecto.getTotalClientes();
+
+        // Convertir el total de clientes a una cadena
+        String reportClientes = String.valueOf(totalClientes);
+
+        // Reemplazar
+        String resultHtml = html.replace("${TotalClientes}", reportClientes);
 
         return resultHtml;
     }

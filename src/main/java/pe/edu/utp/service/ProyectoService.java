@@ -194,9 +194,27 @@ public class ProyectoService {
         return sb.toString();
     }
 
+    //REPORTES
+    public int getTotalClientes() throws SQLException, IOException {
+        int totalClientes = 0;
 
+        try {
+            CallableStatement cstmt = cnn.prepareCall("{CALL verTotalClientes()}");
+            ResultSet rs = cstmt.executeQuery(); // Se ejecuta el procedimiento
 
+            // Si esque hay resultados, mostrar el total de clientes
+            if (rs.next()) {
+                totalClientes = rs.getInt("Total de Clientes");
+            }
 
+            rs.close();
+            cstmt.close();
+        } catch (SQLException e) {
+            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
+            throw new SQLException("Error al obtener el total de clientes");
+        }
 
+        return totalClientes;
+    }
 
 }
