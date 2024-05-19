@@ -57,6 +57,7 @@ public class App
 
         //Usuario
         webserver.addServlet(RegistroUsuarioServlet.class, "/register_usuarios");
+        webserver.addServlet(ComboFor_Usuarios.class, "/add_usuarios");
         
         //Cliente
         webserver.addServlet(ListarClienteServlet.class,"/listar_clientes");

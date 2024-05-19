@@ -36,20 +36,14 @@
             </div>
             <form action="/register_usuarios" class="form" method="post">
                 <div class="form_group">
-                    <label for="comboDni" class="">Dni Colaborador</label>
-                        <select name="comboDni" id="comboDni">
-                            <option value="71484606">71484606</option>
-                            <option value="70707070">70707070</option>
-                            <option value="12345678">12345678</option>
+                    <label for="comboDni" class="">Colaborador</label>
+                    <select name="comboDni" id="comboDni">
+                            ${comboColaboradores}
                     </select>
                 </div>
                 <div class="form_group">
-                    <label for="comboRol" class="">Rol</label>
-                    <select name="comboRol" id="comboRol">
-                            <option value="Admin">Admin</option>
-                            <option value="Jefe">Jefe</option>
-                            <option value="Colaborador">Colaborador</option>
-                    </select>
+                    <label for="comboRol" class="">Username</label>
+                    <input name="comboRol" id="comboRol">
                 </div>
                 <div class="form_group">
                     <label for="txtpassword" class="">Password</label>

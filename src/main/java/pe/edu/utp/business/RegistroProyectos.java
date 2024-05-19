@@ -148,4 +148,18 @@ public class RegistroProyectos {
         return resultHtml;
     }
 
+    public String getHtmlUsuarios() throws IOException, SQLException {
+        // Cargar la plantilla de la página de agregar proyecto
+        String filename = "src\\main\\resources\\web\\register-nuevo.html";
+        String html = TextUTP.read(filename);
+
+        //Obtener las opciones del combo de colaboradores
+        String comboColaboradores = busquedaServiceProyecto.getComboColaboradores();
+
+        // Reemplazar
+        String resultHtml = html.replace("${comboColaboradores}",comboColaboradores);
+
+        return resultHtml;
+    }
+
 }
