@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @WebServlet("/add_project")
-public class ComboServlet extends HttpServlet {
+public class CombosFor_AddProject extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
