@@ -265,7 +265,7 @@ public class ProyectoService {
         double totalCosto = 0;
 
         try {
-            CallableStatement cstmt = cnn.prepareCall("{CALL calcularTotalCostoProyectos(?)}");
+            CallableStatement cstmt = cnn.prepareCall("{CALL TotalCostoProyectos(?)}");
             cstmt.registerOutParameter(1, Types.DOUBLE);
             cstmt.execute();
 
@@ -279,10 +279,4 @@ public class ProyectoService {
 
         return totalCosto;
     }
-
-
-
-
-
-
 }
