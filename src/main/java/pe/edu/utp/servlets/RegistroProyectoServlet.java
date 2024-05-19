@@ -29,7 +29,6 @@ public class RegistroProyectoServlet extends HttpServlet {
         this.doPost(req,resp);
     }
 
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        //Captura de datos

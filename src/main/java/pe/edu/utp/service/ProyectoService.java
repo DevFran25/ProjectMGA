@@ -97,28 +97,29 @@ public class ProyectoService {
         return lista;
     }
 
-    //Metodo Combo Clientes
-    public String getComboClientes() throws SQLException, IOException {
-        StringBuilder sb = new StringBuilder();
-        String strSQL = "SELECT id_cliente, nombre FROM Cliente";
-
-        try {
-            Statement stmt = cnn.createStatement();
-            ResultSet rst = stmt.executeQuery(strSQL);
-
-            while (rst.next()) {
-                int idCliente = rst.getInt("id_cliente");
-                String nombreCliente = rst.getString("nombre");
-                sb.append(String.format("<option value=\"%d\">%s</option>", idCliente, nombreCliente));
+    //Obtener Detalle  proyecto
+    public Proyecto getProyectoById(String idProyecto) throws SQLException {
+        String query = "{CALL GetProyectoById(?)}";
+        try (CallableStatement stmt = cnn.prepareCall(query)) {
+            stmt.setString(1, idProyecto);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return new Proyecto(
+                            rs.getString("id_proyecto"),
+                            rs.getInt("id_cliente"),
+                            rs.getString("dni_colaborador"),
+                            rs.getString("nombre"),
+                            rs.getString("ubicacion"),
+                            rs.getFloat("costo"),
+                            rs.getString("fecha_inicio"),
+                            rs.getString("fecha_fin"),
+                            rs.getString("estado"),
+                            rs.getString("foto")
+                    );
+                }
             }
-            rst.close();
-            stmt.close();
-        } catch (SQLException e) {
-            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
-            throw new SQLException("Error al obtener la lista de clientes");
         }
-
-        return sb.toString();
+        return null;
     }
 
     //Metodo Combo Colaboradores
@@ -168,5 +169,34 @@ public class ProyectoService {
 
         return sb.toString();
     }
+
+    //Metodo Combo Clientes
+    public String getComboClientes() throws SQLException, IOException {
+        StringBuilder sb = new StringBuilder();
+        String strSQL = "SELECT id_cliente, nombre FROM Cliente";
+
+        try {
+            Statement stmt = cnn.createStatement();
+            ResultSet rst = stmt.executeQuery(strSQL);
+
+            while (rst.next()) {
+                int idCliente = rst.getInt("id_cliente");
+                String nombreCliente = rst.getString("nombre");
+                sb.append(String.format("<option value=\"%d\">%s</option>", idCliente, nombreCliente));
+            }
+            rst.close();
+            stmt.close();
+        } catch (SQLException e) {
+            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
+            throw new SQLException("Error al obtener la lista de clientes");
+        }
+
+        return sb.toString();
+    }
+
+
+
+
+
 
 }
