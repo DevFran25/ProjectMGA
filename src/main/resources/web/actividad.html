@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
 <div class="container">
@@ -20,27 +21,27 @@
                 <i class='bx bxs-dashboard'></i>
                 <p>Panel</p>
             </a>
-           <!-- <a href="projects.html"  class="">
-                <i class='bx bx-cog'></i>
-                <p>Proyectos</p>
-            </a>
-            <a href="archivos.html" >
-                <i class='bx bx-file' ></i>
-                <p>Archivos</p>
-            </a>
-            <a href="clients.html">
-                <i class='bx bx-user' ></i>
-                <p>Clientes</p>
-            </a>-->
+            <!-- <a href="projects.html"  class="">
+                 <i class='bx bx-cog'></i>
+                 <p>Proyectos</p>
+             </a>
+             <a href="archivos.html" >
+                 <i class='bx bx-file' ></i>
+                 <p>Archivos</p>
+             </a>
+             <a href="clients.html">
+                 <i class='bx bx-user' ></i>
+                 <p>Clientes</p>
+             </a>-->
             <a href="collaborators.html">
                 <i class='bx bx-group'></i>
                 <p>Colaboradores</p>
             </a>
-            <a href="avance.html" class="active">
+            <a href="avance.html">
                 <i class='bx bx-check-square'></i>
                 <p>Avance</p>
             </a>
-            <a href="actividad.html">
+            <a href="actividad.html" class="active">
                 <i class='bx bx-list-ul'></i>
                 <p>Actividades</p>
             </a>
@@ -66,7 +67,7 @@
                 <a href="">
                     <i class='bx bx-menu' ></i>
                 </a>
-                <h3>Avance</h3>
+                <h3>Actividad</h3>
             </div>
             <div class="navbar_right">
                 <div class="theme-toggler">
@@ -106,9 +107,9 @@
 
                 </div>
 
-                <a href="addavance.html">
+                <a href="addactividad.html">
                     <i class='bx bx-plus' ></i>
-                    <span>Agregar Avance</span>
+                    <span>Agregar Actividad</span>
                 </a>
 
                 <!--
@@ -125,16 +126,15 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th>Id Avance</th>
+                            <th>Id Actividad</th>
                             <th>Id Proyecto</th>
-                            <th>Identificación (DNI - Colaborador)</th>
-                            <th>Progreso</th>
-                            <th>Acciones</th>
+                            <th>Nombre de la Actividad</th>
+                            <th>Estado</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            ${itemsAvance}
+                            ${itemsActividad}
                         </tr>
                         </tbody>
 

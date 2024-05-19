@@ -105,4 +105,11 @@
 2024-05-18 09:00:30 - ERROR - Table 'projectsdb.colaboradores' doesn't exist
 2024-05-18 09:05:01 - ERROR - Table 'projectsdb.colaboradores' doesn't exist
 2024-05-18 09:05:30 - ERROR - Table 'projectsdb.colaboradores' doesn't exist
+<<<<<<< HEAD
 2024-05-18 09:33:40 - ERROR - Error: usuario no existe
+=======
+2024-05-18 10:48:15 - ERROR - Error: usuario no existe
+2024-05-18 10:48:31 - ERROR - Error: usuario no existe
+2024-05-18 10:48:38 - ERROR - Error: usuario no existe
+2024-05-18 10:53:05 - ERROR - Error: usuario no existe
+>>>>>>> b02e6a64df812b8c65154488350e447b0c7f90d7

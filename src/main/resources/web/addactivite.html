@@ -20,25 +20,25 @@
                 <i class='bx bxs-dashboard'></i>
                 <p>Panel</p>
             </a>
-           <!-- <a href="/proyectos"  class="">
-                <i class='bx bx-cog'></i>
-                <p>Proyectos</p>
-            </a>
-            <a href="archivos.html" >
-                <i class='bx bx-file' ></i>
-                <p>Archivos</p>
-            </a>
-            <a href="listar_clientes" >
-                <i class='bx bx-user' ></i>
-                <p>Clientes</p>
-            </a>
-            <a href="listar_colaborador" >
-                <i class='bx bx-user' ></i>
-                <p>Colaboradores</p>
-            </a>-->
-            <a href="listar_avance" class="active">
+            <!-- <a href="/proyectos"  class="">
+                 <i class='bx bx-cog'></i>
+                 <p>Proyectos</p>
+             </a>
+             <a href="archivos.html" >
+                 <i class='bx bx-file' ></i>
+                 <p>Archivos</p>
+             </a>
+             <a href="listar_clientes" >
+                 <i class='bx bx-user' ></i>
+                 <p>Clientes</p>
+             </a>
+             <a href="listar_colaborador" >
+                 <i class='bx bx-user' ></i>
+                 <p>Colaboradores</p>
+             </a>-->
+            <a href="listar_actividad" class="active">
                 <i class='bx bx-check-square'></i>
-                <p>Avance</p>
+                <p>Actividad</p>
             </a>
             <!--<a href="#">
                 <i class='bx bx-calendar' ></i>
@@ -58,7 +58,7 @@
                 <a href="">
                     <i class='bx bx-menu' ></i>
                 </a>
-                <h3>Cliente</h3>
+                <h3>Actividad</h3>
             </div>
             <div class="navbar_right">
                 <div class="theme-toggler">
@@ -92,14 +92,14 @@
                         <a href="avance.html">
                             <i class='bx bxs-chevron-left' ></i>
                         </a>
-                        <h3>Agregar un nuevo avance</h3>
+                        <h3>Agregar una nueva actividad</h3>
                     </div>
 
                 </div>
 
                 <div class="form">
 
-                    <form action="/registrar_avance" class="form_box" method="POST">
+                    <form action="/registrar_actividad" class="form_box" method="POST">
 
                         <!--<div class="form_group">
                             <label for="txt_tipopersona">Tipo Persona</label>
@@ -111,8 +111,8 @@
                         </div>-->
 
                         <div class="form_group">
-                            <label for="txtavance">Id Avance</label>
-                            <input type="number" name="txtavance" id="txtavance">
+                            <label for="txtactividad">Id Actividad</label>
+                            <input type="number" name="txtactividad" id="txtactividad">
                         </div>
 
                         <div class="form_group">
@@ -121,13 +121,13 @@
                         </div>
 
                         <div class="form_group">
-                            <label for="txtcolaborador">Identificación (DNI - Colaborador)</label>
-                            <input type="text" name="txtcolaborador" id="txtcolaborador">
+                            <label for="txtnombre">Nombre de actividad</label>
+                            <input type="text" name="txtnombre" id="txtnombre">
                         </div>
 
                         <div class="form_group">
-                            <label for="txtprogreso">Progreso</label>
-                            <input type="text" name="txtprogreso" id="txtprogreso">
+                            <label for="txtestado">Estado</label>
+                            <input type="text" name="txtestado" id="txtestado">
                         </div>
 
                         <!--<div class="form_group">
@@ -137,7 +137,7 @@
 -->
 
 
-                        <input type="submit" value="Crear Avance">
+                        <input type="submit" value="Crear Actividad">
 
                     </form>
 
