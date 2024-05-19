@@ -75,6 +75,7 @@ public class App
         // Entregable
         webserver.addServlet(ListarEntregableServlet.class, "/listar_entregable");
         webserver.addServlet(RegistrarEntregableServlet.class, "/registrar_entregable");
+        webserver.addServlet(ComboFor_AddEntregable.class, "/add_entregable");
 
 
         webserver.addServlet(LoginServlet.class, "/login");
