@@ -1,6 +1,5 @@
 
 package pe.edu.utp.servlets;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -9,9 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import pe.edu.utp.App;
 import pe.edu.utp.model.Entregable;
 import pe.edu.utp.utils.TextUTP;
-
 import java.io.IOException;
-import java.sql.Date;
 
 @WebServlet ("/registrar_entregable")
 public class RegistrarEntregableServlet extends HttpServlet {
@@ -28,6 +25,7 @@ public class RegistrarEntregableServlet extends HttpServlet {
         String nombre = req.getParameter("txtnombre");
         String fecha = req.getParameter("txtfecha");
         String archivo = req.getParameter("txtarchivo");
+
 
         // Crear objeto entregable
         try {
@@ -48,7 +46,5 @@ public class RegistrarEntregableServlet extends HttpServlet {
             String html_error = TextUTP.read(filename_error);
             resp.getWriter().println(html_error.replace("${error}", e.getMessage()));
         }
-
-
     }
 }

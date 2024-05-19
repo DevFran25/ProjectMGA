@@ -102,30 +102,5 @@ public class AvanceService {
         }
         return lista;
     }
-
-    /*//Metodo Combo Avances
-    public String getComboAvances() throws SQLException, IOException {
-        StringBuilder sb = new StringBuilder();
-        String strSQL = "SELECT id_avance, id_proyecto, dni_colaborador FROM Avance";
-
-        try {
-            Statement stmt = cnn.createStatement();
-            ResultSet rst = stmt.executeQuery(strSQL);
-
-            while (rst.next()) {
-                int id_avance = rst.getInt("id_avance");
-                String id_proyecto = rst.getString("id_proyecto");
-                String dni_colaborador = rst.getString("id_colaborador");
-                sb.append(String.format("<option value=\"%d\">%s</option>", id_avance, id_proyecto, dni_colaborador));
-            }
-            rst.close();
-            stmt.close();
-        } catch (SQLException e) {
-            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
-            throw new SQLException("Error al obtener la lista de avances");
-        }
-
-        return sb.toString();
-    }*/
 }
 

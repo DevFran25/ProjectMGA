@@ -53,7 +53,7 @@ public class App
 
         //Proyecto
         webserver.addServlet(RegistroProyectoServlet.class, "/register_proyectos").getRegistration().setMultipartConfig(new MultipartConfigElement("src\\main\\resources\\web\\upload"));
-        //webserver.addServlet(ListarProyectosServlet.class, "/listar_proyecto");
+        webserver.addServlet(ListarProyectosServlet.class, "/listar_proyecto");
 
         //Usuario
         webserver.addServlet(RegistroUsuarioServlet.class, "/register_usuarios");
