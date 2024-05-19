@@ -187,18 +187,25 @@ public class RegistroProyectos {
 
     //Reportes
     public String getTotal() throws SQLException, IOException {
-        // Cargar la página donde se mostrarán los reportes
         String filename = "src\\main\\resources\\web\\index.html";
         String html = TextUTP.read(filename);
 
-        // Obtener los reportes
         int totalClientes = busquedaServiceProyecto.getTotalClientes();
+        int totalProyectos = busquedaServiceProyecto.getTotalProyectos();
+        int totalEntregables = busquedaServiceProyecto.getTotalEntregables();
+        double totalPresupeusto = busquedaServiceProyecto.getTotalCostoProyectos();
 
-        // Convertir el total de clientes a una cadena
+        // Convertir a cadenas
         String reportClientes = String.valueOf(totalClientes);
+        String reportProyectos = String.valueOf(totalProyectos);
+        String reportEntregables = String.valueOf(totalEntregables);
+        String reportPresupuesto = String.valueOf(totalPresupeusto);
 
-        // Reemplazar
+        // Reemplazar en el HTML
         String resultHtml = html.replace("${TotalClientes}", reportClientes);
+        resultHtml = resultHtml.replace("${TotalProyectos}", reportProyectos);
+        resultHtml = resultHtml.replace("${TotalEntregables}", reportEntregables);
+        resultHtml = resultHtml.replace("${TotalPresupuesto}", reportPresupuesto);
 
         return resultHtml;
     }

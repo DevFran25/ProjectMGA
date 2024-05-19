@@ -62,10 +62,7 @@ public class RegistroProyectoServlet extends HttpServlet {
 
             App.RegProyects.registrarProyectos(proyecto);
 
-            //String filename = "src\\main\\resources\\web\\addproject.html";
-            String filename = AppConfig.getRegistroProyecto();
-            String html = TextUTP.read(filename);
-            resp.getWriter().println(html);
+            resp.sendRedirect("/proyectos");
 
         } catch(IllegalArgumentException e){
                 String filename_error = AppConfig.getErrorTemplate();

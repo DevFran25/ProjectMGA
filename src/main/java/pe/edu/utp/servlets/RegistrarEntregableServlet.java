@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import pe.edu.utp.App;
 import pe.edu.utp.model.Entregable;
+import pe.edu.utp.util.AppConfig;
 import pe.edu.utp.utils.TextUTP;
 import java.io.IOException;
 
@@ -34,15 +35,11 @@ public class RegistrarEntregableServlet extends HttpServlet {
             //Registro Entregable a la bd
             App.RegEntregable.registroEntregable(entregable);
 
-            String filename = "src\\main\\resources\\web\\entregable.html";
-            String html = TextUTP.read(filename);
-            resp.setCharacterEncoding("UTF-8");
-            resp.setContentType("text/html");
-            resp.getWriter().println(html);
+            resp.sendRedirect("/listar_entregable");
 
 
         } catch (IllegalArgumentException e) {
-            String filename_error = "src\\main\\resources\\templates\\error.html";
+            String filename_error = AppConfig.getErrorTemplate();
             String html_error = TextUTP.read(filename_error);
             resp.getWriter().println(html_error.replace("${error}", e.getMessage()));
         }

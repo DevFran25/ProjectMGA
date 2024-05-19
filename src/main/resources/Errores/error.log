@@ -140,3 +140,6 @@
 2024-05-19 04:20:41 - ERROR - Parameter index of 1 is out of range (1, 0)
 2024-05-19 04:24:36 - ERROR - Parameter index of 1 is out of range (1, 0)
 2024-05-19 04:24:54 - ERROR - Parameter index of 1 is out of range (1, 0)
+2024-05-19 04:33:30 - ERROR - Error: usuario no existe
+2024-05-19 04:41:56 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-19 04:53:08 - ERROR - Error: usuario no existe

@@ -202,7 +202,7 @@ public class ProyectoService {
             CallableStatement cstmt = cnn.prepareCall("{CALL verTotalClientes()}");
             ResultSet rs = cstmt.executeQuery(); // Se ejecuta el procedimiento
 
-            // Si esque hay resultados, mostrar el total de clientes
+            // Si  hay resultados, mostrar el total de clientes
             if (rs.next()) {
                 totalClientes = rs.getInt("Total de Clientes");
             }
@@ -216,5 +216,73 @@ public class ProyectoService {
 
         return totalClientes;
     }
+
+    public int getTotalProyectos() throws SQLException, IOException {
+        int totalProyectos = 0;
+
+        try {
+            CallableStatement cstmt = cnn.prepareCall("{CALL verTotalProyectos()}");
+            ResultSet rs = cstmt.executeQuery(); // Se ejecuta el procedimiento
+
+            // Si hay resultados, mostrar el total de proyectos
+            if (rs.next()) {
+                totalProyectos = rs.getInt("Total de Proyectos");
+            }
+
+            rs.close();
+            cstmt.close();
+        } catch (SQLException e) {
+            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
+            throw new SQLException("Error al obtener el total de proyectos");
+        }
+
+        return totalProyectos;
+    }
+
+    public int getTotalEntregables() throws SQLException, IOException {
+        int totalEntregables = 0;
+
+        try {
+            CallableStatement cstmt = cnn.prepareCall("{CALL verTotalEntregables()}");
+            ResultSet rs = cstmt.executeQuery(); // Se ejecuta el procedimiento
+
+            // Si hay resultados, mostrar el total de entregables
+            if (rs.next()) {
+                totalEntregables = rs.getInt("Total de Entregables");
+            }
+
+            rs.close();
+            cstmt.close();
+        } catch (SQLException e) {
+            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
+            throw new SQLException("Error al obtener el total de entregables");
+        }
+
+        return totalEntregables;
+    }
+
+    public double getTotalCostoProyectos() throws SQLException {
+        double totalCosto = 0;
+
+        try {
+            CallableStatement cstmt = cnn.prepareCall("{CALL calcularTotalCostoProyectos(?)}");
+            cstmt.registerOutParameter(1, Types.DOUBLE);
+            cstmt.execute();
+
+            totalCosto = cstmt.getDouble(1);
+
+            cstmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        }
+
+        return totalCosto;
+    }
+
+
+
+
+
 
 }

@@ -22,7 +22,7 @@ public class AppConfig {
 
     public static String getErrorTemplate() { return getTemplateDir() + separator() + "error.html";}
 
-    public static String getRegistroProyecto() { return getWebDir() + separator() + "index.html";}
+
 
     //Web Y Template
     public static String getTemplateDir(){
