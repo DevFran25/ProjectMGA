@@ -38,11 +38,7 @@ public class RegistroColaboradorServlet extends HttpServlet {
             //Registro Cliente a la bd
             App.RegColabs.registrarColaborador(colaborador);
 
-            String filename = "src\\main\\resources\\web\\collaborators.html";
-            String html = TextUTP.read(filename);
-            resp.setCharacterEncoding("UTF-8");
-            resp.setContentType("text/html");
-            resp.getWriter().println(html);
+            resp.sendRedirect("/listar_colaborador");
 
 
         } catch (IllegalArgumentException e) {

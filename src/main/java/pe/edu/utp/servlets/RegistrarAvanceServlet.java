@@ -32,11 +32,7 @@ public class RegistrarAvanceServlet extends HttpServlet {
 
             App.RegAvance.registrarAvance(avance);
 
-            String filename = "src\\main\\resources\\web\\avance.html";
-            String html = TextUTP.read(filename);
-            resp.setCharacterEncoding("UTF-8");
-            resp.setContentType("text/html");
-            resp.getWriter().println(html);
+            resp.sendRedirect("/listar_avance");
 
 
         } catch (IllegalArgumentException e) {

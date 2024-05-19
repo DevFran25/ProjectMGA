@@ -35,11 +35,7 @@ public class RegistroUsuarioServlet extends HttpServlet {
             //Registro Usuario a la bd
             App.RegUsers.registrarUsuarios(usuario);
 
-            String filename = "src\\main\\resources\\web\\register-nuevo.html";
-            String html = TextUTP.read(filename);
-            resp.setCharacterEncoding("UTF-8");
-            resp.setContentType("text/html");
-            resp.getWriter().println(html);
+            resp.sendRedirect("/login");
 
 
         } catch (IllegalArgumentException e) {

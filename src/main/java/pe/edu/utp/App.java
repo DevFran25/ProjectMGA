@@ -1,7 +1,6 @@
 package pe.edu.utp;
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.MultipartConfigElement;
-import org.eclipse.jetty.servlet.FilterHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.edu.utp.filters.AdminFilter;
@@ -31,11 +30,8 @@ public class App
     public static RegistroProyectos RegProyects = new RegistroProyectos();
     public static RegistroClientes RegClients = new RegistroClientes();
     public static RegistroColaborador RegColabs = new RegistroColaborador();
-
     public static RegistroAvance RegAvance = new RegistroAvance();
     public static RegistroEntregable RegEntregable = new RegistroEntregable();
-
-
 
 
     public static void main( String[] args ) throws Exception {

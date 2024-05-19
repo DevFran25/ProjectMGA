@@ -37,11 +37,7 @@ public class RegistroClienteServlet extends HttpServlet {
             //Registro Cliente a la bd
             App.RegClients.registrarCliente(cliente);
 
-            String filename = "src\\main\\resources\\web\\listar_clientes";
-            String html = TextUTP.read(filename);
-            resp.setCharacterEncoding("UTF-8");
-            resp.setContentType("text/html");
-            resp.getWriter().println(html);
+            resp.sendRedirect("/listar_clientes");
 
 
         } catch (IllegalArgumentException e) {
