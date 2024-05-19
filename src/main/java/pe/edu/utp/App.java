@@ -61,7 +61,7 @@ public class App
         //Cliente
         webserver.addServlet(ListarClienteServlet.class,"/listar_clientes");
         webserver.addServlet(RegistroClienteServlet.class, "/register_cliente");
-        webserver.addServlet(ComboClientes.class,"/add_project");
+        webserver.addServlet(ComboServlet.class,"/add_project");
 
         //Colaborador
         webserver.addServlet(ListarColaboradorServlet.class,"/listar_colaborador");

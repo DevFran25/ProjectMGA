@@ -298,7 +298,7 @@ DELIMITER ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `listarEntregable`()
 BEGIN
-    SELECT id_entregable, id_proyecto, nombre, fecha, archivo FROM Entregable;
+    SELECT id_entregable, id_proyecto, nombre, fecha, archivo FROM entregable;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;

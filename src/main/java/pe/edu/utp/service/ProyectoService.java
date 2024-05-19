@@ -120,4 +120,29 @@ public class ProyectoService {
 
         return sb.toString();
     }
+
+    //Metodo Combo Colaboradores
+    public String getComboColaboradores() throws SQLException, IOException {
+        StringBuilder sb = new StringBuilder();
+        String strSQL = "SELECT dni_colaborador, nombres FROM Colaborador";
+
+        try {
+            Statement stmt = cnn.createStatement();
+            ResultSet rst = stmt.executeQuery(strSQL);
+
+            while (rst.next()) {
+                String dni_colaborador = rst.getString("dni_colaborador");
+                String nombres = rst.getString("nombres");
+                sb.append(String.format("<option value=\"%s\">%s</option>", dni_colaborador, nombres));
+            }
+            rst.close();
+            stmt.close();
+        } catch (SQLException e) {
+            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
+            throw new SQLException("Error al obtener la lista de colaboradores");
+        }
+
+        return sb.toString();
+    }
+
 }

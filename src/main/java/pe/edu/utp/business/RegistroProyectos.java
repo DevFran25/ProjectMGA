@@ -102,8 +102,12 @@ public class RegistroProyectos {
         // Obtener las opciones del combo de clientes
         String comboClientes = busquedaServiceProyecto.getComboClientes();
 
-        // Reemplazar el marcador de posición con las opciones del combo
-        String resultHtml = html.replace("${comboClientes}", comboClientes);
+        //Obtener las opciones del combo de colaboradores
+        String comboColaboradores = busquedaServiceProyecto.getComboColaboradores();
+
+        // Reemplazar
+        String resultHtml = html.replace("${comboClientes}",comboClientes)
+                .replace("${comboColaboradores}",comboColaboradores);
 
         return resultHtml;
     }
