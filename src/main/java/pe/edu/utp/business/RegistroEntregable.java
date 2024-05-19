@@ -7,7 +7,6 @@ import pe.edu.utp.util.AppConfig;
 import pe.edu.utp.util.DataAccessMariaDB;
 import pe.edu.utp.util.ErrorLog;
 import pe.edu.utp.utils.TextUTP;
-
 import javax.naming.NamingException;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -61,7 +60,7 @@ public class RegistroEntregable {
         String filenameItems = "src\\main\\resources\\templates\\entregable_listado.html";
         String htmlItem = TextUTP.read(filenameItems);
 
-        // Recorrer la lista de Proyectos
+        // Recorrer la lista de Entregables
         StringBuilder itemsHtml = new StringBuilder();
 
         // Listar

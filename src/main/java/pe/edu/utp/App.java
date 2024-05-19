@@ -70,6 +70,7 @@ public class App
         // Avance
         webserver.addServlet(ListarAvanceServlet.class, "/listar_avance");
         webserver.addServlet(RegistrarAvanceServlet.class, "/registrar_avance");
+        webserver.addServlet(ComboFor_AddAvance.class, "/add_avance");
 
         // Entregable
         webserver.addServlet(ListarEntregableServlet.class, "/listar_entregable");

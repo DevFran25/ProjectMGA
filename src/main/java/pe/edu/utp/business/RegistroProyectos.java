@@ -94,6 +94,7 @@ public class RegistroProyectos {
 
     }
 
+    //Combos para add_proyecto
     public String getHtmlAddProject() throws IOException, SQLException {
         // Cargar la plantilla de la página de agregar proyecto
         String filename = "src\\main\\resources\\web\\addproject.html";
@@ -111,4 +112,40 @@ public class RegistroProyectos {
 
         return resultHtml;
     }
+
+    //Combos para add_avance
+    public String getHtmlAvance() throws IOException, SQLException {
+        // Cargar la plantilla de la página de agregar proyecto
+        String filename = "src\\main\\resources\\web\\addavance.html";
+        String html = TextUTP.read(filename);
+
+        // Obtener las opciones del combo de proyectos
+        String comboProyectos = busquedaServiceProyecto.getComboProyectos();
+
+        //Obtener las opciones del combo de colaboradores
+        String comboColaboradores = busquedaServiceProyecto.getComboColaboradores();
+
+        // Reemplazar
+        String resultHtml = html.replace("${comboProyectos}",comboProyectos)
+                .replace("${comboColaboradores}",comboColaboradores);
+
+        return resultHtml;
+    }
+
+
+    //Combo para add_entregable
+    public String getHtmlEntregable() throws IOException, SQLException {
+        // Cargar la plantilla de la página de agregar proyecto
+        String filename = "src\\main\\resources\\web\\addentregable.html";
+        String html = TextUTP.read(filename);
+
+        // Obtener las opciones del combo de proyectos
+        String comboProyectos = busquedaServiceProyecto.getComboProyectos();
+
+        // Reemplazar
+        String resultHtml = html.replace("${comboProyectos}",comboProyectos);
+
+        return resultHtml;
+    }
+
 }

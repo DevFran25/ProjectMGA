@@ -145,4 +145,28 @@ public class ProyectoService {
         return sb.toString();
     }
 
+
+    public String getComboProyectos() throws SQLException, IOException {
+        StringBuilder sb = new StringBuilder();
+        String strSQL = "SELECT id_proyecto, nombre FROM proyecto";
+
+        try {
+            Statement stmt = cnn.createStatement();
+            ResultSet rst = stmt.executeQuery(strSQL);
+
+            while (rst.next()) {
+                String id_proyecto = rst.getString("id_proyecto");
+                String nombre = rst.getString("nombre");
+                sb.append(String.format("<option value=\"%s\">%s</option>", id_proyecto, nombre));
+            }
+            rst.close();
+            stmt.close();
+        } catch (SQLException e) {
+            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
+            throw new SQLException("Error al obtener la lista de proyectos");
+        }
+
+        return sb.toString();
+    }
+
 }
