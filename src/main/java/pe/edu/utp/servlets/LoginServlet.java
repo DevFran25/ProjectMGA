@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import pe.edu.utp.business.LoginBusiness;
+import pe.edu.utp.service.UsuariosService;
 import pe.edu.utp.util.ErrorLog;
 import pe.edu.utp.util.Errors;
 import pe.edu.utp.util.Success;
@@ -71,7 +72,9 @@ public class LoginServlet extends HttpServlet {
             return;
         }
 
-        boolean checkpassword = usuario.get("password").equals(password);
+        String hashedPassword = UsuariosService.md5(password);
+
+        boolean checkpassword = usuario.get("password").equals(hashedPassword);
         if(!checkpassword){
             //PrintWriter out = resp.getWriter();
             //out.println("Contraseña incorrecta");
@@ -95,7 +98,6 @@ public class LoginServlet extends HttpServlet {
                 case "jefe" -> resp.sendRedirect("/jefe");
                 case "admin" -> resp.sendRedirect("/");
             }
-
         }
 
     }

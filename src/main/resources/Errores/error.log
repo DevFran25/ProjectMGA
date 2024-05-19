@@ -140,6 +140,17 @@
 2024-05-19 04:20:41 - ERROR - Parameter index of 1 is out of range (1, 0)
 2024-05-19 04:24:36 - ERROR - Parameter index of 1 is out of range (1, 0)
 2024-05-19 04:24:54 - ERROR - Parameter index of 1 is out of range (1, 0)
+<<<<<<< Updated upstream
 2024-05-19 04:33:30 - ERROR - Error: usuario no existe
 2024-05-19 04:41:56 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 2024-05-19 04:53:08 - ERROR - Error: usuario no existe
+=======
+2024-05-19 04:50:48 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-19 04:50:49 - ERROR - PROCEDURE projectsdb.RegistrarUsuario does not exist
+2024-05-19 04:51:51 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-19 04:51:51 - ERROR - PROCEDURE projectsdb.RegistrarUsuario does not exist
+2024-05-19 04:53:02 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-19 04:53:02 - ERROR - PROCEDURE projectsdb.RegistrarUsuario does not exist
+2024-05-19 04:57:37 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-19 05:07:57 - ERROR - Error: usuario no existe
+>>>>>>> Stashed changes
