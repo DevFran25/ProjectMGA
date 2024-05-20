@@ -265,8 +265,7 @@ ul {
 .top i{
     font-size: 3rem;
     cursor: pointer;
-  color: white;
-
+  color: var(--color-text);
 }
 
 @media screen and (min-width: 1280px ){
@@ -278,7 +277,6 @@ ul {
 .top .top_logo {
   width: 10rem;
 }
-
 
 
 .aside {
