@@ -160,3 +160,5 @@
 =======
 2024-05-19 05:29:32 - ERROR - Table 'projectsdb.entregable' doesn't exist
 >>>>>>> Stashed changes
+2024-05-20 01:04:27 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-20 01:12:27 - INFO - CALL registrarActividad(?, ?, ?, ?)
