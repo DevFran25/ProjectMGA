@@ -83,6 +83,7 @@ public class App
         //Actividad
         webserver.addServlet(ListarActividadServlet.class, "/listar_actividad");
         webserver.addServlet(RegistrarActividadServlet.class, "/registrar_actividad");
+        webserver.addServlet(ComboFor_AddActividad.class, "/add_actividad");
 
 
         webserver.addServlet(LoginServlet.class, "/login");

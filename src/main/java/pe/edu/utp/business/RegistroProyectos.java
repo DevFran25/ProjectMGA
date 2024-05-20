@@ -155,6 +155,20 @@ public class RegistroProyectos {
         return resultHtml;
     }
 
+    public String getHmtlActividad() throws IOException, SQLException {
+        // Cargar la plantilla de la página de agregar proyecto
+        String filename = "src\\main\\resources\\web\\addactivite.html";
+        String html = TextUTP.read(filename);
+
+        // Obtener las opciones del combo de proyectos
+        String comboProyectos = busquedaServiceProyecto.getComboProyectos();
+
+        // Reemplazar
+        String resultHtml = html.replace("${comboProyectos}",comboProyectos);
+
+        return resultHtml;
+    }
+
 
     //Combo para add_entregable
     public String getHtmlEntregable() throws IOException, SQLException {

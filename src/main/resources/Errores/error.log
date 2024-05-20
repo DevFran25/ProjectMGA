@@ -162,3 +162,4 @@
 >>>>>>> Stashed changes
 2024-05-20 01:04:27 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-20 01:12:27 - INFO - CALL registrarActividad(?, ?, ?, ?)
+2024-05-20 08:28:07 - ERROR - Error: usuario no existe
