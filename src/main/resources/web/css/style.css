@@ -256,13 +256,30 @@ ul {
   min-height: 7rem;
   border-bottom: 1px solid var(--color-border-nav);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
+.top i{
+    font-size: 3rem;
+    cursor: pointer;
+  color: white;
+
+}
+
+@media screen and (min-width: 1280px ){
+ .top i{
+    display: none;
+ }
+}
+
 .top .top_logo {
   width: 10rem;
 }
+
+
 
 .aside {
   border-right: 1px solid var(--color-border-nav);
@@ -275,7 +292,12 @@ ul {
   width: 26rem;
   z-index: 100;
   transform: translateX(-100%);
+  transition: all .3s ease;
 }
+.aside.show{
+  transform: translateX(0);
+}
+
 @media screen and (min-width: 1280px) {
   .aside {
     position: fixed;

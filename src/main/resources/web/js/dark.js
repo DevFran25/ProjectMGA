@@ -9,7 +9,6 @@ function setTheme(){
   let currentTheme = getTheme("theme");
   icons.forEach( icon => {
     if( icon.classList.contains(currentTheme) ){
-      console.log(icon)
       icon.classList.add("active");
       return;
     }
@@ -42,3 +41,28 @@ themeToggler.addEventListener("click", () => {
   })
   document.cookie = "theme="+theme;
 });
+
+const menuBtn = document.querySelector('.bx.bx-menu');
+const sideBar = document.querySelector('.aside');
+const closeBtn = document.querySelector('.closeIcon');
+
+
+menuBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    sideBar.classList.add('show');
+})
+
+closeBtn.addEventListener('click', () => {
+    sideBar.classList.remove('show');
+})
+
+
+
+
+
+
+
+
+
+
+
