@@ -32,6 +32,8 @@ public class App
     public static RegistroColaborador RegColabs = new RegistroColaborador();
     public static RegistroAvance RegAvance = new RegistroAvance();
     public static RegistroEntregable RegEntregable = new RegistroEntregable();
+    public static RegistroActividad RegActividad = new RegistroActividad();
+
 
 
     public static void main( String[] args ) throws Exception {
@@ -77,6 +79,10 @@ public class App
         webserver.addServlet(ListarEntregableServlet.class, "/listar_entregable");
         webserver.addServlet(RegistrarEntregableServlet.class, "/registrar_entregable");
         webserver.addServlet(ComboFor_AddEntregable.class, "/add_entregable");
+
+        //Actividad
+        webserver.addServlet(ListarActividadServlet.class, "/listar_actividad");
+        webserver.addServlet(RegistrarActividadServlet.class, "/registrar_actividad");
 
 
         webserver.addServlet(LoginServlet.class, "/login");
