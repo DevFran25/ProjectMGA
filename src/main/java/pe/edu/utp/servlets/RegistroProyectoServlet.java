@@ -45,6 +45,7 @@ public class RegistroProyectoServlet extends HttpServlet {
         // AppConfig + Metodo
         String destino = "src\\main\\resources\\web\\upload\\";
 
+        //clase validacion le envio todos los datos
 
         //System.out.println(id_proyecto + dni_colaborador + id_cliente + nombre + ubicacion + costo + fecha_inicio + fecha_fin + estado);
 
