@@ -120,6 +120,7 @@ public class RegistroProyectos {
     //Combos para add_proyecto
     public String getHtmlAddProject() throws IOException, SQLException {
         // Cargar la plantilla de la página de agregar proyecto
+        //AppConfig.getErrorTemplate();
         String filename = "src\\main\\resources\\web\\addproject.html";
         String html = TextUTP.read(filename);
 
