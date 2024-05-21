@@ -19,6 +19,7 @@ public class LoginFilter implements Filter {
 
         HttpSession session = req.getSession();
         String cargo = (String) session.getAttribute("cargo");
+
         if( cargo != null){
             if(cargo.equals("admin")){
                 resp.sendRedirect(req.getContextPath()+"/");

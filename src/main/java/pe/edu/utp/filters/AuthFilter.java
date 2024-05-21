@@ -5,12 +5,13 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import pe.edu.utp.util.ErrorLog;
 
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-@WebFilter("*.html")
+//@WebFilter("/*")
 public class AuthFilter implements Filter {
 
 
@@ -31,21 +32,14 @@ public class AuthFilter implements Filter {
 
         String path = req.getRequestURI().substring(req.getContextPath().length());
 
-        if(exceptionUrl.contains(path)){
-            filterChain.doFilter(servletRequest, servletResponse);
-            return;
-        }
+        //System.out.println("Ruta Interceptada: " + path);
+        ErrorLog.log("Ruta interceptada: " + path, ErrorLog.Level.INFO);
 
         HttpSession session = req.getSession();
         String cargo = (String) session.getAttribute("cargo");
 
-        if( cargo == null || cargo.isBlank() ){
-            resp.sendRedirect(req.getContextPath()+"/login");
-        }else if( !cargo.equals("admin")  ){
-            resp.sendRedirect(req.getContextPath()+"/"+cargo);
-        }else {
-            filterChain.doFilter(servletRequest, servletResponse);
-        }
 
+
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 }

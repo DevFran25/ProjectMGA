@@ -16,8 +16,7 @@ public class LoginService {
 
     public Map<String, String> usuarioExiste(String dni) throws SQLException {
         Map<String, String> result = null;
-        String sql = "select id_usuario, u.dni_colaborador, username, password, nombres, apellidos, telefono, email, " +
-                "cargo from usuario u inner join colaborador c on u.dni_colaborador = c.dni_colaborador where u.dni_colaborador = ?";
+        String sql = "CALL ObtenerUsuarioPorDNI(?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, dni);
         ResultSet rs = stmt.executeQuery();
@@ -29,8 +28,7 @@ public class LoginService {
 
     public Map<String, String> findByEmail(String email) throws SQLException {
         Map<String, String> result = null;
-        String sql = "select id_usuario, u.dni_colaborador, username, password, nombres, apellidos, telefono, email, " +
-                "cargo from usuario u inner join colaborador c on u.dni_colaborador = c.dni_colaborador where email = ?";
+        String sql = "CALL ObtenerUsuarioPorEmail(?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, email);
         ResultSet rs = stmt.executeQuery();
@@ -42,8 +40,7 @@ public class LoginService {
 
     public Map<String, String> findByToken(String token) throws SQLException {
         Map<String, String> result = null;
-        String sql = "select id_usuario, u.dni_colaborador, username, password, nombres, apellidos, telefono, email, " +
-                "cargo, token from usuario u inner join colaborador c on u.dni_colaborador = c.dni_colaborador where token = ?";
+        String sql = "CALL ObtenerUsuarioPorToken(?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, token);
         ResultSet rs = stmt.executeQuery();

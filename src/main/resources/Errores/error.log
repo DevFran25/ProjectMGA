@@ -163,8 +163,189 @@
 2024-05-20 01:04:27 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-20 01:12:27 - INFO - CALL registrarActividad(?, ?, ?, ?)
 2024-05-20 08:28:07 - ERROR - Error: usuario no existe
+<<<<<<< Updated upstream
 2024-05-21 11:23:46 - INFO - CALL registrarActividad(?, ?, ?, ?)
 2024-05-21 11:32:08 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-21 11:42:00 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-21 11:44:37 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 2024-05-21 11:46:15 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
+=======
+2024-05-21 10:29:29 - INFO - CALL registrarActividad(?, ?, ?, ?)
+2024-05-21 10:29:29 - ERROR - Table 'projectsdb.actividades' doesn't exist
+2024-05-21 10:30:50 - INFO - CALL registrarActividad(?, ?, ?, ?)
+2024-05-21 11:26:59 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-21 04:31:00 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
+2024-05-21 04:31:10 - INFO - CALL RegistrarColaborador(?, ?, ?, ?, ?, ?)
+2024-05-21 04:39:13 - INFO - /add_usuarios
+2024-05-21 04:39:13 - INFO - /js/dark.js
+2024-05-21 04:39:13 - INFO - /css/style.css
+2024-05-21 04:39:13 - INFO - /img/logo2.png
+2024-05-21 04:39:13 - INFO - /js/app.js
+2024-05-21 04:39:24 - INFO - /img/bg-01.jpg
+2024-05-21 04:39:28 - INFO - /favicon.ico
+2024-05-21 04:40:06 - INFO - Ruta interceptada: /add_usuarios
+2024-05-21 04:41:15 - INFO - Ruta interceptada: /login.html
+2024-05-21 04:41:48 - INFO - Ruta interceptada: /login
+2024-05-21 04:42:51 - INFO - Ruta interceptada: /add_usuarios
+2024-05-21 04:43:14 - INFO - Ruta interceptada: /login
+2024-05-21 04:43:16 - INFO - Ruta interceptada: /
+2024-05-21 04:43:16 - INFO - Ruta interceptada: /inicio
+2024-05-21 04:43:19 - INFO - Ruta interceptada: /logout
+2024-05-21 04:43:19 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:52 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:53 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:53 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:53 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:53 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:53 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:53 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:53 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:54 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:45:59 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:46:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:29 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:30 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:30 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:30 - INFO - Ruta interceptada: /login
+2024-05-21 04:47:30 - INFO - Ruta interceptada: /login
+2024-05-21 04:48:08 - INFO - Ruta interceptada: /index.html
+2024-05-21 04:48:08 - INFO - Ruta interceptada: /login
+2024-05-21 04:48:11 - INFO - Ruta interceptada: /inicio
+2024-05-21 04:48:11 - INFO - Ruta interceptada: /login
+2024-05-21 04:48:11 - INFO - Ruta interceptada: /index.html
+2024-05-21 04:48:11 - INFO - Ruta interceptada: /login
+2024-05-21 04:48:12 - INFO - Ruta interceptada: /colaborador
+2024-05-21 04:48:12 - INFO - Ruta interceptada: /login
+2024-05-21 04:48:19 - INFO - Ruta interceptada: /login
+2024-05-21 04:48:20 - INFO - Ruta interceptada: /
+2024-05-21 04:48:24 - INFO - Ruta interceptada: /logout
+2024-05-21 04:48:28 - INFO - Ruta interceptada: /login
+2024-05-21 04:48:30 - INFO - Ruta interceptada: /logout
+2024-05-21 04:48:31 - INFO - Ruta interceptada: /logout
+2024-05-21 04:48:32 - INFO - Ruta interceptada: /logout
+2024-05-21 04:48:34 - INFO - Ruta interceptada: /login
+2024-05-21 04:48:36 - INFO - Ruta interceptada: /login
+2024-05-21 04:48:36 - INFO - Ruta interceptada: /favicon.ico
+2024-05-21 04:49:00 - INFO - Ruta interceptada: /login
+2024-05-21 04:49:00 - INFO - Ruta interceptada: /favicon.ico
+2024-05-21 04:49:06 - INFO - Ruta interceptada: /olvide
+2024-05-21 04:52:17 - INFO - Ruta interceptada: /login
+2024-05-21 05:10:19 - INFO - Ruta interceptada: /login
+2024-05-21 05:10:19 - INFO - Ruta interceptada: /js/dark.js
+2024-05-21 05:10:19 - INFO - Ruta interceptada: /js/app.js
+2024-05-21 05:10:19 - INFO - Ruta interceptada: /css/style.css
+2024-05-21 05:10:19 - INFO - Ruta interceptada: /img/logo2.png
+2024-05-21 05:10:19 - INFO - Ruta interceptada: /img/bg-01.jpg
+2024-05-21 05:10:19 - INFO - Ruta interceptada: /favicon.ico
+2024-05-21 05:10:25 - INFO - Ruta interceptada: /login
+2024-05-21 05:10:25 - INFO - Ruta interceptada: /
+2024-05-21 05:10:25 - INFO - Ruta interceptada: /inicio
+2024-05-21 05:10:27 - INFO - Ruta interceptada: /login
+2024-05-21 05:10:29 - INFO - Ruta interceptada: /login
+2024-05-21 05:10:29 - ERROR - Error: usuario no existe
+2024-05-21 05:10:29 - INFO - Ruta interceptada: /login
+2024-05-21 05:10:35 - INFO - Ruta interceptada: /login
+2024-05-21 05:10:35 - INFO - Ruta interceptada: /
+2024-05-21 05:10:35 - INFO - Ruta interceptada: /inicio
+2024-05-21 05:10:37 - INFO - Ruta interceptada: /logout
+2024-05-21 05:10:37 - INFO - Ruta interceptada: /login
+2024-05-21 05:10:43 - INFO - Ruta interceptada: /login
+2024-05-21 05:10:43 - ERROR - Error: usuario no existe
+2024-05-21 05:10:43 - INFO - Ruta interceptada: /login
+2024-05-21 05:10:49 - INFO - Ruta interceptada: /olvide
+2024-05-21 05:10:58 - INFO - Ruta interceptada: /olvide
+2024-05-21 05:10:58 - INFO - Ruta interceptada: /olvide
+2024-05-21 05:11:11 - INFO - Ruta interceptada: /olvide
+2024-05-21 05:11:16 - INFO - Ruta interceptada: /login
+2024-05-21 05:11:21 - INFO - Ruta interceptada: /login
+2024-05-21 05:17:37 - INFO - Ruta interceptada: /login
+2024-05-21 05:17:38 - INFO - Ruta interceptada: /login
+2024-05-21 05:17:40 - INFO - Ruta interceptada: /login
+2024-05-21 05:17:40 - INFO - Ruta interceptada: /js/dark.js
+2024-05-21 05:17:48 - INFO - Ruta interceptada: /login
+2024-05-21 05:17:51 - INFO - Ruta interceptada: /login
+>>>>>>> Stashed changes

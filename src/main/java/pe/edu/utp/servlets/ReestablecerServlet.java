@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import pe.edu.utp.business.LoginBusiness;
+import pe.edu.utp.service.UsuariosService;
 import pe.edu.utp.util.Errors;
 import pe.edu.utp.utils.TextUTP;
 
@@ -49,10 +50,14 @@ public class ReestablecerServlet extends HttpServlet {
         String password = req.getParameter("password");
         String id = req.getParameter("id");
 
+        if(password.isBlank() ){
+            return;
+        }
+
         String newToken = "";
         Map<String, String> fields = new HashMap<>();
         fields.put("token", newToken);
-        fields.put("password", password);
+        fields.put("password", UsuariosService.md5(password));
         Map<String, String> where = new HashMap<>();
         where.put("id_usuario", id);
         boolean update = loginBusiness.updateBy("usuario", fields, where);

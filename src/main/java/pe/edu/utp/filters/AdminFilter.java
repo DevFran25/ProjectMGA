@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebFilter("")
+@WebFilter("/*")
 public class AdminFilter implements Filter {
 
     @Override
@@ -18,11 +18,22 @@ public class AdminFilter implements Filter {
 
         HttpSession session = req.getSession();
         String cargo = (String) session.getAttribute("cargo");
+
+        // Excluye las rutas de login y colaborador
+        String path = req.getRequestURI().substring(req.getContextPath().length());
+        if (path.startsWith("/login") || path.startsWith("/colaborador") || path.startsWith("/logout") ) {
+            filterChain.doFilter(servletRequest, servletResponse);
+            return;
+        }
+
         if( cargo == null ){
             resp.sendRedirect(req.getContextPath()+"/login");
+
         }else if(!cargo.equals("admin")){
             resp.sendRedirect(req.getContextPath()+"/"+cargo);
+
         }else{
+
             filterChain.doFilter(servletRequest, servletResponse);
         }
 
