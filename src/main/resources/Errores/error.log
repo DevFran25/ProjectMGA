@@ -349,3 +349,5 @@
 2024-05-21 05:17:48 - INFO - Ruta interceptada: /login
 2024-05-21 05:17:51 - INFO - Ruta interceptada: /login
 >>>>>>> Stashed changes
+2024-05-21 06:27:29 - INFO - CALL registrarAvance(?, ?, ?, ?)
+2024-05-21 06:27:56 - INFO - CALL registrarActividad(?, ?, ?, ?)
