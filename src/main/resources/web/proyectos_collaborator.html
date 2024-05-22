@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema MGA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="container">
+    <aside class="aside">
+        <div class="top">
+            <a href="/collaborator" class="top_logo">
+                <img src="img/logo2.png" alt="">
+            </a>
+            <i class='closeIcon bx bx-x'></i>
+        </div>
+        <div class="sidebar">
+            <a href="/collaborator" >
+                <i class='bx bxs-dashboard' ></i>
+                <p>Panel</p>
+            </a>
+            <a href="/proyectos_collaborator"  class="active">
+                <i class='bx bx-cog'></i>
+                <p>Proyectos</p>
+            </a>
+
+            <a href="/listar_actividad_collaborator" >
+                <i class='bx bx-file' ></i>
+                <p>Actividades</p>
+            </a>
+            <a href="/listar_avance_collaborator" >
+                <i class='bx bx-check-square' ></i>
+                <p>Avance</p>
+            </a>
+
+        </div>
+    </aside>
+    <main class="main">
+
+        <nav class="navbar">
+
+            <div class="navbar_left">
+                <a href="">
+                    <i class='bx bx-menu' ></i>
+                </a>
+                <h3>Todos los proyectos del colaborador</h3>
+            </div>
+            <div class="navbar_right">
+                <div class="theme-toggler">
+                    <span class="light-theme"><i class='bx bxs-sun' ></i></span>
+                    <span class="dark-theme"><i class='bx bxs-moon'></i></span>
+                </div>
+                <a href="#">
+                    <i class='bx bx-bell' ></i>
+                </a>
+                <div href="#" class="perfil_user">
+                    <div class="perfil_icon">
+                        <p>U</p>
+                    </div>
+                    <p>Usuario</p>
+                    <div class="user_options">
+                        <a href="/logout">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="page_projects">
+
+            <div class="nav_project">
+                <div class="options">
+                    <a href="" id="line" class="type"><i class="bx bx-menu"></i></a>
+                    <a href="" id="grid" class="type active"><i class='bx bx-grid-alt' ></i></a>
+
+                    <div class="filters">
+                        <div class="orderBy">
+                            <p class="opt">Sort</p>
+                            <select name="" id="id">
+                                <option value="">A-Z</option>
+                                <option value="">Fecha</option>
+                            </select>
+                        </div>
+
+                        <div class="stateBy">
+                            <p class="opt">State</p>
+                            <select name="" id="">
+                                <option value="">All</option>
+                                <option value="">Completados</option>
+                                <option value="">Pendientes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="projectsContainer" class="projects grid">
+                ${itemsProyectoCollaborator}
+            </div>
+
+            <div class="pagination">
+                <ul>
+                    ${paginacionCollaborator}
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+
+<script src="js/dark.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
