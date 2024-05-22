@@ -66,11 +66,7 @@ public class OlvideServlet extends HttpServlet {
         }
 
         String token = Utils.crearToken();
-        Map<String, String> fields = new HashMap<>();
-        fields.put("token", token);
-        Map<String, String> where = new HashMap<>();
-        where.put("dni_colaborador", usuario.get("dni_colaborador"));
-        boolean update = loginBusiness.updateBy("usuario", fields, where);
+        boolean update = loginBusiness.updateUsuarioTokenByDni(token, usuario.get("dni_colaborador"));
 
         if(update){
 

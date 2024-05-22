@@ -55,15 +55,11 @@ public class ReestablecerServlet extends HttpServlet {
         }
 
         String newToken = "";
-        Map<String, String> fields = new HashMap<>();
-        fields.put("token", newToken);
-        fields.put("password", UsuariosService.md5(password));
-        Map<String, String> where = new HashMap<>();
-        where.put("id_usuario", id);
-        boolean update = loginBusiness.updateBy("usuario", fields, where);
+        boolean update = loginBusiness.updateUsuarioTokenAndPassword(newToken, UsuariosService.md5(password), id);
 
         if(update){
             resp.sendRedirect("http://localhost:8085/login?success=UPDATED_PASSWORD");
+
         }else{
             resp.sendRedirect("http://localhost:8085/reestablecer?token="+token);
         }
