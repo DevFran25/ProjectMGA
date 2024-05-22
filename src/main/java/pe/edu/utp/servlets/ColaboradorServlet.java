@@ -17,14 +17,14 @@ public class ColaboradorServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        /*
+
         Log.print("Pagina Admin", resp);
-        String filename = "src\\main\\resources\\web\\colaborador.html";
+        String filename = "src\\main\\resources\\web\\collaborator.html";
         String html = TextUTP.read(filename);
         resp.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html");
         resp.getWriter().println(html);
-        */
+
 
         PrintWriter out = resp.getWriter();
         HttpSession session = req.getSession();
