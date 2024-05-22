@@ -18,11 +18,11 @@ public class Paginacion {
     Connection conn = null;
 
     //Variables de Paginacion
-    Integer nroRegistros;
-    Integer registrosPorPagina;
-    Integer indice;
-    Integer paginaActual;
-    Integer totalPaginas;
+    private Integer nroRegistros;
+    private Integer registrosPorPagina;
+    private Integer indice;
+    private Integer paginaActual;
+    private Integer totalPaginas;
 
     public Paginacion(Integer paginaActual, Integer registrosPorPagina){
         try {
@@ -41,13 +41,14 @@ public class Paginacion {
 
     public List<Proyecto> obtenerProyectos(){
         List<Proyecto> proyectos = new ArrayList<>();
-        Statement stmt = null;
+        PreparedStatement stmt = null;
         ResultSet rst = null;
-        String strSQL = "SELECT id_proyecto,id_cliente,dni_colaborador,nombre,ubicacion,costo,fecha_inicio,fecha_fin," +
-                "estado,foto FROM proyecto LIMIT " + this.indice + ", " + this.registrosPorPagina;
+        String strSQL = String.format("CALL paginacionProyectos(?, ?)");
         try {
-            stmt = conn.createStatement();
-            rst = stmt.executeQuery(strSQL);
+            stmt = conn.prepareStatement(strSQL);
+            stmt.setInt(1, this.indice);
+            stmt.setInt(2, this.registrosPorPagina);
+            rst = stmt.executeQuery();
 
             while (rst.next()) {
                 String id_proyecto = rst.getString("id_proyecto");
@@ -66,13 +67,13 @@ public class Paginacion {
             }
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
         }
         return proyectos;
     }
 
     public void calcularPaginas(){
-        String sql = "SELECT count(*) as 'total' FROM proyecto";
+        String sql = "CALL verTotalProyectos()";
         Statement stmt = null;
         ResultSet rs = null;
 
@@ -80,7 +81,7 @@ public class Paginacion {
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             if(rs.next()){
-                nroRegistros = rs.getInt("total");
+                nroRegistros = rs.getInt("Total de Proyectos");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
