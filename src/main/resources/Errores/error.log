@@ -361,3 +361,6 @@
 2024-05-22 12:45:13 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-22 02:03:12 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-22 02:08:58 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-22 10:25:36 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-22 10:31:44 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-22 10:55:31 - ERROR - Error: usuario no existe

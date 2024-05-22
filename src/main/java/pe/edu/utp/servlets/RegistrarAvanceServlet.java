@@ -28,6 +28,12 @@ public class RegistrarAvanceServlet extends HttpServlet {
 
         // Crear objeto avance
         try {
+            // Validaciones
+            Validator.validateNotEmpty(dni_colaborador, "Dni Colaborador");
+            Validator.validateNotEmpty(String.valueOf(id_avance), "Id Avance");
+            Validator.validateNotEmpty(dni_colaborador, "Dni Colaborador");
+            Validator.validateNotEmpty(progreso, "Progreso");
+
             Avance avance = new Avance(id_avance, id_proyecto, dni_colaborador, progreso);
 
             App.RegAvance.registrarAvance(avance);

@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import pe.edu.utp.App;
 import pe.edu.utp.model.Colaborador;
+import pe.edu.utp.util.AppConfig;
 import pe.edu.utp.utils.TextUTP;
 
 import java.io.IOException;
@@ -33,6 +34,14 @@ public class RegistroColaboradorServlet extends HttpServlet {
 
         // Crear objeto colaborador
         try {
+            // Validaciones
+            Validator.validateNotEmpty(dni_colaborador, "Dni Colaborador");
+            Validator.validateNotEmpty(nombre, "Nombre");
+            Validator.validateNotEmpty(apellidos, "Apellido");
+            Validator.validateNotEmpty(telefono, "Telefono");
+            Validator.validateNotEmpty(email, "Correo");
+            Validator.validateNotEmpty(cargo, "Cargo");
+
             Colaborador colaborador = new Colaborador(dni_colaborador, nombre, apellidos, telefono, email, cargo);
 
             //Registro Cliente a la bd
@@ -42,7 +51,7 @@ public class RegistroColaboradorServlet extends HttpServlet {
 
 
         } catch (IllegalArgumentException e) {
-            String filename_error = "src\\main\\resources\\templates\\error.html";
+            String filename_error = AppConfig.getErrorTemplate();
             String html_error = TextUTP.read(filename_error);
             resp.getWriter().println(html_error.replace("${error}", e.getMessage()));
         }

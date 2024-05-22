@@ -28,6 +28,12 @@ public class RegistrarActividadServlet extends HttpServlet {
 
         // Crear objeto avance
         try {
+            // Validaciones
+            Validator.validateNotEmpty(String.valueOf(id_actividad), "Id Actividad");
+            Validator.validateNotEmpty(nombre, "Nombre");
+            Validator.validateNotEmpty(estado, "Estado");
+            Validator.validateNotEmpty(id_proyecto, "Id Proyecto");
+
             Actividades actividades = new Actividades(id_actividad, id_proyecto, nombre, estado);
 
             App.RegActividad.registrarActividad(actividades);

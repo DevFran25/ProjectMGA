@@ -30,6 +30,11 @@ public class RegistroUsuarioServlet extends HttpServlet {
 
         // Crear objeto usuario
         try {
+            // Validaciones
+            Validator.validateNotEmpty(dni_colaborador, "Dni Colaborador");
+            Validator.validateNotEmpty(username, "Usuario");
+            Validator.validateNotEmpty(password, "Password");
+
             Usuario usuario = new Usuario(dni_colaborador, username, password);
 
             //Registro Usuario a la bd

@@ -30,6 +30,13 @@ public class RegistrarEntregableServlet extends HttpServlet {
 
         // Crear objeto entregable
         try {
+            // Validaciones
+            Validator.validateNotEmpty(String.valueOf(id_entregable), "Dni Colaborador");
+            Validator.validateNotEmpty(nombre, "Nombre");
+            Validator.validateNotEmpty(id_proyecto, "Id Proyecto");
+            Validator.validateNotEmpty(fecha, "Fecha");
+            Validator.validateNotEmpty(archivo, "Archivo");
+
             Entregable entregable = new Entregable(id_entregable, id_proyecto, nombre, fecha, archivo);
 
             //Registro Entregable a la bd

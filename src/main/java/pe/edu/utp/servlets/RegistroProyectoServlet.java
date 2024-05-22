@@ -10,7 +10,6 @@ import jakarta.servlet.http.Part;
 import pe.edu.utp.App;
 import pe.edu.utp.model.Proyecto;
 import pe.edu.utp.util.AppConfig;
-import pe.edu.utp.utils.TextUTP;
 import pe.edu.utp.utils.UTPBinary;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -44,7 +43,7 @@ public class RegistroProyectoServlet extends HttpServlet {
         String fecha_inicio = LocalDate.now().toString();
         String fecha_fin = req.getParameter("txtfecha_fin");
         String estado = req.getParameter("txtestado");
-        String destino = "src\\main\\resources\\web\\upload\\";
+        String destino = AppConfig.getImgDir();
 
         try {
             // Validaciones
@@ -64,6 +63,9 @@ public class RegistroProyectoServlet extends HttpServlet {
             // Obtener la imagen y guardarla en la carpeta upload
             Part filePart = req.getPart("txtFoto");
             String foto = getFileName(filePart);
+            if(foto.isEmpty()){
+                throw new IllegalArgumentException("El campo foto no puede estar vacio");
+            }
             String fileFoto = destino + foto;
             byte[] data = filePart.getInputStream().readAllBytes();
             UTPBinary.echobin(data, fileFoto);
@@ -76,7 +78,7 @@ public class RegistroProyectoServlet extends HttpServlet {
 
         } catch (IllegalArgumentException e) {
             // Leer el HTML de error y reemplazar el marcador de posición con el mensaje de error
-            String errorPagePath = "src\\main\\resources\\templates\\error.html";
+            String errorPagePath = AppConfig.getErrorTemplate();
             String html_error = new String(Files.readAllBytes(Paths.get(errorPagePath)), StandardCharsets.UTF_8);
             html_error = html_error.replace("${error}", e.getMessage());
 
