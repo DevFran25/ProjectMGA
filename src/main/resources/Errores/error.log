@@ -366,3 +366,7 @@
 2024-05-22 10:55:31 - ERROR - Error: usuario no existe
 2024-05-22 05:22:08 - ERROR - Error: usuario no existe
 2024-05-22 05:29:49 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-22 05:59:44 - INFO - CALL registrarEntregable(?, ?, ?, ?, ?)
+2024-05-22 06:24:02 - ERROR - Error: usuario no existe
+2024-05-22 06:24:09 - ERROR - Error: usuario no existe
+2024-05-22 06:24:51 - INFO - CALL registrarEntregable(?, ?, ?, ?, ?)

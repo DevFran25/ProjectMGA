@@ -77,7 +77,7 @@ public class App
 
         // Entregable
         webserver.addServlet(ListarEntregableServlet.class, "/listar_entregable");
-        webserver.addServlet(RegistrarEntregableServlet.class, "/registrar_entregable");
+        webserver.addServlet(RegistrarEntregableServlet.class, "/registrar_entregable").getRegistration().setMultipartConfig(new MultipartConfigElement("src\\main\\resources\\web\\documentos"));;
         webserver.addServlet(ComboFor_AddEntregable.class, "/add_entregable");
 
         //Actividad

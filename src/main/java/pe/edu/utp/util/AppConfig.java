@@ -20,8 +20,10 @@ public class AppConfig {
     //Imagenes
     public static String getImgDir(){ return rb.getString("upload_dir"); }
 
-    public static String getErrorTemplate() { return getTemplateDir() + separator() + "error.html";}
+    //Documentos
+    public  static String getFileDir() {return rb.getString("doc_dir");}
 
+    public static String getErrorTemplate() { return getTemplateDir() + separator() + "error.html";}
 
 
     //Web Y Template
