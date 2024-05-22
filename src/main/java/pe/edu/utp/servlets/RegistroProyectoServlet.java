@@ -40,7 +40,8 @@ public class RegistroProyectoServlet extends HttpServlet {
         String ubicacion = req.getParameter("txtubicacion");
         String txtCosto = req.getParameter("txtcosto");
         String txtIdCliente = req.getParameter("txtid_cliente");
-        String fecha_inicio = LocalDate.now().toString();
+        //String fecha_inicio = LocalDate.now().toString();
+        String fecha_inicio = req.getParameter("txtfecha_inicio");
         String fecha_fin = req.getParameter("txtfecha_fin");
         String estado = req.getParameter("txtestado");
         String destino = AppConfig.getImgDir();
@@ -53,8 +54,9 @@ public class RegistroProyectoServlet extends HttpServlet {
             Validator.validateNotEmpty(ubicacion, "Ubicación");
             Validator.validateNotEmpty(txtCosto, "Costo");
             Validator.validateNotEmpty(txtIdCliente, "ID del cliente");
+            Validator.validateNotEmpty(fecha_inicio, "Fecha Inicio");
             Validator.validateNotEmpty(fecha_fin, "Fecha de fin");
-            Validator.validateNotEmpty(estado, "Estado");
+            //Validator.validateNotEmpty(estado, "Estado");
 
             // Continuar con la lógica de negocio si todas las validaciones pasan
             float costo = Float.parseFloat(txtCosto);

@@ -2,7 +2,7 @@ package pe.edu.utp.model;
 
 public class Actividades {
 
-    private int id_actividad;
+    private  int id_actividad;
     private String id_proyecto;
     private String nombre;
     private String estado;

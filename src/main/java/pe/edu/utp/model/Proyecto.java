@@ -1,7 +1,16 @@
 package pe.edu.utp.model;
+import java.util.Comparator;
+import java.util.Objects;
 
+public class Proyecto implements Comparable<Proyecto>  {
 
-public class Proyecto {
+    public static final Comparator<Proyecto> PROYECTO_COMPARATOR_NATURAL_ORDER =
+            Comparator.comparing(Proyecto::getId_proyecto).thenComparing(Proyecto::getDni_colaborador).
+                    thenComparing(Proyecto::getNombre).thenComparing(Proyecto::getId_cliente);
+    @Override
+    public int compareTo(Proyecto o) {
+        return PROYECTO_COMPARATOR_NATURAL_ORDER.compare(this,o);
+    }
 
     //Atributos
     private String id_proyecto;
@@ -88,4 +97,19 @@ public class Proyecto {
                 ", foto='" + foto + '\'' +
                 '}';
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Proyecto proyecto)) return false;
+        return getId_cliente() == proyecto.getId_cliente() && Objects.equals(getId_proyecto(), proyecto.getId_proyecto()) && Objects.equals(getDni_colaborador(), proyecto.getDni_colaborador()) && Objects.equals(getNombre(), proyecto.getNombre());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId_proyecto(), getId_cliente(), getDni_colaborador(), getNombre());
+    }
+
+
 }
