@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema MGA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+<div class="container">
+    <aside class="aside">
+        <div class="top">
+            <a href="/collaborator" class="top_logo">
+                <img src="img/logo2.png" alt="">
+            </a>
+            <i class='closeIcon bx bx-x'></i>
+        </div>
+        <div class="sidebar">
+            <a href="/collaborator"  >
+                <i class='bx bxs-dashboard' ></i>
+                <p>Panel</p>
+            </a>
+            <a href="/proyectos_collaborator"  class="">
+                <i class='bx bx-cog'></i>
+                <p>Proyectos</p>
+            </a>
+            <a href="/listar_actividad_collaborator" class="active">
+                <i class='bx bx-file' ></i>
+                <p>Actividades</p>
+            </a>
+            <a href="/listar_avance_collaborator" >
+                <i class='bx bx-check-square' ></i>
+                <p>Avance</p>
+            </a>
+        </div>
+    </aside>
+    <main class="main">
+
+        <nav class="navbar">
+
+            <div class="navbar_left">
+                <a href="">
+                    <i class='bx bx-menu' ></i>
+                </a>
+                <h3>Actividad</h3>
+            </div>
+            <div class="navbar_right">
+                <div class="theme-toggler">
+                    <span class="light-theme"><i class='bx bxs-sun' ></i></span>
+                    <span class="dark-theme"><i class='bx bxs-moon'></i></span>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="page_projects">
+
+            <div class="nav_project">
+                <div class="options">
+
+                    <div class="filters">
+                        <div class="orderBy">
+                            <p class="opt">Sort</p>
+                            <select name="" id="">
+                                <option value="">A-Z</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="projectsContainer" class="projects">
+
+                <div class="table_box">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Id Actividad</th>
+                            <th>Id Proyecto</th>
+                            <th>Nombre de la Actividad</th>
+                            <th>Estado</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            ${itemsActividadCollaborator}
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="pagination">
+
+                <ul>
+                    <li>
+                        <a href="">
+                            <span>Previo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""  class="active">1</a>
+                    </li>
+                    <li>
+                        <a href="">2</a>
+                    </li>
+                    <li>
+                        <a href="">3</a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>Siguiente</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </main>
+</div>
+
+<script src="js/dark.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
