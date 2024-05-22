@@ -358,3 +358,6 @@
 2024-05-21 10:57:34 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 2024-05-21 10:57:34 - ERROR - Data truncation: Data too long for column 'foto' at row 1
 2024-05-21 11:30:01 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-22 12:45:13 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-22 02:03:12 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-22 02:08:58 - INFO - CALL RegistrarUsuario(?, ?, ?)

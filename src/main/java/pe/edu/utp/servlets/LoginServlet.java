@@ -94,7 +94,7 @@ public class LoginServlet extends HttpServlet {
 
             String cargo = usuario.get("cargo");
             switch (cargo) {
-                case "colaborador" -> resp.sendRedirect("/colaborador");
+                case "colaborador" -> resp.sendRedirect("/collaborator");
                 case "jefe" -> resp.sendRedirect("/jefe");
                 case "admin" -> resp.sendRedirect("/");
             }
