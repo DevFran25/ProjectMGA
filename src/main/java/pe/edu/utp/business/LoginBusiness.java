@@ -57,12 +57,21 @@ public class LoginBusiness {
         return existe == null ? null : existe;
     }
 
-    public boolean updateBy(String table, Map<String, String> fields, Map<String, String> where){
+    public boolean updateUsuarioTokenByDni(String token, String dni){
         try {
-            return loginService.updateBy(table, fields, where);
+            return loginService.updateUsuarioTokenByDni(token, dni);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+
+    public boolean updateUsuarioTokenAndPassword(String token, String password, String id){
+        try {
+            return loginService.updateUsuarioTokenAndPassword(token, password, id);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }

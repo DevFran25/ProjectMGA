@@ -41,14 +41,6 @@ public class ProyectoServlet extends HttpServlet {
             return;
         }
 
-        /*
-        out.println(paginacion);
-
-        for( Proyecto pr : proyectos ){
-            out.println(pr.getNombre());
-        }
-         */
-
         // Cargar plantilla principal
         String filename = "src\\main\\resources\\web\\projects.html";
         String html = TextUTP.read(filename);
@@ -89,7 +81,8 @@ public class ProyectoServlet extends HttpServlet {
         }
 
         // Reemplazar en la plantilla principal
-        String reporteHtml = html.replace("${itemsProyecto}", itemsHtml.toString())
+        String reporteHtml = html
+                .replace("${itemsProyecto}", itemsHtml.toString())
                 .replace("${paginacion}", paging.toString());
 
         resp.setCharacterEncoding("UTF-8");

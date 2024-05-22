@@ -19,6 +19,8 @@ public class ColaboradorFilter implements Filter {
 
         HttpSession session = req.getSession();
         String cargo = (String) session.getAttribute("cargo");
+
+
         if( cargo == null ){
             resp.sendRedirect(req.getContextPath()+"/login");
         }else if(!cargo.equals("colaborador") && !cargo.equals("admin") ){

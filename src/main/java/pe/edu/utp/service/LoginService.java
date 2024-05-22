@@ -16,8 +16,7 @@ public class LoginService {
 
     public Map<String, String> usuarioExiste(String dni) throws SQLException {
         Map<String, String> result = null;
-        String sql = "select id_usuario, u.dni_colaborador, username, password, nombres, apellidos, telefono, email, " +
-                "cargo from usuario u inner join colaborador c on u.dni_colaborador = c.dni_colaborador where u.dni_colaborador = ?";
+        String sql = "CALL ObtenerUsuarioPorDNI(?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, dni);
         ResultSet rs = stmt.executeQuery();
@@ -29,8 +28,7 @@ public class LoginService {
 
     public Map<String, String> findByEmail(String email) throws SQLException {
         Map<String, String> result = null;
-        String sql = "select id_usuario, u.dni_colaborador, username, password, nombres, apellidos, telefono, email, " +
-                "cargo from usuario u inner join colaborador c on u.dni_colaborador = c.dni_colaborador where email = ?";
+        String sql = "CALL ObtenerUsuarioPorEmail(?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, email);
         ResultSet rs = stmt.executeQuery();
@@ -42,8 +40,7 @@ public class LoginService {
 
     public Map<String, String> findByToken(String token) throws SQLException {
         Map<String, String> result = null;
-        String sql = "select id_usuario, u.dni_colaborador, username, password, nombres, apellidos, telefono, email, " +
-                "cargo, token from usuario u inner join colaborador c on u.dni_colaborador = c.dni_colaborador where token = ?";
+        String sql = "CALL ObtenerUsuarioPorToken(?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, token);
         ResultSet rs = stmt.executeQuery();
@@ -53,36 +50,25 @@ public class LoginService {
         return result;
     }
 
-
-    public boolean updateBy(String table, Map<String, String> fields, Map<String, String> where) throws SQLException {
-
-        StringBuilder sb = new StringBuilder();
-        sb.append("UPDATE ").append(table).append(" SET ");
-        boolean firstField = true;
-        for(Map.Entry<String, String> field : fields.entrySet()){
-            if(!firstField){
-                sb.append(", ");
-            }
-            sb.append(field.getKey()).append(" = '").append(field.getValue()).append("'");
-            firstField = false;
-        }
-        sb.append(" WHERE ");
-        boolean firstWhere = true;
-        for(Map.Entry<String, String> wh : where.entrySet()){
-            if(!firstWhere){
-                sb.append(" AND ");
-            }
-            sb.append(wh.getKey()).append(" = '").append(wh.getValue()).append("'");
-            firstWhere = false;
-        }
-        String sql = sb.toString();
-
-        Statement stmt = conn.createStatement();
-
-        int rows = stmt.executeUpdate(sql);
-
+    public boolean updateUsuarioTokenByDni(String token, String dni) throws SQLException {
+        String sql = "CALL UpdateUsuarioTokenByDNI(?, ?)";
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setString(1, token);
+        stmt.setString(2, dni);
+        int rows = stmt.executeUpdate();
         return (rows > 0);
     }
+
+    public boolean updateUsuarioTokenAndPassword(String token, String password, String id) throws SQLException {
+        String sql = "CALL UpdateUsuarioTokenAndPassword(?, ?, ?)";
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setString(1, token);
+        stmt.setString(2, password);
+        stmt.setString(3, id);
+        int rows = stmt.executeUpdate();
+        return (rows > 0);
+    }
+
 
     private Map<String, String> getData(ResultSet rs) throws SQLException {
         Map<String, String> values = new HashMap<>();

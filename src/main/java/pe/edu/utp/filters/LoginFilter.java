@@ -7,6 +7,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 @WebServlet("/login/*")
 public class LoginFilter implements Filter {
@@ -19,6 +21,7 @@ public class LoginFilter implements Filter {
 
         HttpSession session = req.getSession();
         String cargo = (String) session.getAttribute("cargo");
+
         if( cargo != null){
             if(cargo.equals("admin")){
                 resp.sendRedirect(req.getContextPath()+"/");

@@ -4,10 +4,18 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
 import pe.edu.utp.App;
 import pe.edu.utp.model.Cliente;
+import pe.edu.utp.model.Proyecto;
 import pe.edu.utp.utils.TextUTP;
+import pe.edu.utp.utils.UTPBinary;
+
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.time.LocalDate;
 
 @WebServlet("/register_cliente")
 
@@ -18,11 +26,9 @@ public class RegistroClienteServlet extends HttpServlet {
         super.doGet(req, resp);
     }
 
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        //Capturar los datos del Cliente
-        String identificacion  = req.getParameter("txtidentificacion");
+        // Captura de datos
+        String identificacion = req.getParameter("txtidentificacion");
         String nombre = req.getParameter("txtnombre");
         String apellidos = req.getParameter("txtapellidos");
         String correo = req.getParameter("txtcorreo");
@@ -30,22 +36,29 @@ public class RegistroClienteServlet extends HttpServlet {
         String tipo_cliente = req.getParameter("txt_tipopersona");
 
 
-        // Crear objeto usuario
         try {
-            Cliente cliente = new Cliente(identificacion, tipo_cliente, nombre, apellidos, correo, celular);
+            // Validaciones
+            Validator.validateNotEmpty(identificacion, "Identificación");
+            Validator.validateNotEmpty(nombre, "Nombre");
+            Validator.validateNotEmpty(apellidos, "Apellido");
+            Validator.validateNotEmpty(correo, "Correo");
+            Validator.validateNotEmpty(celular, "Celular");
+            Validator.validateNotEmpty(tipo_cliente, "tipo Cliente");
 
-            //Registro Cliente a la bd
+            Cliente cliente = new Cliente(identificacion, nombre, apellidos, correo, celular, tipo_cliente);
             App.RegClients.registrarCliente(cliente);
 
-            resp.sendRedirect("/listar_clientes");
-
+            resp.sendRedirect("/cliente");
 
         } catch (IllegalArgumentException e) {
-            String filename_error = "src\\main\\resources\\templates\\error.html";
-            String html_error = TextUTP.read(filename_error);
-            resp.getWriter().println(html_error.replace("${error}", e.getMessage()));
+            // Leer el HTML de error y reemplazar el marcador de posición con el mensaje de error
+            String errorPagePath = "src\\main\\resources\\templates\\error.html";
+            String html_error = new String(Files.readAllBytes(Paths.get(errorPagePath)), StandardCharsets.UTF_8);
+            html_error = html_error.replace("${error}", e.getMessage());
+
+            resp.setContentType("text/html");
+            resp.setCharacterEncoding("UTF-8");
+            resp.getWriter().write(html_error);
         }
-
-
     }
 }

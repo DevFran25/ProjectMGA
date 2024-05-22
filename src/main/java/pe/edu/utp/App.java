@@ -97,10 +97,10 @@ public class App
 
         webserver.addServlet(ch.qos.logback.classic.ViewStatusMessagesServlet.class, "/status");
 
-        webserver.addFilter(AuthFilter.class, "*.html", EnumSet.of(DispatcherType.REQUEST));
+        webserver.addFilter(AdminFilter.class, "/*", EnumSet.of(DispatcherType.REQUEST));
         webserver.addFilter(LoginFilter.class, "/login/*", EnumSet.of(DispatcherType.REQUEST));
         webserver.addFilter(ColaboradorFilter.class, "/colaborador/*", EnumSet.of(DispatcherType.REQUEST));
-        webserver.addFilter(AdminFilter.class, "", EnumSet.of(DispatcherType.REQUEST));
+
 
         URL myURL = new URL("http://localhost:8085");
         System.out.println("*********************************************************");
