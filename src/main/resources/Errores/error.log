@@ -351,3 +351,10 @@
 >>>>>>> Stashed changes
 2024-05-21 06:27:29 - INFO - CALL registrarAvance(?, ?, ?, ?)
 2024-05-21 06:27:56 - INFO - CALL registrarActividad(?, ?, ?, ?)
+2024-05-21 09:36:49 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-21 10:24:15 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-21 10:56:29 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-21 10:56:29 - ERROR - Data truncation: Incorrect date value: '' for column 'fecha_fin' at row 1
+2024-05-21 10:57:34 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-21 10:57:34 - ERROR - Data truncation: Data too long for column 'foto' at row 1
+2024-05-21 11:30:01 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)

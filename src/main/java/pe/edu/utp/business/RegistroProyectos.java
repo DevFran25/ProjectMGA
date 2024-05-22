@@ -91,6 +91,7 @@ public class RegistroProyectos {
 
         return reporteHtml;
     }
+
     public String getHtmlDetalleProyecto(String idProyecto) throws IOException, SQLException {
         // Cargar la página de detalle del proyecto
         String filename = "src\\main\\resources\\web\\project.html";
