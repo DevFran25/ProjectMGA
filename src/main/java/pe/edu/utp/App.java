@@ -32,8 +32,6 @@ public class App
     public static RegistroEntregable RegEntregable = new RegistroEntregable();
     public static RegistroActividad RegActividad = new RegistroActividad();
 
-    public static ListarProyectoColaborador LisProColaborador = new ListarProyectoColaborador();
-
 
     public static void main( String[] args ) throws Exception {
         logger.info("Init app...");
@@ -57,7 +55,7 @@ public class App
         webserver.addServlet(DetalleProyectoServlet.class, "/detalle_proyecto");
 
         // COLABORADOR
-        webserver.addServlet(ListarProyectosColaboradorServlet.class, "/listar_proyecto_colaborador");
+        webserver.addServlet(ListarProyectosColaboradorServlet.class, "/colaborador/listar_proyecto_colaborador");
 
 
         //Usuario
@@ -91,6 +89,9 @@ public class App
         webserver.addServlet(ListarActividadServlet.class, "/listar_actividad");
         webserver.addServlet(RegistrarActividadServlet.class, "/registrar_actividad");
         webserver.addServlet(ComboFor_AddActividad.class, "/add_actividad");
+
+        // COLABORADOR
+        webserver.addServlet(ListarActividadColaboradorServlet.class, "/colaborador/listar_actividad_colaborador");
 
 
 

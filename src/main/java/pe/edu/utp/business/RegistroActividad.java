@@ -86,4 +86,42 @@ public class RegistroActividad {
 
 
     }
+
+    //Listar Avance en colaborador
+    public String getHtmlListarActividadColaborador() throws IOException, SQLException {
+        // Cargar plantilla principal
+        String filename = "src\\main\\resources\\web\\actividad_colaborador.html";
+        String html = TextUTP.read(filename);
+
+        // Cargar plantilla para los item
+        String filenameItems = "src\\main\\resources\\templates\\actividad_listado.html";
+        String htmlItem = TextUTP.read(filenameItems);
+
+        // Recorrer la lista de Proyectos
+        StringBuilder itemsHtml = new StringBuilder();
+
+        // Listar
+        List<Actividades> listaActividad = busquedaServiceActividad.getAllActividad();
+        //String comboClientes = busquedaServiceProyecto.getComboClientes();
+
+        for (Actividades actividades : listaActividad) {
+
+            //Tabla Proyectos
+            String item = htmlItem.replace("${id_actividad}", Integer.toString(actividades.getId_actividad()))
+                    .replace("${id_proyecto}", actividades.getId_proyecto())
+                    .replace("${nombre}", actividades.getNombre())
+                    .replace("${estado}", actividades.getEstado());
+            itemsHtml.append(item);
+        }
+        // Reemplazar en la plantilla principal
+        /*String reporteHtml = html.replace("${itemsProyecto}", itemsHtml.toString())
+                .replace("${comboClientes}", comboClientes);*/
+
+        // Reemplazar en la plantilla principal
+        String reporteHtml = html.replace("${itemsActividadColaborador}", itemsHtml.toString());
+
+        return reporteHtml;
+
+
+    }
 }
