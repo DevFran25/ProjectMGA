@@ -17,12 +17,27 @@ public class DetalleProyectoServlet extends HttpServlet {
         try {
             String idProyecto = req.getParameter("idProyecto");
             if (idProyecto == null || idProyecto.isEmpty()) {
-                resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "No se encontro el proyecto");
+                resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "No se encontró el proyecto");
+                return;
+            }
+            String action = req.getParameter("action");
+            if ("updateEstado".equals(action)) {
+                actualizarEstadoProyecto(idProyecto); // Llamada al método para actualizar el estado
+                resp.sendRedirect(req.getContextPath() + "/detalle_proyecto?idProyecto=" + idProyecto);
                 return;
             }
             resp.getWriter().println(App.RegProyects.getHtmlDetalleProyecto(idProyecto));
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    private void actualizarEstadoProyecto(String idProyecto) throws SQLException, IOException {
+        try {
+            App.RegProyects.actualizarEstadoProyecto(idProyecto);
+            System.out.println("Estado del proyecto actualizado correctamente.");
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al actualizar el estado del proyecto.", e);
         }
     }
 }

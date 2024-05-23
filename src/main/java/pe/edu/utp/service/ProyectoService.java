@@ -122,6 +122,19 @@ public class ProyectoService {
         return null;
     }
 
+    //Actualizar Estado Proyecto
+    public void actualizarEstadoProyecto(String idProyecto) throws SQLException, IOException {
+        String query = "{CALL actualizarEstado(?)}";
+
+        try (CallableStatement cstmt = cnn.prepareCall(query)) {
+            cstmt.setString(1, idProyecto);
+            cstmt.execute();
+        } catch (SQLException e) {
+            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
+            throw e;
+        }
+    }
+
     //Metodo Combo Colaboradores
     public String getComboColaboradores() throws SQLException, IOException {
         StringBuilder sb = new StringBuilder();

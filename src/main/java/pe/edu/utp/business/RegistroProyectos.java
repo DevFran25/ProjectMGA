@@ -30,6 +30,7 @@ public class RegistroProyectos {
         }
     }
 
+
     public static void registrarProyectos(Proyecto proyecto) throws IOException {
 
         try {
@@ -49,6 +50,17 @@ public class RegistroProyectos {
             throw new RuntimeException(e);
         }
     }
+
+    public void actualizarEstadoProyecto(String idProyecto) throws SQLException, IOException {
+        try {
+            busquedaServiceProyecto.actualizarEstadoProyecto(idProyecto);
+            System.out.println("Estado del proyecto actualizado correctamente.");
+        } catch (SQLException e) {
+            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
+            throw e;
+        }
+    }
+
 
     //Listar Proyectos
     public String getHtmlListarProyectos() throws IOException, SQLException {
