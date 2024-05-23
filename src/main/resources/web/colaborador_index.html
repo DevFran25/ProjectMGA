@@ -12,28 +12,28 @@
 <body>
 <aside class="aside">
     <div class="top">
-        <a href="/colaborador_index" class="top_logo">
+        <a href="/colaborador" class="top_logo">
             <img src="img/logo2.png" alt="">
         </a>
         <i class='closeIcon bx bx-x'></i>
     </div>
     <div class="sidebar">
-        <a href="/colaborador_index"  class="active">
-            <i class='bx bxs-dashboard' ></i>
-            <p>Panel</p>
-        </a>
-        <a href="/proyectos_colaborador"  class="">
+        <a href="/colaborador/proyectos_colaborador"  class="">
             <i class='bx bx-cog'></i>
             <p>Proyectos</p>
         </a>
 
-        <a href="/listar_actividad_colaborador" >
+        <a href="/colaborador/listar_actividad_colaborador" >
             <i class='bx bx-file' ></i>
             <p>Actividades</p>
         </a>
         <a href="/colaborador/listar_avance_colaborador" >
             <i class='bx bx-check-square' ></i>
             <p>Avance</p>
+        </a>
+        <a href="/logout">
+            <i class='bx bx-exit'></i>
+            <p>Cerrar sesión</p>
         </a>
 
     </div>
@@ -50,28 +50,6 @@
                     <i class='bx bx-menu' ></i>
                 </a>
                 <h3>Dashboard</h3>
-            </div>
-
-            <div class="navbar_right">
-                <div class="theme-toggler">
-                    <span class="light-theme"><i class='bx bxs-sun' ></i></span>
-                    <span class="dark-theme"><i class='bx bxs-moon'></i></span>
-                </div>
-                <a href="#">
-                    <i class='bx bx-bell' ></i>
-                </a>
-
-                <div href="#" class="perfil_user">
-                    <div class="perfil_icon">
-                        <p>U</p>
-                    </div>
-                    <p>Colaborador: ${nombre} ${apellidos} <br>
-                        Número de DNI: ${dni_colaborador}</p>
-                    <div class="user_options">
-                        <a href="/logout">Cerrar Sesión</a>
-                    </div>
-                </div>
-
             </div>
 
         </nav>
