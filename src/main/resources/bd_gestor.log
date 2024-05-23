@@ -1469,3 +1469,10 @@ java.lang.RuntimeException: PROCEDURE projectsdb.paginacionProyectos does not ex
 2024-05-22 18:23:53,818 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@7ca20101{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
 2024-05-22 18:23:53,857 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@2c1156a7{HTTP/1.1, (http/1.1)}{0.0.0.0:62339}
 2024-05-22 18:23:53,857 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@2c07545f{STARTING}[11.0.15,sto=0] @2433ms
+2024-05-22 18:36:35,486 INFO [main] pe.edu.utp.App [App.java : 40] -- Init app...
+2024-05-22 18:36:36,012 INFO [main] org.eclipse.jetty.server.Server [Server.java : 384] -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.9+8-LTS
+2024-05-22 18:36:36,104 INFO [main] o.e.j.s.s.DefaultSessionIdManager [DefaultSessionIdManager.java : 332] -- Session workerName=node0
+2024-05-22 18:36:36,172 INFO [main] o.e.j.server.handler.ContextHandler [ContextHandler.java : 907] -- Started o.e.j.s.ServletContextHandler@cd1d761{/,file:///C:/Users/Duki2/AppData/Local/Temp/,AVAILABLE}
+2024-05-22 18:36:36,232 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@7ca20101{HTTP/1.1, (http/1.1)}{0.0.0.0:8085}
+2024-05-22 18:36:36,263 INFO [main] o.e.jetty.server.AbstractConnector [AbstractConnector.java : 376] -- Started ServerConnector@2c1156a7{HTTP/1.1, (http/1.1)}{0.0.0.0:62489}
+2024-05-22 18:36:36,263 INFO [main] org.eclipse.jetty.server.Server [Server.java : 439] -- Started Server@2c07545f{STARTING}[11.0.15,sto=0] @3097ms

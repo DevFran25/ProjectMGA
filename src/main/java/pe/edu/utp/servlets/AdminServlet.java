@@ -6,7 +6,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import pe.edu.utp.utils.Log;
-import pe.edu.utp.utils.TextUTP;
 
 import java.io.IOException;
 

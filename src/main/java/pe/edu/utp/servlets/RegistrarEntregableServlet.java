@@ -59,6 +59,11 @@ public class RegistrarEntregableServlet extends HttpServlet {
             if (fileName.isEmpty()) {
                 throw new IllegalArgumentException("El campo archivo no puede estar vacío");
             }
+            // Guardar el archivo
+            String destino = AppConfig.getFileDir();
+            String filePath = destino + fileName;
+            byte[] data = filePart.getInputStream().readAllBytes();
+            Files.write(Paths.get(filePath), data);
 
             // Validar el tipo de archivo
             String fileType = filePart.getContentType();
@@ -66,11 +71,6 @@ public class RegistrarEntregableServlet extends HttpServlet {
                 throw new IllegalArgumentException("Tipo de archivo no permitido");
             }
 
-            // Guardar el archivo
-            String destino = AppConfig.getFileDir();
-            String filePath = destino + fileName;
-            byte[] data = filePart.getInputStream().readAllBytes();
-            Files.write(Paths.get(filePath), data);
 
             // Crear el objeto Entregable y registrar el entregable
             Entregable entregable = new Entregable(id_entregable, id_proyecto, nombre, fecha, fileName);
