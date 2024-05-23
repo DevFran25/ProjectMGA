@@ -430,3 +430,5 @@
 2024-05-23 08:03:23 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 2024-05-23 08:05:42 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 2024-05-23 08:05:42 - ERROR - Data truncation: Data too long for column 'foto' at row 1
+2024-05-23 11:46:56 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
+2024-05-23 11:54:09 - INFO - CALL RegistrarCliente(?, ?, ?, ?, ?, ?)
