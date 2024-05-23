@@ -221,13 +221,14 @@ public class RegistroProyectos {
         int totalClientes = busquedaServiceProyecto.getTotalClientes();
         int totalProyectos = busquedaServiceProyecto.getTotalProyectos();
         int totalEntregables = busquedaServiceProyecto.getTotalEntregables();
-        double totalPresupeusto = busquedaServiceProyecto.getTotalCostoProyectos();
+        double totalPresupuesto = busquedaServiceProyecto.getTotalCostoProyectos();
+        List<String> proyectosConDiasRestantes = busquedaServiceProyecto.getProyectosConDiasRestantes();
 
-        // Convertir a cadenas
+        // Se convierten a cadenas
         String reportClientes = String.valueOf(totalClientes);
         String reportProyectos = String.valueOf(totalProyectos);
         String reportEntregables = String.valueOf(totalEntregables);
-        String reportPresupuesto = String.valueOf(totalPresupeusto);
+        String reportPresupuesto = String.valueOf(totalPresupuesto);
 
         // Reemplazar en el HTML
         String resultHtml = html.replace("${TotalClientes}", reportClientes);
@@ -235,8 +236,16 @@ public class RegistroProyectos {
         resultHtml = resultHtml.replace("${TotalEntregables}", reportEntregables);
         resultHtml = resultHtml.replace("${TotalPresupuesto}", reportPresupuesto);
 
+        // Agregar información de proyectos con días restantes
+        StringBuilder proyectosHtml = new StringBuilder();
+        for (String proyecto : proyectosConDiasRestantes) {
+            proyectosHtml.append("<p style=\"text-align:left\">").append(proyecto).append("</p>");
+        }
+        resultHtml = resultHtml.replace("${Alertas}", proyectosHtml.toString());
+
         return resultHtml;
     }
+
 
     //Listar Proyectos de colaborador
     public String getHtmlListarProyectosColaborador() throws IOException, SQLException {

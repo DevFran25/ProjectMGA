@@ -362,3 +362,8 @@
 2024-05-22 02:03:12 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-22 02:08:58 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-22 05:58:39 - ERROR - Error: usuario no existe
+2024-05-22 09:20:52 - ERROR - PROCEDURE projectsdb.TotalProyectosConDiasRestantes does not exist
+2024-05-22 09:21:32 - ERROR - Error: usuario no existe
+2024-05-22 09:21:38 - ERROR - Error: usuario no existe
+2024-05-22 09:21:57 - ERROR - No value specified for parameter 1
+2024-05-22 09:27:57 - ERROR - Error: usuario no existe

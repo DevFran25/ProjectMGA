@@ -22,7 +22,7 @@ public class DetalleProyectoServlet extends HttpServlet {
             }
             String action = req.getParameter("action");
             if ("updateEstado".equals(action)) {
-                actualizarEstadoProyecto(idProyecto); // Llamada al método para actualizar el estado
+                actualizarEstadoProyecto(idProyecto);
                 resp.sendRedirect(req.getContextPath() + "/detalle_proyecto?idProyecto=" + idProyecto);
                 return;
             }

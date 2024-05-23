@@ -10,6 +10,7 @@ import pe.edu.utp.util.ErrorLog;
 import javax.naming.NamingException;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -291,5 +292,27 @@ public class ProyectoService {
         }
 
         return totalCosto;
+    }
+
+    //Alertas
+    public List<String> getProyectosConDiasRestantes() throws SQLException, IOException {
+        List<String> proyectosConDiasRestantes = new ArrayList<>();
+        String query = "{CALL ListarProyectosConDiasRestantes()}";
+
+        try (CallableStatement cstmt = cnn.prepareCall(query)) {
+            ResultSet rs = cstmt.executeQuery();
+
+            while (rs.next()) {
+                String nombreProyecto = rs.getString("nombre");
+                int diasRestantes = rs.getInt("dias_restantes");
+                String mensaje = String.format("El proyecto con el nombre %s estara por terminar en %d dias.", nombreProyecto, diasRestantes);
+                proyectosConDiasRestantes.add(mensaje);
+            }
+        } catch (SQLException e) {
+            ErrorLog.log(e.getMessage(), ErrorLog.Level.ERROR);
+            throw new SQLException("Error al obtener los proyectos con dias restantes");
+        }
+
+        return proyectosConDiasRestantes;
     }
 }
