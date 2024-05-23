@@ -17,22 +17,24 @@
             <i class='closeIcon bx bx-x'></i>
         </div>
         <div class="sidebar">
-            <a href="/collaborator"  >
+            <a href="/collaborator" >
                 <i class='bx bxs-dashboard' ></i>
                 <p>Panel</p>
             </a>
-            <a href="/proyectos_collaborator"  class="">
+            <a href="/proyectos_collaborator"  class="active">
                 <i class='bx bx-cog'></i>
                 <p>Proyectos</p>
             </a>
+
             <a href="/listar_actividad_collaborator" >
                 <i class='bx bx-file' ></i>
                 <p>Actividades</p>
             </a>
-            <a href="/listar_avance_collaborator" class="active">
+            <a href="/listar_avance_collaborator" >
                 <i class='bx bx-check-square' ></i>
                 <p>Avance</p>
             </a>
+
         </div>
     </aside>
     <main class="main">
@@ -43,12 +45,24 @@
                 <a href="">
                     <i class='bx bx-menu' ></i>
                 </a>
-                <h3>Avance</h3>
+                <h3>Todos los proyectos del colaborador</h3>
             </div>
             <div class="navbar_right">
                 <div class="theme-toggler">
                     <span class="light-theme"><i class='bx bxs-sun' ></i></span>
                     <span class="dark-theme"><i class='bx bxs-moon'></i></span>
+                </div>
+                <a href="#">
+                    <i class='bx bx-bell' ></i>
+                </a>
+                <div href="#" class="perfil_user">
+                    <div class="perfil_icon">
+                        <p>U</p>
+                    </div>
+                    <p>Usuario</p>
+                    <div class="user_options">
+                        <a href="/logout">Cerrar Sesión</a>
+                    </div>
                 </div>
             </div>
 
@@ -58,68 +72,40 @@
 
             <div class="nav_project">
                 <div class="options">
+                    <a href="" id="line" class="type"><i class="bx bx-menu"></i></a>
+                    <a href="" id="grid" class="type active"><i class='bx bx-grid-alt' ></i></a>
 
                     <div class="filters">
                         <div class="orderBy">
                             <p class="opt">Sort</p>
-                            <select name="" id="">
+                            <select name="" id="id">
                                 <option value="">A-Z</option>
+                                <option value="">Fecha</option>
                             </select>
                         </div>
 
+                        <div class="stateBy">
+                            <p class="opt">State</p>
+                            <select name="" id="">
+                                <option value="">All</option>
+                                <option value="">Completados</option>
+                                <option value="">Pendientes</option>
+                            </select>
+                        </div>
                     </div>
 
                 </div>
             </div>
 
-            <div id="projectsContainer" class="projects">
-
-                <div class="table_box">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Id Avance</th>
-                            <th>Id Proyecto</th>
-                            <th>(DNI - Colaborador)</th>
-                            <th>Progreso</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            ${itemsAvanceCollaborator}
-                        </tr>
-                        </tbody>
-
-                    </table>
-                </div>
+            <div id="projectsContainer" class="projects grid">
+                ${itemsProyectoColaborador}
             </div>
 
             <div class="pagination">
-
                 <ul>
-                    <li>
-                        <a href="">
-                            <span>Previo</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href=""  class="active">1</a>
-                    </li>
-                    <li>
-                        <a href="">2</a>
-                    </li>
-                    <li>
-                        <a href="">3</a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>Siguiente</span>
-                        </a>
-                    </li>
+                    ${paginacionColaborador}
                 </ul>
-
             </div>
-
 
         </div>
 

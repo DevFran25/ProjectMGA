@@ -4,10 +4,8 @@ import jakarta.servlet.MultipartConfigElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.edu.utp.filters.AdminFilter;
-import pe.edu.utp.filters.AuthFilter;
 import pe.edu.utp.filters.ColaboradorFilter;
 import pe.edu.utp.filters.LoginFilter;
-import pe.edu.utp.model.*;
 import pe.edu.utp.service.*;
 import pe.edu.utp.servlets.*;
 import pe.edu.utp.util.*;
@@ -34,6 +32,7 @@ public class App
     public static RegistroEntregable RegEntregable = new RegistroEntregable();
     public static RegistroActividad RegActividad = new RegistroActividad();
 
+    public static ListarProyectoColaborador LisProColaborador = new ListarProyectoColaborador();
 
 
     public static void main( String[] args ) throws Exception {
@@ -57,6 +56,10 @@ public class App
         webserver.addServlet(ListarProyectosServlet.class, "/listar_proyecto");
         webserver.addServlet(DetalleProyectoServlet.class, "/detalle_proyecto");
 
+        // COLABORADOR
+        webserver.addServlet(ListarProyectosColaboradorServlet.class, "/listar_proyecto_colaborador");
+
+
         //Usuario
         webserver.addServlet(RegistroUsuarioServlet.class, "/register_usuarios");
         webserver.addServlet(ComboFor_Usuarios.class, "/add_usuarios");
@@ -75,6 +78,10 @@ public class App
         webserver.addServlet(RegistrarAvanceServlet.class, "/registrar_avance");
         webserver.addServlet(ComboFor_AddAvance.class, "/add_avance");
 
+        // COLABORADOR
+        webserver.addServlet(ListarColaboradorAvanceServlet.class, "/colaborador/listar_avance_colaborador");
+
+
         // Entregable
         webserver.addServlet(ListarEntregableServlet.class, "/listar_entregable");
         webserver.addServlet(RegistrarEntregableServlet.class, "/registrar_entregable").getRegistration().setMultipartConfig(new MultipartConfigElement("src\\main\\resources\\web\\documentos"));;
@@ -84,6 +91,7 @@ public class App
         webserver.addServlet(ListarActividadServlet.class, "/listar_actividad");
         webserver.addServlet(RegistrarActividadServlet.class, "/registrar_actividad");
         webserver.addServlet(ComboFor_AddActividad.class, "/add_actividad");
+
 
 
         webserver.addServlet(LoginServlet.class, "/login");
