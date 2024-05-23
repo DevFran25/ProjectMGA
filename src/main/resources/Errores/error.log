@@ -358,12 +358,30 @@
 2024-05-21 10:57:34 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 2024-05-21 10:57:34 - ERROR - Data truncation: Data too long for column 'foto' at row 1
 2024-05-21 11:30:01 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+<<<<<<< Updated upstream
 2024-05-22 12:45:13 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-22 02:03:12 - INFO - CALL RegistrarUsuario(?, ?, ?)
 2024-05-22 02:08:58 - INFO - CALL RegistrarUsuario(?, ?, ?)
+<<<<<<< Updated upstream
 2024-05-22 05:58:39 - ERROR - Error: usuario no existe
 2024-05-22 09:20:52 - ERROR - PROCEDURE projectsdb.TotalProyectosConDiasRestantes does not exist
 2024-05-22 09:21:32 - ERROR - Error: usuario no existe
 2024-05-22 09:21:38 - ERROR - Error: usuario no existe
 2024-05-22 09:21:57 - ERROR - No value specified for parameter 1
 2024-05-22 09:27:57 - ERROR - Error: usuario no existe
+=======
+2024-05-22 10:25:36 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-22 10:31:44 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-22 10:55:31 - ERROR - Error: usuario no existe
+=======
+2024-05-21 11:53:44 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-22 12:01:14 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-22 12:01:14 - ERROR - Incorrect integer value: 'w3' for column 'id_proyecto' at row 1
+>>>>>>> Stashed changes
+2024-05-22 06:00:59 - INFO - CALL RegistrarColaborador(?, ?, ?, ?, ?, ?)
+2024-05-22 06:06:37 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-22 06:09:01 - INFO - CALL RegistrarUsuario(?, ?, ?)
+2024-05-22 06:24:12 - ERROR - Error: usuario no existe
+2024-05-22 06:40:42 - INFO - CALL RegistrarColaborador(?, ?, ?, ?, ?, ?)
+2024-05-22 06:42:15 - INFO - CALL RegistrarUsuario(?, ?, ?)
+>>>>>>> Stashed changes
