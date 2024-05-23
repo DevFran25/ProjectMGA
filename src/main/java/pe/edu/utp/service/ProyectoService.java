@@ -6,10 +6,13 @@ import pe.edu.utp.model.Cliente;
 import pe.edu.utp.model.Colaborador;
 import pe.edu.utp.model.Proyecto;
 import pe.edu.utp.util.DataAccess;
+import pe.edu.utp.util.DateFormatter;
 import pe.edu.utp.util.ErrorLog;
 import javax.naming.NamingException;
 import java.io.IOException;
 import java.sql.*;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -304,7 +307,13 @@ public class ProyectoService {
 
             while (rs.next()) {
                 String nombreProyecto = rs.getString("nombre");
+                LocalDate fechaFin = rs.getDate("fecha_fin").toLocalDate();
                 int diasRestantes = rs.getInt("dias_restantes");
+
+                if( diasRestantes < 0 || diasRestantes > 7 ){
+                    continue;
+                }
+
                 String mensaje = String.format("El proyecto con el nombre %s estara por terminar en %d dias.", nombreProyecto, diasRestantes);
                 proyectosConDiasRestantes.add(mensaje);
             }

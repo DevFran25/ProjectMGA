@@ -385,3 +385,48 @@
 2024-05-22 06:40:42 - INFO - CALL RegistrarColaborador(?, ?, ?, ?, ?, ?)
 2024-05-22 06:42:15 - INFO - CALL RegistrarUsuario(?, ?, ?)
 >>>>>>> Stashed changes
+2024-05-23 03:14:53 - ERROR - PROCEDURE projectsdb.ListarProyectosConDiasRestantes does not exist
+2024-05-23 03:27:12 - INFO - CALL registrarEntregable(?, ?, ?, ?, ?)
+2024-05-23 07:50:50 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-23 07:50:50 - ERROR - Data truncation: Data too long for column 'nombre' at row 1
+2024-05-23 07:51:47 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-23 07:51:47 - ERROR - Incorrect integer value: 's123' for column 'id_proyecto' at row 1
+2024-05-23 07:52:40 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-23 07:56:19 - INFO - Days diff: -111
+2024-05-23 07:56:19 - INFO - Days diff: -111
+2024-05-23 07:56:19 - INFO - Days diff: -80
+2024-05-23 07:56:19 - INFO - Days diff: -17
+2024-05-23 07:56:19 - INFO - Days diff: 16
+2024-05-23 07:56:19 - INFO - Days diff: 48
+2024-05-23 07:56:19 - INFO - Days diff: 81
+2024-05-23 07:56:19 - INFO - Days diff: 114
+2024-05-23 07:56:19 - INFO - Days diff: 146
+2024-05-23 07:56:19 - INFO - Days diff: 179
+2024-05-23 07:56:19 - INFO - Days diff: 211
+2024-05-23 07:56:19 - INFO - Days diff: 244
+2024-05-23 07:56:19 - INFO - Days diff: 277
+2024-05-23 07:56:19 - INFO - Days diff: 307
+2024-05-23 07:56:19 - INFO - Days diff: 340
+2024-05-23 07:56:19 - INFO - Days diff: 372
+2024-05-23 07:56:19 - INFO - Days diff: 404
+2024-05-23 07:56:19 - INFO - Days diff: 437
+2024-05-23 07:56:19 - INFO - Days diff: 470
+2024-05-23 07:56:19 - INFO - Days diff: 502
+2024-05-23 07:56:19 - INFO - Days diff: 535
+2024-05-23 07:56:19 - INFO - Days diff: 567
+2024-05-23 07:56:19 - INFO - Days diff: 600
+2024-05-23 07:56:19 - INFO - Days diff: 633
+2024-05-23 07:56:19 - INFO - Days diff: 665
+2024-05-23 07:56:19 - INFO - Days diff: 698
+2024-05-23 07:56:19 - INFO - Days diff: 730
+2024-05-23 07:56:19 - INFO - Days diff: 763
+2024-05-23 07:56:19 - INFO - Days diff: 795
+2024-05-23 07:56:19 - INFO - Days diff: 828
+2024-05-23 07:56:19 - INFO - Days diff: 860
+2024-05-23 07:56:19 - INFO - Days diff: -1
+2024-05-23 07:56:19 - INFO - Days diff: 4
+2024-05-23 08:02:00 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-23 08:02:00 - ERROR - Incorrect integer value: 'a23' for column 'id_proyecto' at row 1
+2024-05-23 08:03:23 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-23 08:05:42 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-23 08:05:42 - ERROR - Data truncation: Data too long for column 'foto' at row 1

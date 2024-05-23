@@ -224,6 +224,7 @@ public class RegistroProyectos {
         double totalPresupuesto = busquedaServiceProyecto.getTotalCostoProyectos();
         List<String> proyectosConDiasRestantes = busquedaServiceProyecto.getProyectosConDiasRestantes();
 
+
         // Se convierten a cadenas
         String reportClientes = String.valueOf(totalClientes);
         String reportProyectos = String.valueOf(totalProyectos);
@@ -239,7 +240,7 @@ public class RegistroProyectos {
         // Agregar información de proyectos con días restantes
         StringBuilder proyectosHtml = new StringBuilder();
         for (String proyecto : proyectosConDiasRestantes) {
-            proyectosHtml.append("<p style=\"text-align:left\">").append(proyecto).append("</p>");
+            proyectosHtml.append("<li style=\"text-align:left\">").append(proyecto).append("</li>");
         }
         resultHtml = resultHtml.replace("${Alertas}", proyectosHtml.toString());
 
