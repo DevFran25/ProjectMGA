@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema MGA</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <i class='bx bx-user'></i>
                 <p>Inicio</p>
             </a>
-            <a href="/colaborador/proyectos_collaborator"  class="active">
+            <a href="/colaborador/listar_proyecto_colaborador"  class="active">
                 <i class='bx bx-cog'></i>
                 <p>Proyectos</p>
             </a>
@@ -53,7 +53,7 @@
                 <div class="top">
 
                     <div class="head">
-                        <a href="projects.html">
+                        <a href="proyectos_colaborador.html">
                             <i class='bx bxs-chevron-left' ></i>
                         </a>
                         <h3>${nombre}</h3>
@@ -70,8 +70,8 @@
                     <div class="left">
 
                         <div class="actions">
-                            <a href="">
-                                <i class='bx bx-check' ></i>
+                            <a href="/detalle_proyecto_colaborador?idProyecto=${id_proyecto}&action=updateEstado">
+                                <i class='bx bx-check'></i>
                                 <p>Marcar como completado</p>
                             </a>
                         </div>
@@ -130,7 +130,7 @@
 </main>
 </div>
 
-<script src="js/dark.js"></script>
-<script src="js/dropdown.js"></script>
+<script src="/js/dark.js"></script>
+<script src="/js/dropdown.js"></script>
 </body>
 </html>
