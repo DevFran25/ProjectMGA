@@ -19,7 +19,7 @@ public class ColaboradorServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Log.print("Pagina Admin", resp);
-        String filename = "src\\main\\resources\\web\\collaborator.html";
+        String filename = "src\\main\\resources\\web\\colaborador_index.html";
         String html = TextUTP.read(filename);
         resp.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html");
