@@ -367,3 +367,6 @@
 2024-05-22 09:21:38 - ERROR - Error: usuario no existe
 2024-05-22 09:21:57 - ERROR - No value specified for parameter 1
 2024-05-22 09:27:57 - ERROR - Error: usuario no existe
+2024-05-22 10:23:09 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-22 10:26:08 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-05-22 10:28:00 - INFO - CALL RegistrarProyecto(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
