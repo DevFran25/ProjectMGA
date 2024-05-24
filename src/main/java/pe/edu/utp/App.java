@@ -56,6 +56,7 @@ public class App
 
         // COLABORADOR
         webserver.addServlet(ListarProyectosColaboradorServlet.class, "/colaborador/listar_proyecto_colaborador");
+        webserver.addServlet(ListarProyectoDetalleColaborador.class, "/detalle_proyecto_colaborador");
 
 
         //Usuario

@@ -2,9 +2,7 @@ package pe.edu.utp.business;
 
 import pe.edu.utp.exceptions.AlreadyExistsException;
 import pe.edu.utp.model.Avance;
-import pe.edu.utp.model.Proyecto;
 import pe.edu.utp.service.AvanceService;
-import pe.edu.utp.service.ProyectoService;
 import pe.edu.utp.util.AppConfig;
 import pe.edu.utp.util.DataAccessMariaDB;
 import pe.edu.utp.util.ErrorLog;

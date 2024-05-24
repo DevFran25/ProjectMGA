@@ -4,18 +4,13 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
 import pe.edu.utp.App;
 import pe.edu.utp.model.Cliente;
-import pe.edu.utp.model.Proyecto;
-import pe.edu.utp.utils.TextUTP;
-import pe.edu.utp.utils.UTPBinary;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.time.LocalDate;
 
 @WebServlet("/register_cliente")
 
@@ -48,7 +43,7 @@ public class RegistroClienteServlet extends HttpServlet {
             Cliente cliente = new Cliente(identificacion, nombre, apellidos, correo, celular, tipo_cliente);
             App.RegClients.registrarCliente(cliente);
 
-            resp.sendRedirect("/cliente");
+            resp.sendRedirect("/listar_clientes");
 
         } catch (IllegalArgumentException e) {
             // Leer el HTML de error y reemplazar el marcador de posición con el mensaje de error

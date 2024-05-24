@@ -63,10 +63,17 @@ public class RegistroProyectoServlet extends HttpServlet {
 
             // Obtener la imagen y guardarla en la carpeta upload
             Part filePart = req.getPart("txtFoto");
+
+            if( filePart == null){
+                throw new IllegalArgumentException();
+            }
+
             String foto = getFileName(filePart);
+
             if(foto.isEmpty()){
                 throw new IllegalArgumentException("El campo foto no puede estar vacio");
             }
+
             String fileFoto = destino + foto;
             byte[] data = filePart.getInputStream().readAllBytes();
             UTPBinary.echobin(data, fileFoto);

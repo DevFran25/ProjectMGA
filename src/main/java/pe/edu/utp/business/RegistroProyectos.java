@@ -224,6 +224,7 @@ public class RegistroProyectos {
         double totalPresupuesto = busquedaServiceProyecto.getTotalCostoProyectos();
         List<String> proyectosConDiasRestantes = busquedaServiceProyecto.getProyectosConDiasRestantes();
 
+
         // Se convierten a cadenas
         String reportClientes = String.valueOf(totalClientes);
         String reportProyectos = String.valueOf(totalProyectos);
@@ -239,13 +240,15 @@ public class RegistroProyectos {
         // Agregar información de proyectos con días restantes
         StringBuilder proyectosHtml = new StringBuilder();
         for (String proyecto : proyectosConDiasRestantes) {
-            proyectosHtml.append("<p style=\"text-align:left\">").append(proyecto).append("</p>");
+            proyectosHtml.append("<li style=\"text-align:left\">").append(proyecto).append("</li>");
         }
         resultHtml = resultHtml.replace("${Alertas}", proyectosHtml.toString());
 
         return resultHtml;
     }
 
+
+    // PARA COLABORADOR
 
     //Listar Proyectos de colaborador
     public String getHtmlListarProyectosColaborador() throws IOException, SQLException {
@@ -287,6 +290,32 @@ public class RegistroProyectos {
         String reporteHtml = html.replace("${itemsProyectoColaborador}", itemsHtml.toString());
 
         return reporteHtml;
+    }
+
+    public String getHtmlDetalleProyectoColaborador(String idProyecto) throws IOException, SQLException {
+        // Cargar la página de detalle del proyecto
+        String filename = "src\\main\\resources\\web\\proyectos_colaborador_info.html";
+        String html = TextUTP.read(filename);
+
+        // Obtener el proyecto por su ID
+        Proyecto proyecto = busquedaServiceProyecto.getProyectoById(idProyecto);
+        if (proyecto == null) {
+            throw new SQLException("Proyecto no encontrado con ID: " + idProyecto);
+        }
+
+        // Reemplazar los placeholders en la plantilla con los datos del proyecto
+        String resultHtml = html.replace("${id_proyecto}", proyecto.getId_proyecto())
+                .replace("${dni_colaborador}", proyecto.getDni_colaborador())
+                .replace("${id_cliente}", Integer.toString(proyecto.getId_cliente()))
+                .replace("${nombre}", proyecto.getNombre())
+                .replace("${ubicacion}", proyecto.getUbicacion())
+                .replace("${costo}", Float.toString(proyecto.getCosto()))
+                .replace("${fecha_inicio}", proyecto.getFecha_inicio())
+                .replace("${fecha_fin}", proyecto.getFecha_fin())
+                .replace("${estado}", proyecto.getEstado())
+                .replace("${foto}", proyecto.getFoto());
+
+        return resultHtml;
     }
 
 }
