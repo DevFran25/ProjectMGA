@@ -40,7 +40,7 @@ public class RegistroClienteServlet extends HttpServlet {
             Validator.validateNotEmpty(celular, "Celular");
             Validator.validateNotEmpty(tipo_cliente, "tipo Cliente");
 
-            Cliente cliente = new Cliente(identificacion, nombre, apellidos, correo, celular, tipo_cliente);
+            Cliente cliente = new Cliente(identificacion, tipo_cliente, nombre, apellidos, correo, celular);
             App.RegClients.registrarCliente(cliente);
 
             resp.sendRedirect("/listar_clientes");
