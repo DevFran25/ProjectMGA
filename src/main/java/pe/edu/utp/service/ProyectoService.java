@@ -76,10 +76,10 @@ public class ProyectoService {
             int count = 0;
 
             while (rst.next()) {
-                String id_proyecto = rst.getString("id_proyecto");
-                int id_cliente = rst.getInt("id_cliente");
-                String dni_colaborador = rst.getString("dni_colaborador");
-                String nombre = rst.getString("nombre");
+                String id_proyecto = rst.getString("id");
+                int id_cliente = rst.getInt("nombre_cliente");
+                String dni_colaborador = rst.getString("nombre_colaborador");
+                String nombre = rst.getString("nombre_proyecto");
                 String ubicacion = rst.getString("ubicacion");
                 Float costo = rst.getFloat("costo");
                 String fecha_inicio = rst.getString("fecha_inicio");
@@ -109,16 +109,17 @@ public class ProyectoService {
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     return new Proyecto(
-                            rs.getString("id_proyecto"),
+                            rs.getString("id"),
                             rs.getInt("id_cliente"),
-                            rs.getString("dni_colaborador"),
-                            rs.getString("nombre"),
+                            rs.getString("nombre_colaborador"),
+                            rs.getString("nombre_proyecto"),
                             rs.getString("ubicacion"),
                             rs.getFloat("costo"),
                             rs.getString("fecha_inicio"),
                             rs.getString("fecha_fin"),
                             rs.getString("estado"),
-                            rs.getString("foto")
+                            rs.getString("foto"),
+                            rs.getString("nombre_cliente")
                     );
                 }
             }

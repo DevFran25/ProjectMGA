@@ -125,7 +125,8 @@ public class RegistroProyectos {
                 .replace("${fecha_inicio}", proyecto.getFecha_inicio())
                 .replace("${fecha_fin}", proyecto.getFecha_fin())
                 .replace("${estado}", proyecto.getEstado())
-                .replace("${foto}", proyecto.getFoto());
+                .replace("${foto}", proyecto.getFoto())
+                .replace("{nombre_cliente}", proyecto.getNombre_cliente());
 
         return resultHtml;
     }
@@ -313,7 +314,8 @@ public class RegistroProyectos {
                 .replace("${fecha_inicio}", proyecto.getFecha_inicio())
                 .replace("${fecha_fin}", proyecto.getFecha_fin())
                 .replace("${estado}", proyecto.getEstado())
-                .replace("${foto}", proyecto.getFoto());
+                .replace("${foto}", proyecto.getFoto())
+                .replace("${nombre_cliente}", proyecto.getNombre_cliente());
 
         return resultHtml;
     }

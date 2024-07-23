@@ -16,6 +16,7 @@ public class Proyecto implements Comparable<Proyecto>  {
     private String id_proyecto;
     private int id_cliente;
     private String dni_colaborador;
+
     private String nombre;
     private String ubicacion;
     private float costo;
@@ -23,6 +24,8 @@ public class Proyecto implements Comparable<Proyecto>  {
     private String fecha_fin;
     private String estado;
     private String foto;
+
+    private String nombre_cliente;
 
 
     public Proyecto() {
@@ -32,6 +35,21 @@ public class Proyecto implements Comparable<Proyecto>  {
         this.id_proyecto = id_proyecto;
         this.id_cliente = id_cliente;
         this.dni_colaborador = dni_colaborador;
+        this.nombre = nombre;
+        this.ubicacion = ubicacion;
+        this.costo = costo;
+        this.fecha_inicio = fecha_inicio;
+        this.fecha_fin = fecha_fin;
+        this.estado = estado;
+        this.foto = foto;
+    }
+
+
+    public Proyecto(String id_proyecto, int id_cliente,String dni_colaborador, String nombre, String ubicacion, float costo, String fecha_inicio, String fecha_fin, String estado, String foto, String nombre_cliente) {
+        this.id_proyecto = id_proyecto;
+        this.dni_colaborador = dni_colaborador;
+        this.nombre_cliente = nombre_cliente;
+        this.id_cliente = id_cliente;
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.costo = costo;
@@ -81,12 +99,16 @@ public class Proyecto implements Comparable<Proyecto>  {
         return foto;
     }
 
+    public String getNombre_cliente() {
+        return nombre_cliente;
+    }
+
 
     @Override
     public String toString() {
         return "Proyecto{" +
                 "id_proyecto='" + id_proyecto + '\'' +
-                ", id_cliente='" + id_cliente + '\'' +
+                ", id_cliente=" + id_cliente +
                 ", dni_colaborador='" + dni_colaborador + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", ubicacion='" + ubicacion + '\'' +
@@ -95,9 +117,9 @@ public class Proyecto implements Comparable<Proyecto>  {
                 ", fecha_fin='" + fecha_fin + '\'' +
                 ", estado='" + estado + '\'' +
                 ", foto='" + foto + '\'' +
+                ", nombre_cliente='" + nombre_cliente + '\'' +
                 '}';
     }
-
 
     @Override
     public boolean equals(Object o) {
